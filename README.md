@@ -1,4 +1,4 @@
-# Conception et mise en oeuvre d’une solution décisionnelle pour l’analyse des performances des centres de formation professionnelle au Maroc
+<h1 align="center" style="color:blue;">Conception et mise en œuvre d’une solution décisionnelle pour l’analyse des performances des centres de formation professionnelle au Maroc</h1>
 
 ## Résumé du projet
 Le projet consiste à concevoir et déployer une solution complète de **Business Intelligence (BI)** pour l'analyse des performances des **centres de formation professionnelle au Maroc**.  
