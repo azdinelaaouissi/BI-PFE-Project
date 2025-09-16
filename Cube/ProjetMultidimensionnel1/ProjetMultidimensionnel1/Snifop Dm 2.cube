@@ -1,0 +1,674 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="85995e60-cf51-4ce1-9ac1-517576fd3648" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Snifop Dm 2</ID>
+  <Name>Snifop Dm 2</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="28" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2747" scrolltop="-1781" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="21881" y="20188" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_FORMATEUR_ETABLISSEMENT" left="20" top="7400" logicalid="14" controlid="1" masterid="0" hint1="0" hint2="0" width="6271" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00007f1800009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dm_DIM_FORMATEUR_ETABLISSEMENT" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_PROVINCE" left="17150" top="10598" logicalid="15" controlid="2" masterid="0" hint1="0" hint2="0" width="3863" height="5513" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000170f000089150000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dm_DIM_PROVINCE" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_ETABLISSEMENT" left="9987" top="13795" logicalid="16" controlid="3" masterid="0" hint1="0" hint2="0" width="4763" height="6341" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00009b120000c5180000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dm_DIM_ETABLISSEMENT" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_FORMATEUR" left="9238" top="-601" logicalid="17" controlid="4" masterid="0" hint1="0" hint2="0" width="4471" height="6164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00007711000014180000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dm_DIM_FORMATEUR" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="FACT_FORMATION" left="8691" top="7400" logicalid="18" controlid="5" masterid="0" hint1="0" hint2="0" width="6059" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000ab1700009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dm_FACT_FORMATION" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_ETABLISSEMENT_FILIERE" left="17150" top="5049" logicalid="19" controlid="6" masterid="0" hint1="0" hint2="0" width="3942" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000660f00004d0c0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dm_DIM_ETABLISSEMENT_FILIERE" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_FILIERE" left="3459" top="13795" logicalid="20" controlid="7" masterid="0" hint1="0" hint2="0" width="4128" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e000020100000f40d0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dm_DIM_FILIERE" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="5991" top="7348" logicalid="21" controlid="8" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_FACT_FORMATION_FORMATEUR_ETABLISSEMENT]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="5" sourceattachpoint="23" destattachpoint="22" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="6291" y="7747" />
+              <point x="8691" y="7747" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="9424" top="5064" logicalid="22" controlid="9" masterid="0" hint1="0" hint2="0" width="946" height="2636" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_FACT_FORMATION_FORMATEUR]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="5" sourceattachpoint="1" destattachpoint="4" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="9823" y="5563" />
+              <point x="9823" y="6481" />
+              <point x="10070" y="6481" />
+              <point x="10070" y="7400" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="6774" top="11095" logicalid="23" controlid="10" masterid="0" hint1="0" hint2="0" width="2496" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_FACT_FORMATION_FILIERE]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="7" destid="5" sourceattachpoint="12" destattachpoint="1" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="7173" y="13795" />
+              <point x="7173" y="12595" />
+              <point x="8970" y="12595" />
+              <point x="8970" y="11395" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="9769" top="11095" logicalid="24" controlid="11" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_FACT_FORMATION_ETABLISSEMENT]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="5" sourceattachpoint="0" destattachpoint="5" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="10168" y="13795" />
+              <point x="10168" y="12595" />
+              <point x="10070" y="12595" />
+              <point x="10070" y="11395" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="14450" top="10747" logicalid="25" controlid="12" masterid="0" hint1="0" hint2="0" width="3000" height="807" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_FACT_FORMATION_PROVINCE]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="5" sourceattachpoint="14" destattachpoint="35" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="17150" y="11154" />
+              <point x="15950" y="11154" />
+              <point x="15950" y="11047" />
+              <point x="14750" y="11047" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="14450" top="7324" logicalid="26" controlid="13" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_FACT_FORMATION_ETAB_FILIERE]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="5" sourceattachpoint="22" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="17150" y="7723" />
+              <point x="15950" y="7723" />
+              <point x="15950" y="7747" />
+              <point x="14750" y="7747" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-2747</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-1781</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>-601</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>75</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="2a3b4f6a-6d1f-45b8-a1ef-0fc7718a0132">
+      <ID>DIM FORMATEUR ETABLISSEMENT</ID>
+      <Name>DIM FORMATEUR ETABLISSEMENT</Name>
+      <DimensionID>DIM FORMATEUR ETABLISSEMENT</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="dd1eb16a-88ed-40fe-adac-3c6a58be9783">
+          <AttributeID>FORMATEUR ETABLISSEMENT SK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ed989ada-5717-4f94-ade5-56f39fad4553">
+          <AttributeID>STATUT</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="262b051c-88ef-44fb-8c4d-2b5d6c85a505">
+          <AttributeID>DATE DEBUT</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="20ec90df-ee45-4355-a8fb-2c4de24e7a37">
+          <AttributeID>DATE FIN</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b2dfad18-d9e7-4625-ae38-a32ee9d50f40">
+          <AttributeID>ACTIF</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b6308c4f-dc39-4796-851d-cdfaae2c7107">
+          <AttributeID>TYPE CONTRAT</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="c55d795a-ce31-473c-b4b2-839be2f1fde3">
+      <ID>DIM FORMATEUR</ID>
+      <Name>DIM FORMATEUR</Name>
+      <DimensionID>DIM FORMATEUR</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="7dd20d98-caae-4a8c-9a35-ebcd761d2097">
+          <AttributeID>FORMATEUR SK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e073f586-2970-4728-9221-e91ef2fee3de">
+          <AttributeID>SEXE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bf506800-574c-4f6d-a21a-8836cfbaaa7a">
+          <AttributeID>VILLE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="dcf98de1-6950-4e00-b6cb-d6ab7ecc5dfc">
+          <AttributeID>NB MOIS FORMATION</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0c2aada2-e842-456d-b47e-d4be51e05f2e">
+          <AttributeID>NB MOIS ENTREPRISE</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="38f979cc-32aa-4d71-80de-4ddc5a4df226">
+      <ID>DIM FILIERE</ID>
+      <Name>DIM FILIERE</Name>
+      <DimensionID>DIM FILIERE</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="8336dfbc-29cb-47dd-87c3-5f143bd7f4d1">
+          <AttributeID>FILIERE SK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8288bf52-f780-4467-876b-5b46f4112e45">
+          <AttributeID>FILIERE ID SRC</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d407f19a-95e2-4ac0-b780-66f331a9b456">
+          <AttributeID>NOM</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b7d36b6d-861c-4069-95f7-ba7ab7647a89">
+          <AttributeID>NIVEAU FORMATION</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3a775fd7-280c-4ac3-ad89-d55076150b08">
+          <AttributeID>PROGRAMME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fb22c649-9836-4c0d-aeb4-e3b5c61e01cd">
+          <AttributeID>DUREE</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="f486e162-90c0-4669-b416-e190669a8b9b">
+      <ID>DIM ETABLISSEMENT</ID>
+      <Name>DIM ETABLISSEMENT</Name>
+      <DimensionID>DIM ETABLISSEMENT</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="fe553cc6-4069-4bb2-8645-da4815680a77">
+          <AttributeID>ETABLISSEMENT SK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7571f9bf-17c6-4709-b274-558eb23d079f">
+          <AttributeID>TYPE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3ce9fc03-1975-4aad-b322-fe433e479a55">
+          <AttributeID>STATUT</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4dc1fdeb-7630-4370-97de-9477d9b2b4cc">
+          <AttributeID>ANNEE FONDATION</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cb80242b-7792-43cf-8b90-531da2da2136">
+          <AttributeID>CAPACITE ACCUEIL</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="eed861aa-abd6-4a34-b234-8474ccab7e8c">
+          <AttributeID>DATE AUTORISATION</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d75da393-f93f-4458-adac-1713f551e049">
+          <AttributeID>Date Cloture</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9ead240e-b157-4a23-a89a-15aea5869451">
+          <AttributeID>AUTORISE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3450d8ab-7a2f-49b0-a9f9-7ddc9f756916">
+          <AttributeID>NOM</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="9f52ea93-83f0-4406-8bf7-f237d5dbcc7f">
+      <ID>DIM PROVINCE</ID>
+      <Name>DIM PROVINCE</Name>
+      <DimensionID>DIM PROVINCE</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="bf59362d-c295-4c41-9201-fdd9824fe9f0">
+          <AttributeID>PROVINCE SK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="dc23f389-f292-4786-9800-291c519c073b">
+          <AttributeID>NOM PROVINCE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="894109b4-8546-4629-a464-b5eee03fdaec">
+          <AttributeID>NOM REGION</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4d3cc825-d477-463d-a282-1228e0d7e323">
+          <AttributeID>Lat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1e805e3b-49bd-44a7-9443-3a44d7ed7e5d">
+          <AttributeID>Lon</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c82be06a-0b9b-4f1b-abd8-9b9af50c0b8b">
+          <AttributeID>Lat P</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f1e9c872-1c60-400d-ae3a-a017d991aa52">
+          <AttributeID>Lon P</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="a3a5d4c5-f155-4522-b8a2-f24732159bde">
+          <HierarchyID>Hiérarchie</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="25303905-51c0-4c62-9123-9153238182fc">
+      <ID>DIM ETABLISSEMENT FILIERE</ID>
+      <Name>DIM ETABLISSEMENT FILIERE</Name>
+      <DimensionID>DIM ETABLISSEMENT FILIERE</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="1cb0cdb5-f0a2-4f54-a320-51ea34e8bad7">
+          <AttributeID>ETAB FILIERE SK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="777a957a-725e-42e4-a2f4-2193bc6a2335">
+          <AttributeID>ETAB FILIERE SRC</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="96152c58-0bf9-4952-ab21-9f513fb2cb6c">
+          <AttributeID>CAPACITE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9b5c8ff5-c8a3-4688-af13-816449726ec8">
+          <AttributeID>TAUX ROULEMENT</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e937e6c6-4f6d-4164-95e9-e63b017c23be">
+          <AttributeID>MODE FORMATION</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="292884e7-d9d3-4310-bed8-a65c301aaf6f">
+      <ID>FACT FORMATION</ID>
+      <Name>FACT FORMATION</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="2078c75f-b018-454b-9132-56728d792a36">
+          <ID>FACT FORMATION Nombre</ID>
+          <Name>FACT FORMATION Nombre</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="f5db1913-486c-42c6-b586-6e54e8c370c3">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="cf6cde4b-2a06-4c10-a2f9-c9a581c18366">
+              <TableID>dm_FACT_FORMATION</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6233c9ba-ce7e-4b63-bf65-7411b707b39a">
+          <CubeDimensionID>DIM FORMATEUR ETABLISSEMENT</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="fd5a65b8-ef3c-4428-be27-6f7ec5c9bfa2">
+              <AttributeID>FORMATEUR ETABLISSEMENT SK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="63243557-5e45-4381-8478-622ea7365dc6">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="26596f62-467f-4f67-8663-f0b35667b281">
+                    <TableID>dm_FACT_FORMATION</TableID>
+                    <ColumnID>FORMATEUR_ETABLISSEMENT_SK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="96454d9e-8f18-43f0-8e27-25b580e7fcdd">
+          <CubeDimensionID>DIM FORMATEUR</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="21abc402-849e-4240-9437-82a416a03ecc">
+              <AttributeID>FORMATEUR SK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7605ac81-c865-4366-a296-64a8eeccbbdc">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7db7e755-3b9c-42dd-b82a-eca10737749e">
+                    <TableID>dm_FACT_FORMATION</TableID>
+                    <ColumnID>FORMATEUR_SK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="827ee81f-b8be-4bac-916a-207b0fc59796">
+          <CubeDimensionID>DIM FILIERE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="ecf3cb41-a692-4ab2-95ec-c5d3da19ce21">
+              <AttributeID>FILIERE SK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="258b012f-7ea3-427a-9aa9-c89c446278f8">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c554df1d-75bf-4347-96b5-36f826e71426">
+                    <TableID>dm_FACT_FORMATION</TableID>
+                    <ColumnID>FILIERE_SK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="966e9033-6562-4e52-bd2e-9b63f170798b">
+          <CubeDimensionID>DIM ETABLISSEMENT</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="9a5a9293-9160-4cf7-94b6-e9f00f8e29aa">
+              <AttributeID>ETABLISSEMENT SK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7dc57108-6c07-48ab-93b6-814c802bc7d9">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="8855e545-8ab8-4102-8502-8b9d5a603ddf">
+                    <TableID>dm_FACT_FORMATION</TableID>
+                    <ColumnID>ETABLISSEMENT_SK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="a635c506-753c-4575-906c-c65c5a903908">
+          <CubeDimensionID>DIM PROVINCE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="8b700bc6-3179-4f96-92f3-bcb511618391">
+              <AttributeID>PROVINCE SK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7b9ca79f-8ed0-46eb-a9f4-64e65951e6c8">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c92e2123-25e4-4629-a16d-a4ca5b64d0c6">
+                    <TableID>dm_FACT_FORMATION</TableID>
+                    <ColumnID>PROVINCE_SK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6d282a95-195e-450f-bdfe-69fe62426f8d">
+          <CubeDimensionID>DIM ETABLISSEMENT FILIERE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="24da21e1-6e53-43c0-8c6c-703e14bf19b2">
+              <AttributeID>ETAB FILIERE SK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="cedb09c9-266d-41d9-b42b-a21330ae902d">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ebff9775-0352-46f1-ade9-706815cfd78b">
+                    <TableID>dm_FACT_FORMATION</TableID>
+                    <ColumnID>ETAB_FILIERE_SK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="6d508c81-fd70-42af-b60c-78841bbb3b2b">
+    <DataSourceViewID>Snifop Dm</DataSourceViewID>
+  </Source>
+  <MdxScripts>
+    <MdxScript dwd:design-time-name="cae1b1c5-9448-4776-b2a2-4ea9ae298b1d">
+      <ID>MdxScript</ID>
+      <Name>MdxScript</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Commands>
+        <Command>
+          <Text>/*
+La commande CALCULATE contrôle l'agrégation des cellules feuilles dans le cube.
+Si la commande CALCULATE est supprimée ou modifiée, les données au sein du cube sont affectées.
+Vous devez modifier cette commande uniquement si vous spécifiez manuellement la façon dont le cube est agrégé.
+*/
+CALCULATE;  
+CREATE MEMBER CURRENTCUBE.[Measures].[Duree Filiere Unique]
+ AS IIF(
+        IsEmpty([DIM FILIERE].[DUREE].CURRENTMEMBER.MEMBER_CAPTION),
+        NULL,
+        StrToValue([DIM FILIERE].[DUREE].CURRENTMEMBER.MEMBER_CAPTION)
+    ), 
+VISIBLE = 1;  
+CREATE MEMBER CURRENTCUBE.[Measures].[charge Moyenne Par Formateur]
+ AS IIF(
+        [Measures].[Nombre Formateurs] = 0,
+        NULL,
+        [Measures].[Duree Filiere Unique] / [Measures].[Nombre Formateurs]
+    ),
+FORMAT_STRING = "#,##0.00", 
+VISIBLE = 1;  
+CREATE MEMBER CURRENTCUBE.[Measures].[Somme Duree Etablissement]
+ AS SUM(
+        NONEMPTY(
+         EXISTING    [DIM FILIERE].[FILIERE SK].[FILIERE SK].MEMBERS,
+            [Measures].[FACT FORMATION Nombre]
+        ),
+        IIF(
+            IsEmpty([DIM FILIERE].[DUREE].CURRENTMEMBER.MEMBER_CAPTION),
+            NULL,
+            StrToValue([DIM FILIERE].[DUREE].CURRENTMEMBER.MEMBER_CAPTION)
+        )
+    ), 
+VISIBLE = 1;  
+CREATE MEMBER CURRENTCUBE.[Measures].[Charge Globale Etablissement]
+ AS IIF(
+        [Measures].[Nombre Formateurs] = 0,
+        NULL,
+        [Measures].[Somme Duree Etablissement] / [Measures].[Nombre Formateurs]
+    ),
+FORMAT_STRING = "#,##0.00", 
+VISIBLE = 1; 
+CREATE MEMBER CURRENTCUBE.[Measures].[charge  global  etab  g]
+ AS AVG(
+   EXISTING [DIM ETABLISSEMENT].[ETABLISSEMENT SK].MEMBERS,
+    IIF(
+        [Measures].[Nombre Formateurs] = 0,
+        NULL,
+        [Measures].[Somme Duree Etablissement] / [Measures].[Nombre Formateurs]
+    )
+), 
+VISIBLE = 1  ; 
+CREATE MEMBER CURRENTCUBE.[Measures].[nbr  etab act]
+ AS DISTINCTCOUNT(
+    EXISTING [Dim Etablissement].[Etablissement SK].[Etablissement SK].MEMBERS
+), 
+VISIBLE = 1  ; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Moyenne Capacité Accueil]
+ AS AVG(
+        NONEMPTY(
+          existing   [Dim Etablissement].[ETABLISSEMENT SK].[ETABLISSEMENT SK].MEMBERS,
+            [Measures].[FACT FORMATION Nombre] -- Sert à filtrer uniquement les établissements liés à des faits
+        ),
+        IIF(
+            IsNumeric([Dim Etablissement].[ETABLISSEMENT SK].CURRENTMEMBER.Properties("CAPACITE ACCUEIL")),
+            VAL([Dim Etablissement].[ETABLISSEMENT SK].CURRENTMEMBER.Properties("CAPACITE ACCUEIL")),
+            NULL
+        )
+    ), 
+VISIBLE = 1  ; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Ancienneté Moyenne]
+ AS AVG(
+	  NONEMPTY(
+    EXISTING    [DIM FORMATEUR].[FORMATEUR SK].MEMBERS,
+	[Measures].[FACT FORMATION Nombre]
+	),
+        VAL([DIM FORMATEUR].[FORMATEUR SK].CURRENTMEMBER.PROPERTIES("NB MOIS FORMATION"))
+    ), 
+VISIBLE = 1  ; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Nombre Formateurs CDI]
+ AS COUNT(
+        DISTINCT(
+            NONEMPTY(
+                ( EXISTING [DIM FORMATEUR].[FORMATEUR SK].MEMBERS,
+                 [DIM FORMATEUR ETABLISSEMENT].[TYPE CONTRAT].[CDI]),
+                [Measures].[FACT FORMATION Nombre]
+            )
+        )
+    ), 
+VISIBLE = 1  ; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Nbr Filières  act]
+ AS DISTINCTCOUNT(
+        EXISTING [DIM FILIERE].[FILIERE SK].[FILIERE SK].MEMBERS
+     ), 
+VISIBLE = 1  ;  
+CREATE MEMBER CURRENTCUBE.[Measures].[Nombre Formateurs]
+ AS COUNT(
+        NONEMPTY(
+         EXISTING   [DIM FORMATEUR].[FORMATEUR SK].[FORMATEUR SK].MEMBERS,
+            [Measures].[FACT FORMATION Nombre]
+        )
+    ), 
+VISIBLE = 1; </Text>
+        </Command>
+      </Commands>
+    </MdxScript>
+  </MdxScripts>
+</Cube>

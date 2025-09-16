@@ -1,0 +1,2073 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/6/2025 11:03:05 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-OR8HLHK"
+  DTS:CreatorName="DESKTOP-OR8HLHK\HP EliteBook 840 G6"
+  DTS:DTSID="{ABC9ECBA-42FB-4764-A137-B1905523B8DA}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="1036"
+  DTS:ObjectName="Province"
+  DTS:PackageType="5"
+  DTS:VersionBuild="34"
+  DTS:VersionGUID="{D618434A-3CED-4643-9E59-36D49E6F6CDF}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Migration de table Province vers destination SQL server"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tâche de flux de données"
+      DTS:DTSID="{d439468a-3983-47bd-b6ca-31dcd5fb9178}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Migration de table Province vers destination SQL server"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Migration de table Province vers destination SQL server\Colonne dérivée"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="Colonne dérivée"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Migration de table Province vers destination SQL server\Colonne dérivée.Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[NOM_AR]"
+                      cachedDataType="wstr"
+                      cachedLength="637"
+                      cachedName="NOM_AR"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[NOM_AR]" />
+                    <inputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[NOM_ARR]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="NOM_ARR"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Conversion de données.Outputs[Sortie de conversion de données].Columns[NOM_ARR]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[ISNULL](#{Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[NOM_AR]}) ? "عين السبع" : #{Package\Migration de table Province vers destination SQL server\Conversion de données.Outputs[Sortie de conversion de données].Columns[NOM_ARR]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(NOM_AR) ? "عين السبع" : NOM_ARR</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Migration de table Province vers destination SQL server\Colonne dérivée.Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\Migration de table Province vers destination SQL server\Colonne dérivée.Inputs[Entrée de colonne dérivée]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Migration de table Province vers destination SQL server\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\Migration de table Province vers destination SQL server\Colonne dérivée.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Migration de table Province vers destination SQL server\Conversion de données"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Conversion de données;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Conversion de données"
+              name="Conversion de données"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Migration de table Province vers destination SQL server\Conversion de données.Inputs[Entrée de conversion de données]"
+                  name="Entrée de conversion de données">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Conversion de données.Inputs[Entrée de conversion de données].Columns[NOM_AR]"
+                      cachedDataType="wstr"
+                      cachedLength="637"
+                      cachedName="NOM_AR"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[NOM_AR]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Migration de table Province vers destination SQL server\Conversion de données.Outputs[Sortie de conversion de données]"
+                  exclusionGroup="1"
+                  name="Sortie de conversion de données"
+                  synchronousInputId="Package\Migration de table Province vers destination SQL server\Conversion de données.Inputs[Entrée de conversion de données]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Conversion de données.Outputs[Sortie de conversion de données].Columns[NOM_ARR]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Conversion de données.Outputs[Sortie de conversion de données].Columns[NOM_ARR]"
+                      name="NOM_ARR"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[NOM_AR]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Migration de table Province vers destination SQL server\Conversion de données.Outputs[Sortie d'erreur de conversion de données]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de conversion de données"
+                  synchronousInputId="Package\Migration de table Province vers destination SQL server\Conversion de données.Inputs[Entrée de conversion de données]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
+              description="Destination OLE DB"
+              name="Destination  vers Staging  de Table Province"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset">[dbo].[PROVAINCE]</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie les options à utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie quand les validations sont émises pendant l'insertion des données.  Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Connections[OleDbConnection]"
+                  connectionManagerID="{6BB00ADA-10CA-4E25-823E-E1ECF15A8616}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.snifop_stg]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Inputs[Entrée de destination OLE DB]"
+                  errorOrTruncationOperation="Insérer"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrée de destination OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Inputs[Entrée de destination OLE DB].Columns[ID]"
+                      cachedDataType="numeric"
+                      cachedName="ID"
+                      cachedPrecision="38"
+                      externalMetadataColumnId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Inputs[Entrée de destination OLE DB].ExternalColumns[ID]"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[ID]" />
+                    <inputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Inputs[Entrée de destination OLE DB].Columns[REGION_CODE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="REGION_CODE"
+                      externalMetadataColumnId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Inputs[Entrée de destination OLE DB].ExternalColumns[REGION_CODE]"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[REGION_CODE]" />
+                    <inputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Inputs[Entrée de destination OLE DB].Columns[CODE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="CODE"
+                      externalMetadataColumnId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Inputs[Entrée de destination OLE DB].ExternalColumns[CODE]"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[CODE]" />
+                    <inputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Inputs[Entrée de destination OLE DB].Columns[NOM]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="NOM"
+                      externalMetadataColumnId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Inputs[Entrée de destination OLE DB].ExternalColumns[NOM]"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[NOM]" />
+                    <inputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Inputs[Entrée de destination OLE DB].Columns[REGION_ID]"
+                      cachedDataType="numeric"
+                      cachedName="REGION_ID"
+                      cachedPrecision="38"
+                      externalMetadataColumnId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Inputs[Entrée de destination OLE DB].ExternalColumns[REGION_ID]"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[REGION_ID]" />
+                    <inputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Inputs[Entrée de destination OLE DB].Columns[DELEGATION_ID]"
+                      cachedDataType="numeric"
+                      cachedName="DELEGATION_ID"
+                      cachedPrecision="38"
+                      externalMetadataColumnId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Inputs[Entrée de destination OLE DB].ExternalColumns[DELEGATION_ID]"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[DELEGATION_ID]" />
+                    <inputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Inputs[Entrée de destination OLE DB].Columns[IS_URBAIN]"
+                      cachedDataType="i1"
+                      cachedName="IS_URBAIN"
+                      externalMetadataColumnId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Inputs[Entrée de destination OLE DB].ExternalColumns[IS_URBAIN]"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[IS_URBAIN]" />
+                    <inputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Inputs[Entrée de destination OLE DB].Columns[NOM_ARR]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="NOM_ARR"
+                      externalMetadataColumnId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Inputs[Entrée de destination OLE DB].ExternalColumns[NOM_AR]"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Conversion de données.Outputs[Sortie de conversion de données].Columns[NOM_ARR]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Inputs[Entrée de destination OLE DB].ExternalColumns[ID]"
+                      dataType="numeric"
+                      name="ID"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Inputs[Entrée de destination OLE DB].ExternalColumns[REGION_CODE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="REGION_CODE" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Inputs[Entrée de destination OLE DB].ExternalColumns[CODE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="CODE" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Inputs[Entrée de destination OLE DB].ExternalColumns[NOM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="NOM" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Inputs[Entrée de destination OLE DB].ExternalColumns[NOM_AR]"
+                      dataType="wstr"
+                      length="255"
+                      name="NOM_AR" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Inputs[Entrée de destination OLE DB].ExternalColumns[REGION_ID]"
+                      dataType="numeric"
+                      name="REGION_ID"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Inputs[Entrée de destination OLE DB].ExternalColumns[DELEGATION_ID]"
+                      dataType="numeric"
+                      name="DELEGATION_ID"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Inputs[Entrée de destination OLE DB].ExternalColumns[IS_URBAIN]"
+                      dataType="i2"
+                      name="IS_URBAIN" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Outputs[Sortie d'erreur de destination OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de destination OLE DB"
+                  synchronousInputId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Inputs[Entrée de destination OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Migration de table Province vers destination SQL server\Remplacement des Nom_AR qui est Null"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Inclut et exécute un code de script personnalisé. Par exemple, appliquez une règle d'entreprise qui limite la plage des valeurs valides dans une colonne « revenus » ou ajoutez des valeurs dans deux colonnes et calculez la moyenne de la somme.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;13"
+              description="Inclut et exécute un code de script personnalisé. Par exemple, appliquez une règle d'entreprise qui limite la plage des valeurs valides dans une colonne « revenus » ou ajoutez des valeurs dans deux colonnes et calculez la moyenne de la somme."
+              name="Remplacement des Nom_AR qui est Null"
+              version="13">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Stocke le code source du composant"
+                  isArray="true"
+                  name="SourceCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="30">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services component wrapper
+*  This module defines the base class for your component
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+
+public class UserComponent: ScriptComponent
+{
+    public Connections Connections;
+    public Variables Variables;
+    public UserComponent()
+    {
+        Connections = new Connections(this);
+        Variables = new Variables(this);
+    }
+
+    public override void ProcessInput(int InputID, string InputName, PipelineBuffer Buffer, OutputNameMap OutputMap)
+    {
+
+        if (InputName.Equals(@"Entrée 0", StringComparison.Ordinal))
+        {
+            Entrée0_ProcessInput(new Entrée0Buffer(Buffer, GetColumnIndexes(InputID), OutputMap));
+        }
+
+    }
+
+    public virtual void Entrée0_ProcessInput(Entrée0Buffer Buffer)
+    {
+        while (Buffer.NextRow())
+        {
+            Entrée0_ProcessInputRow(Buffer);
+        }
+    }
+
+    public virtual void Entrée0_ProcessInputRow(Entrée0Buffer Row)
+    {
+    }
+
+}
+
+public class Connections
+{
+    ScriptComponent ParentComponent;
+
+    public Connections(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+
+public class Variables
+{
+    ScriptComponent ParentComponent;
+
+    public Variables(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.resx]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[main.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[#region Help:  Introduction to the Script Component
+/* The Script Component allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services data flow.
+ *
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script component. */
+#endregion
+
+#region Namespaces
+using System;
+using System.Data;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+
+#endregion
+
+/// <summary>
+/// This is the class to which to add your code.  Do not change the name, attributes, or parent
+/// of this class.
+/// </summary>
+[Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute]
+public class ScriptMain : UserComponent
+{
+    #region Help:  Using Integration Services variables and parameters
+    /* To use a variable in this script, first ensure that the variable has been added to
+     * either the list contained in the ReadOnlyVariables property or the list contained in
+     * the ReadWriteVariables property of this script component, according to whether or not your
+     * code needs to write into the variable.  To do so, save this script, close this instance of
+     * Visual Studio, and update the ReadOnlyVariables and ReadWriteVariables properties in the
+     * Script Transformation Editor window.
+     * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+     *
+     * Example of reading from a variable or parameter:
+     *  DateTime startTime = Variables.MyStartTime;
+     *
+     * Example of writing to a variable:
+     *  Variables.myStringVariable = "new value";
+     */
+    #endregion
+
+    #region Help:  Using Integration Services Connnection Managers
+    /* Some types of connection managers can be used in this script component.  See the help topic
+     * "Working with Connection Managers Programatically" for details.
+     *
+     * To use a connection manager in this script, first ensure that the connection manager has
+     * been added to either the list of connection managers on the Connection Managers page of the
+     * script component editor.  To add the connection manager, save this script, close this instance of
+     * Visual Studio, and add the Connection Manager to the list.
+     *
+     * If the component needs to hold a connection open while processing rows, override the
+     * AcquireConnections and ReleaseConnections methods.
+     * 
+     * Example of using an ADO.Net connection manager to acquire a SqlConnection:
+     *  object rawConnection = Connections.SalesDB.AcquireConnection(transaction);
+     *  SqlConnection salesDBConn = (SqlConnection)rawConnection;
+     *
+     * Example of using a File connection manager to acquire a file path:
+     *  object rawConnection = Connections.Prices_zip.AcquireConnection(transaction);
+     *  string filePath = (string)rawConnection;
+     *
+     * Example of releasing a connection manager:
+     *  Connections.SalesDB.ReleaseConnection(rawConnection);
+     */
+    #endregion
+
+    #region Help:  Firing Integration Services Events
+    /* This script component can fire events.
+     *
+     * Example of firing an error event:
+     *  ComponentMetaData.FireError(10, "Process Values", "Bad value", "", 0, out cancel);
+     *
+     * Example of firing an information event:
+     *  ComponentMetaData.FireInformation(10, "Process Values", "Processing has started", "", 0, fireAgain);
+     *
+     * Example of firing a warning event:
+     *  ComponentMetaData.FireWarning(10, "Process Values", "No rows were received", "", 0);
+     */
+    #endregion
+
+    /// <summary>
+    /// This method is called once, before rows begin to be processed in the data flow.
+    ///
+    /// You can remove this method if you don't need to do anything here.
+    /// </summary>
+    public override void PreExecute()
+    {
+        base.PreExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called after all the rows have passed through this component.
+    ///
+    /// You can delete this method if you don't need to do anything here.
+    /// </summary>
+    public override void PostExecute()
+    {
+        base.PostExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called once for every row that passes through the component from Entrée0.
+    ///
+    /// Example of reading a value from a column in the the row:
+    ///  string zipCode = Row.ZipCode
+    ///
+    /// Example of writing a value to a column in the row:
+    ///  Row.ZipCode = zipCode
+    /// </summary>
+    /// <param name="Row">The row that is currently passing through the component</param>
+    public override void Entrée0_ProcessInputRow(Entrée0Buffer Row)
+    {
+        if (Row.NOMARR_IsNull || string.IsNullOrWhiteSpace(Row.NOMARR))
+        {
+
+            Row.NOM = Row.NOM.Trim();  // Supprimer les espaces autour du nom
+
+
+
+
+            switch (Row.NOM)
+            {
+                   
+                case "Benslimane":
+                    Row.NOMARR = "بنسليمان"; break;
+                case "Berrechid":
+                    Row.NOMARR = "برشيد"; break;
+                case "Casablanca":
+                    Row.NOMARR = "الدار البيضاء"; break;
+                case "Aîn-Chock":
+                    Row.NOMARR = "عين الشق"; break;
+                case "Aïn-Sebaâ":
+                    Row.NOMARR = "عين السبع"; break;
+                case "Al-Fida":
+                    Row.NOMARR = "الفداء"; break;
+                case "Anfa":
+                    Row.NOMARR = "أنفا"; break;
+                case "Assoukhour Assawda":
+                    Row.NOMARR = "السواني السوداء"; break;
+                case "Ben M'Sick":
+                    Row.NOMARR = "ابن مسيك"; break;
+                case "Hay-Hassani":
+                    Row.NOMARR = "الحي الحسني"; break;
+                case "Hay Mohammadi":
+                    Row.NOMARR = "الحي المحمدي"; break;
+                case "El Maarif":
+                    Row.NOMARR = "المعاريف"; break;
+                case "Mers-Sultan":
+                    Row.NOMARR = "مرس السلطان"; break;
+                case "Moulay Rachid":
+                    Row.NOMARR = "مولاي رشيد"; break;
+                case "Sbata":
+                    Row.NOMARR = "سباتة"; break;
+                case "Sidi Belyout":
+                    Row.NOMARR = "سيدي بليوط"; break;
+                case "Sidi Bernoussi":
+                    Row.NOMARR = "سيدي البرنوصي"; break;
+                case "Sidi Moumen":
+                    Row.NOMARR = "سيدي مومن"; break;
+                case "Sidi Othmane":
+                    Row.NOMARR = "سيدي عثمان"; break;
+            }
+        }
+
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[BufferWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services buffer wrappers
+*  This module defines classes for accessing data flow buffers
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+
+public class Entrée0Buffer: ScriptBuffer
+
+{
+    public Entrée0Buffer(PipelineBuffer Buffer, int[] BufferColumnIndexes, OutputNameMap OutputMap)
+        : base(Buffer, BufferColumnIndexes, OutputMap)
+    {
+    }
+
+    public Decimal ID
+    {
+        get
+        {
+            return Buffer.GetDecimal(BufferColumnIndexes[0]);
+        }
+    }
+    public bool ID_IsNull
+    {
+        get
+        {
+            return IsNull(0);
+        }
+    }
+
+    public String REGIONCODE
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[1]);
+        }
+    }
+    public bool REGIONCODE_IsNull
+    {
+        get
+        {
+            return IsNull(1);
+        }
+    }
+
+    public String CODE
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[2]);
+        }
+    }
+    public bool CODE_IsNull
+    {
+        get
+        {
+            return IsNull(2);
+        }
+    }
+
+    public String NOM
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[3]);
+        }
+        set
+        {
+            this[3] = value;
+        }
+    }
+    public bool NOM_IsNull
+    {
+        get
+        {
+            return IsNull(3);
+        }
+        set
+        {
+            if (value)
+            {
+                SetNull(3);
+            }
+            else
+            {
+                throw new InvalidOperationException("La propriété IsNull ne peut pas prendre la valeur False. Affectez plutôt une valeur à la colonne.");
+            }
+        }
+    }
+
+    public Decimal REGIONID
+    {
+        get
+        {
+            return Buffer.GetDecimal(BufferColumnIndexes[4]);
+        }
+    }
+    public bool REGIONID_IsNull
+    {
+        get
+        {
+            return IsNull(4);
+        }
+    }
+
+    public Decimal DELEGATIONID
+    {
+        get
+        {
+            return Buffer.GetDecimal(BufferColumnIndexes[5]);
+        }
+    }
+    public bool DELEGATIONID_IsNull
+    {
+        get
+        {
+            return IsNull(5);
+        }
+    }
+
+    public String NOMARR
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[6]);
+        }
+        set
+        {
+            this[6] = value;
+        }
+    }
+    public bool NOMARR_IsNull
+    {
+        get
+        {
+            return IsNull(6);
+        }
+        set
+        {
+            if (value)
+            {
+                SetNull(6);
+            }
+            else
+            {
+                throw new InvalidOperationException("La propriété IsNull ne peut pas prendre la valeur False. Affectez plutôt une valeur à la colonne.");
+            }
+        }
+    }
+
+    new public bool NextRow()
+    {
+        return base.NextRow();
+    }
+
+    new public bool EndOfRowset()
+    {
+        return base.EndOfRowset();
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_017f1c93112549c1ae5760ca92c4316e.Properties.Settings.get_Default():SC_017f1c93112549c1ae5760ca92c4316e.Properties.Sett" +
+    "ings")]
+
+namespace SC_017f1c93112549c1ae5760ca92c4316e.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_017f1c93112549c1ae5760ca92c4316e.csproj]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4A24647D-08F2-4869-A18D-E82875D4401E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SC_017f1c93112549c1ae5760ca92c4316e</RootNamespace>
+    <AssemblyName>SC_017f1c93112549c1ae5760ca92c4316e</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.TxScript, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Compile Include="main.cs" />
+    <Compile Include="BufferWrapper.cs" />
+    <Compile Include="ComponentWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" />
+        <Host Name="ScriptComponent" IconIndex="0" />
+        <ProjectClient>
+          <HostIdentifier>SSIS_SC160</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Project]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:CodeName>SC_017f1c93112549c1ae5760ca92c4316e</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
+    <msb:DisplayName>SC_017f1c93112549c1ae5760ca92c4316e</msb:DisplayName>
+    <msb:ProjectId>{29AF9C96-F2E4-4B76-9D1B-25A538786DD7}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="SC_017f1c93112549c1ae5760ca92c4316e.csproj" />
+    <msb:File Include="Properties\Resources.resx" />
+    <msb:File Include="main.cs" />
+    <msb:File Include="BufferWrapper.cs" />
+    <msb:File Include="ComponentWrapper.cs" />
+    <msb:File Include="Properties\Settings.settings" />
+    <msb:File Include="Properties\AssemblyInfo.cs" />
+    <msb:File Include="Properties\Resources.Designer.cs" />
+    <msb:File Include="Properties\Settings.Designer.cs" />
+  </msb:ItemGroup>
+</c:Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\AssemblyInfo.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("SC_017f1c93112549c1ae5760ca92c4316e")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("SC_017f1c93112549c1ae5760ca92c4316e")]
+[assembly: AssemblyCopyright("Copyright @  2025")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.0.0")]
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_017f1c93112549c1ae5760ca92c4316e.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_017f1c93112549c1ae5760ca92c4316e.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_017f1c93112549c1ae5760ca92c4316e.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace SC_017f1c93112549c1ae5760ca92c4316e.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_017f1c93112549c1ae5760ca92c4316e.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Stocke la représentation binaire du composant"
+                  isArray="true"
+                  name="BinaryCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="2">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_017f1c93112549c1ae5760ca92c4316e.dll]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAAy3LGgAAAAAAAAAAOAAIiALATAAABwAAAAIAAAAAAAA1jsA
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAIQ7AABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAA3BsAAAAgAAAAHAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAeAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAJAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAC4
+OwAAAAAAAEgAAAACAAUAzCUAAAAVAAABAAAAAAAAAMw6AAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACioTMAIAUgMAAAEAABEDbxYAAAYt
+EANvFAAABigSAAAKOTkDAAADA28MAAAGbxMAAApvDQAABgNvDAAABgoGORsDAAAGKBQAAAoLBxpZ
+RQ8AAAAyAQAAqQEAANACAAAhAQAA0AIAACIAAAABAAAAVwAAAJEAAAB4AAAA3AEAANACAADQAgAA
+0AIAAEMBAAAqBhkoFQAACgwIHyA7uwAAAAgfYTuiAAAACB9zO4kAAAAqBhcoFQAACgwIH2w1EQgf
+ZTumAAAACB9sO9EAAAAqCCDuAAAAO6MAAAAIIO8AAAA7qQAAACoGFigVAAAKDAgfSDvtAAAACB9N
+O/YAAAAIH1M7/wAAACoGFigVAAAKDAgfSDv/AAAACB9NOwgBAAAqBhsoFQAACgwIH0I7GQEAAAgf
+TzsiAQAAKgZyAQAAcCgWAAAKOjMBAAAqBnIXAABwKBYAAAo6OgEAACoGci0AAHAoFgAACjpxAQAA
+KgZyQwAAcCgWAAAKOgwBAAAqBnJXAABwKBYAAAo6EwEAACoGcmsAAHAoFgAACjoOAQAAKgZyfwAA
+cCgWAAAKOlEBAAAqBnKTAABwKBYAAAo6+AAAACoGcqMAAHAoFgAACjrzAAAAKgZyrQAAcCgWAAAK
+Ou4AAAAqBnLTAABwKBYAAAo69QAAACoGcusAAHAoFgAACjoIAQAAKgZyAwEAcCgWAAAKOjMBAAAq
+BnIbAQBwKBYAAAo6zgAAACoGcjcBAHAoFgAACjrhAAAAKgZyUwEAcCgWAAAKOtwAAAAqBnJfAQBw
+KBYAAAo61wAAACoGcnkBAHAoFgAACjrqAAAAKgZykwEAcCgWAAAKOsEAAAAqA3KxAQBwbxUAAAYq
+A3LDAQBwbxUAAAYqA3LPAQBwbxUAAAYqA3LrAQBwbxUAAAYqA3L9AQBwbxUAAAYqA3IRAgBwbxUA
+AAYqA3IfAgBwbxUAAAYqA3IpAgBwbxUAAAYqA3JJAgBwbxUAAAYqA3JbAgBwbxUAAAYqA3JzAgBw
+bxUAAAYqA3KNAgBwbxUAAAYqA3KfAgBwbxUAAAYqA3K3AgBwbxUAAAYqA3LNAgBwbxUAAAYqA3LZ
+AgBwbxUAAAYqA3LvAgBwbxUAAAYqA3ILAwBwbxUAAAYqA3IfAwBwbxUAAAYqHgIoGgAABioqAgME
+BSgXAAAKKlICexgAAAoCexkAAAoWlG8aAAAKKiICFigbAAAKKlICexgAAAoCexkAAAoXlG8cAAAK
+KiICFygbAAAKKlICexgAAAoCexkAAAoYlG8cAAAKKiICGCgbAAAKKlICexgAAAoCexkAAAoZlG8c
+AAAKKiYCGQMoHQAACioiAhkoGwAACipaAywIAhkoHgAACipyNQMAcHMfAAAKelICexgAAAoCexkA
+AAoalG8aAAAKKiICGigbAAAKKlICexgAAAoCexkAAAoblG8aAAAKKiICGygbAAAKKlICexgAAAoC
+exkAAAoclG8cAAAKKiYCHAMoHQAACioiAhwoGwAACipaAywIAhwoHgAACipyNQMAcHMfAAAKeh4C
+KCAAAAoqHgIoIQAACip+AigiAAAKAgJzHgAABn0BAAAEAgJzHwAABn0CAAAEKpIEcvoDAHAabyMA
+AAosFQIFAgMoJAAACg4EcwUAAAZvHAAABipKKwcCA28dAAAGA28YAAAGLfEqBio6AiglAAAKAgN9
+AwAABCo6AiglAAAKAgN9BAAABCoeAiglAAAKKq5+BQAABC0ecgwEAHDQBwAAAigmAAAKbycAAApz
+KAAACoAFAAAEfgUAAAQqGn4GAAAEKh4CgAYAAAQqGn4HAAAEKh4CKCkAAAoqLnMlAAAGgAcAAAQq
+AEJTSkIBAAEAAAAAAAwAAAB2NC4wLjMwMzE5AAAAAAUAbAAAAPQGAAAjfgAAYAcAAEQHAAAjU3Ry
+aW5ncwAAAACkDgAAgAQAACNVUwAkEwAAEAAAACNHVUlEAAAANBMAAMwBAAAjQmxvYgAAAAAAAAAC
+AAABVxWiAQkBAAAA+gEzABYAAAEAAAAgAAAACAAAAAcAAAAmAAAAEQAAACkAAAAQAAAAAQAAAAMA
+AAARAAAAFgAAAAEAAAAEAAAAAQAAAAAAeQMBAAAAAAAGAFoCYQUGAO4CYQUGAKYBTgUPANUFAAAG
+ANMBoQQGAD0CoQQGAB4CoQQGANUCoQQGAHoCoQQGAJMCoQQGAOoBoQQGAAUCKQMKAK4C8wAKACAF
+8wAOABEF8wAKAOoE8wAGAFsDVAQKAKUG8wAGAGgGVAQGAIkBTgUGADEFgQUGAN4EjAQSAFkBYwMS
+ALoBYwMSAEEBdwQGAG4BYQUGAEYDVAQGALMEVAQGAM0EVAQGABQBVAQGAMUAVAQGAC4HoQQAAAAA
+AQAAAAAAAQABAAEAEABsBAAAEAABAAEAAQAQAAIFAAA5AAEABQABABAAhwYAAEkAAQAaAAEAEABS
+BgAATQADAB4AAQAQABMGAABNAAQAHwAAABAAiAXkBU0ABQAgAAABEABCBuQFZQAHACQABgBSBpkA
+BgATBp0AAQCVBqEAAQCVBqEAEQBgBKUAEQAxAakAEQC1AK0AUCAAAAAAxgAMAwYAAQBYIAAAAADG
+ABcDBgABAGAgAAAAAMYACQexAAEAviMAAAAAhhhBBQYAAgDGIwAAAACGGEEFOQACANEjAAAAAIYI
+KAC3AAUA5iMAAAAAhgjNA2EABQDvIwAAAACGCDcAJgAFAAQkAAAAAIYI2wNhAAUADSQAAAAAhghG
+ACYABQAiJAAAAACGCPEDYQAFACskAAAAAIYITwAmAAUAQCQAAAAAhghXABAABQBKJAAAAACGCAEE
+YQAGAFMkAAAAAIYIEAS8AAYAaiQAAAAAhggKALcABwB/JAAAAACGCKEDYQAHAIgkAAAAAIYIFwC3
+AAcAnSQAAAAAhgi1A2EABwCmJAAAAACGCF8AJgAHALskAAAAAIYIagAQAAcAxSQAAAAAhggfBGEA
+CADOJAAAAACGCDEEvAAIAOUkAAAAAIYAIgdhAAkA7SQAAAAAhgBvBmEACQD1JAAAAACGGEEFBgAJ
+ABUlAAAAAMYA/AbBAAkAOiUAAAAAxgHzBrEADQBNJQAAAADGAQkHsQAOAE8lAAAAAIYYQQXLAA8A
+XiUAAAAAhhhBBcsAEABtJQAAAACDGEEFBgARAHUlAAAAAJMILQXRABEAoSUAAAAAkwgZAdYAEQCo
+JQAAAACTCCUB2wARALAlAAAAAJYIewbhABIAtyUAAAAAhhhBBQYAEgC/JQAAAACRGEcF5gASAAAA
+AQAmBwAAAQAmBQAAAgAdBgAAAwD4BAAAAQAjAwAAAQAjAwAAAQAjAwAAAQAjAwAAAQAvAAAAAgDp
+AAAAAwAmBQAABAD4BAAAAQAmBQAAAQAmBwAAAQCrBgAAAQCrBgAAAQAjAwkAQQUBABEAQQUGABkA
+QQUKACkAQQUQADEAQQUQADkAQQUQAEEAQQUQAEkAQQUQAFEAQQUQAFkAQQUQAGEAQQUQAGkAQQUG
+AKEAQQUGAMEAQQUVANEAQQUGAJEADAMGAJEAFwMGANkAogAhANkAWwQmANkATQMqANkAXgYuANkA
+NwczAHEAQQU5AHEAJgVDAHEAHQZHAHkAWANLAHEAPARRAHkAQwNWAHEASwRbAHEAQwQBAOEAQQUQ
+AHEAIgdhAHEAbwZhAJEAQQUGANkASwZlAJEAMQZsAJkAQQUGAPEA1wByAPEAKgd5AKkAQQV/AMkA
+QQUGAC4ACwAGAS4AEwAPAS4AGwAuAS4AIwA3AS4AKwBgAS4AMwBgAS4AOwBgAS4AQwA3AS4ASwBm
+AS4AUwBgAS4AWwB9AUMAYwDHAeEAewDHAeMAawDHAekBcwAuAQkCcwAuARsAAwABAAcADwAIABEA
+AAA0AOoAAADRA+8AAAA7APMAAADfA+8AAABKAPMAAAD1A+8AAABbAPMAAAAUBO8AAAAOAOoAAACl
+A+8AAAAbAOoAAAC5A+8AAABuAPMAAAA1BO8AAAAxBfcAAAA5AfwAAAB/BgEBAgAGAAMAAgAHAAUA
+AgAIAAcAAgAJAAkAAgAKAAsAAgALAA0AAgAMAA8AAQANAA8AAgAOABEAAQAPABEAAgAQABMAAgAR
+ABUAAgASABcAAgATABkAAgAUABsAAQAVABsAAgAWAB0AAQAXAB0AAgAhAB8AAgAiACEAAQAjACEA
+AgAkACMABIAAAAEAAAAAAAAAAAAAAAAAfgAAAAQAAAAAAAAAAAAAAIcAdQAAAAAAEAAAAAAAAAAA
+AAAAkAC1BgAAAAAQAAAAAAAAAAAAAACQANIGAAAAAAQAAAAAAAAAAAAAAIcAVAQAAAAAAAAAAAEA
+AACSBQAAAAAAPE1vZHVsZT4AZ2V0X1JFR0lPTklEAGdldF9ERUxFR0FUSU9OSUQAZ2V0X0lEAElu
+cHV0SUQAZ2V0X1JFR0lPTkNPREUAZ2V0X0NPREUAZ2V0X05PTQBzZXRfTk9NAGdldF9OT01BUlIA
+c2V0X05PTUFSUgBtc2NvcmxpYgBTQ18wMTdmMWM5MzExMjU0OWMxYWU1NzYwY2E5MmM0MzE2ZQBJ
+c051bGxPcldoaXRlU3BhY2UAZGVmYXVsdEluc3RhbmNlAFJ1bnRpbWVUeXBlSGFuZGxlAEdldFR5
+cGVGcm9tSGFuZGxlAElucHV0TmFtZQBNaWNyb3NvZnQuU3FsU2VydmVyLkR0cy5QaXBlbGluZQBU
+eXBlAGdldF9DdWx0dXJlAHNldF9DdWx0dXJlAHJlc291cmNlQ3VsdHVyZQBBcHBsaWNhdGlvblNl
+dHRpbmdzQmFzZQBFZGl0b3JCcm93c2FibGVTdGF0ZQBDb21waWxlckdlbmVyYXRlZEF0dHJpYnV0
+ZQBEZWJ1Z2dlck5vblVzZXJDb2RlQXR0cmlidXRlAERlYnVnZ2FibGVBdHRyaWJ1dGUARWRpdG9y
+QnJvd3NhYmxlQXR0cmlidXRlAEFzc2VtYmx5VGl0bGVBdHRyaWJ1dGUAQXNzZW1ibHlUcmFkZW1h
+cmtBdHRyaWJ1dGUAVGFyZ2V0RnJhbWV3b3JrQXR0cmlidXRlAEFzc2VtYmx5Q29uZmlndXJhdGlv
+bkF0dHJpYnV0ZQBBc3NlbWJseURlc2NyaXB0aW9uQXR0cmlidXRlAENvbXBpbGF0aW9uUmVsYXhh
+dGlvbnNBdHRyaWJ1dGUAQXNzZW1ibHlQcm9kdWN0QXR0cmlidXRlAEFzc2VtYmx5Q29weXJpZ2h0
+QXR0cmlidXRlAFNTSVNTY3JpcHRDb21wb25lbnRFbnRyeVBvaW50QXR0cmlidXRlAEFzc2VtYmx5
+Q29tcGFueUF0dHJpYnV0ZQBSdW50aW1lQ29tcGF0aWJpbGl0eUF0dHJpYnV0ZQBQcmVFeGVjdXRl
+AFBvc3RFeGVjdXRlAHZhbHVlAFN5c3RlbS5SdW50aW1lLlZlcnNpb25pbmcAR2V0U3RyaW5nAGdl
+dF9MZW5ndGgAR2V0RGVjaW1hbABTeXN0ZW0uQ29tcG9uZW50TW9kZWwAU0NfMDE3ZjFjOTMxMTI1
+NDljMWFlNTc2MGNhOTJjNDMxNmUuZGxsAGdldF9SRUdJT05JRF9Jc051bGwAZ2V0X0RFTEVHQVRJ
+T05JRF9Jc051bGwAZ2V0X0lEX0lzTnVsbABnZXRfUkVHSU9OQ09ERV9Jc051bGwAZ2V0X0NPREVf
+SXNOdWxsAGdldF9OT01fSXNOdWxsAHNldF9OT01fSXNOdWxsAGdldF9OT01BUlJfSXNOdWxsAHNl
+dF9OT01BUlJfSXNOdWxsAFNldE51bGwAc2V0X0l0ZW0AU3lzdGVtAFRyaW0AcmVzb3VyY2VNYW4A
+U2NyaXB0TWFpbgBTeXN0ZW0uQ29uZmlndXJhdGlvbgBTeXN0ZW0uR2xvYmFsaXphdGlvbgBTeXN0
+ZW0uUmVmbGVjdGlvbgBJbnZhbGlkT3BlcmF0aW9uRXhjZXB0aW9uAFN0cmluZ0NvbXBhcmlzb24A
+Q3VsdHVyZUluZm8AT3V0cHV0TmFtZU1hcABPdXRwdXRNYXAARW50csOpZTBCdWZmZXIAUGlwZWxp
+bmVCdWZmZXIAU2NyaXB0QnVmZmVyAGdldF9SZXNvdXJjZU1hbmFnZXIALmN0b3IALmNjdG9yAFN5
+c3RlbS5EaWFnbm9zdGljcwBTeXN0ZW0uUnVudGltZS5Db21waWxlclNlcnZpY2VzAFN5c3RlbS5S
+ZXNvdXJjZXMAU0NfMDE3ZjFjOTMxMTI1NDljMWFlNTc2MGNhOTJjNDMxNmUuUHJvcGVydGllcy5S
+ZXNvdXJjZXMucmVzb3VyY2VzAERlYnVnZ2luZ01vZGVzAFNDXzAxN2YxYzkzMTEyNTQ5YzFhZTU3
+NjBjYTkyYzQzMTZlLlByb3BlcnRpZXMAVmFyaWFibGVzAEJ1ZmZlckNvbHVtbkluZGV4ZXMAR2V0
+Q29sdW1uSW5kZXhlcwBTZXR0aW5ncwBFcXVhbHMAQ29ubmVjdGlvbnMAZ2V0X0NoYXJzAE9iamVj
+dABFbmRPZlJvd3NldABnZXRfRGVmYXVsdABVc2VyQ29tcG9uZW50AFBhcmVudENvbXBvbmVudABT
+Y3JpcHRDb21wb25lbnQATWljcm9zb2Z0LlNxbFNlcnZlci5UeFNjcmlwdABNaWNyb3NvZnQuU3Fs
+U2VydmVyLlBpcGVsaW5lSG9zdABFbnRyw6llMF9Qcm9jZXNzSW5wdXQARW50csOpZTBfUHJvY2Vz
+c0lucHV0Um93AE5leHRSb3cAZ2V0X0Fzc2VtYmx5AG9wX0VxdWFsaXR5AAAAFUIAZQBuAHMAbABp
+AG0AYQBuAGUAABVDAGEAcwBhAGIAbABhAG4AYwBhAAAVQgBlAG4AIABNACcAUwBpAGMAawABE0IA
+ZQByAHIAZQBjAGgAaQBkAAATQQDuAG4ALQBDAGgAbwBjAGsAARNBAO8AbgAtAFMAZQBiAGEA4gAB
+E0UAbAAgAE0AYQBhAHIAaQBmAAAPQQBsAC0ARgBpAGQAYQABCUEAbgBmAGEAACVBAHMAcwBvAHUA
+awBoAG8AdQByACAAQQBzAHMAYQB3AGQAYQAAF0gAYQB5AC0ASABhAHMAcwBhAG4AaQABF00AZQBy
+AHMALQBTAHUAbAB0AGEAbgABF1MAaQBkAGkAIABNAG8AdQBtAGUAbgAAG0gAYQB5ACAATQBvAGgA
+YQBtAG0AYQBkAGkAABtNAG8AdQBsAGEAeQAgAFIAYQBjAGgAaQBkAAALUwBiAGEAdABhAAAZUwBp
+AGQAaQAgAEIAZQBsAHkAbwB1AHQAABlTAGkAZABpACAATwB0AGgAbQBhAG4AZQAAHVMAaQBkAGkA
+IABCAGUAcgBuAG8AdQBzAHMAaQAAESgGRgYzBkQGSgZFBicGRgYBCygGMQY0BkoGLwYBGycGRAYv
+BicGMQYgACcGRAYoBkoGNgYnBiEGARE5BkoGRgYgACcGRAY0BkIGARM5BkoGRgYgACcGRAYzBigG
+OQYBDScGRAZBBi8GJwYhBgEJIwZGBkEGJwYBHycGRAYzBkgGJwZGBkoGIAAnBkQGMwZIBi8GJwYh
+BgERJwYoBkYGIABFBjMGSgZDBgEXJwZEBi0GSgYgACcGRAYtBjMGRgZKBgEZJwZEBi0GSgYgACcG
+RAZFBi0GRQYvBkoGAREnBkQGRQY5BicGMQZKBkEGARdFBjEGMwYgACcGRAYzBkQGNwYnBkYGARVF
+BkgGRAYnBkoGIAAxBjQGSgYvBgELMwYoBicGKgYpBgEVMwZKBi8GSgYgACgGRAZKBkgGNwYBGzMG
+SgYvBkoGIAAnBkQGKAYxBkYGSAY1BkoGARMzBkoGLwZKBiAARQZIBkUGRgYBFTMGSgYvBkoGIAA5
+BisGRQYnBkYGAYDDTABhACAAcAByAG8AcAByAGkA6QB0AOkAIABJAHMATgB1AGwAbAAgAG4AZQAg
+AHAAZQB1AHQAIABwAGEAcwAgAHAAcgBlAG4AZAByAGUAIABsAGEAIAB2AGEAbABlAHUAcgAgAEYA
+YQBsAHMAZQAuACAAQQBmAGYAZQBjAHQAZQB6ACAAcABsAHUAdAD0AHQAIAB1AG4AZQAgAHYAYQBs
+AGUAdQByACAA4AAgAGwAYQAgAGMAbwBsAG8AbgBuAGUALgABEUUAbgB0AHIA6QBlACAAMAABcVMA
+QwBfADAAMQA3AGYAMQBjADkAMwAxADEAMgA1ADQAOQBjADEAYQBlADUANwA2ADAAYwBhADkAMgBj
+ADQAMwAxADYAZQAuAFAAcgBvAHAAZQByAHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAAAA0
+aNo3BsPLTZZVuRWcmHekAAQgAQEIAyAAAQUgAQEREQQgAQEOBSABARFdBQcDDggDBAABAg4DIAAO
+AyAACAQgAQMIBQACAg4OCSADARI9HQgSQQMGEj0DBh0IBSABEUUIBCABAggEIAEOCAUgAgEIHAMg
+AAIGIAICDhF1BSABHQgIBgABEnkRfQUgABKAgQcgAgEOEoCBCLd6XFYZNOCJCImEXc2AgMyRAwYS
+FAMGEhgDBhJJAwYSVQMGElkDBhIgBSABARIMBCAAEUUEIAEBAgkgBAEIDhI9EkEFIAEBEkkEAAAS
+VQQAABJZBQABARJZBAAAEiADAAABBCgAEUUDKAACAygADgQIABJVBAgAElkECAASIAgBAAgAAAAA
+AB4BAAEAVAIWV3JhcE5vbkV4Y2VwdGlvblRocm93cwEIAQACAAAAAAAoAQAjU0NfMDE3ZjFjOTMx
+MTI1NDljMWFlNTc2MGNhOTJjNDMxNmUAAAUBAAAAABYBABFDb3B5cmlnaHQgQCAgMjAyNQAASQEA
+Gi5ORVRGcmFtZXdvcmssVmVyc2lvbj12NC43AQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIuTkVU
+IEZyYW1ld29yayA0LjcEAQAAALQAAADOyu++AQAAAJEAAABsU3lzdGVtLlJlc291cmNlcy5SZXNv
+dXJjZVJlYWRlciwgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQ
+dWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5I1N5c3RlbS5SZXNvdXJjZXMuUnVudGltZVJl
+c291cmNlU2V0AgAAAAAAAAAAAAAAUEFEUEFEULQAAACsOwAAAAAAAAAAAADGOwAAACAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAuDsAAAAAAAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA
+/yUAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB
+ABAAAAAYAACAAAAAAAAAAAAAAAAAAAABAAEAAAAwAACAAAAAAAAAAAAAAAAAAAABAAAAAABIAAAA
+WEAAAOwDAAAAAAAAAAAAAOwDNAAAAFYAUwBfAFYARQBSAFMASQBPAE4AXwBJAE4ARgBPAAAAAAC9
+BO/+AAABAAAAAQAAAAAAAAABAAAAAAA/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAARAAAAAEA
+VgBhAHIARgBpAGwAZQBJAG4AZgBvAAAAAAAkAAQAAABUAHIAYQBuAHMAbABhAHQAaQBvAG4AAAAA
+AAAAsARMAwAAAQBTAHQAcgBpAG4AZwBGAGkAbABlAEkAbgBmAG8AAAAoAwAAAQAwADAAMAAwADAA
+NABiADAAAAAaAAEAAQBDAG8AbQBtAGUAbgB0AHMAAAAAAAAAIgABAAEAQwBvAG0AcABhAG4AeQBO
+AGEAbQBlAAAAAAAAAAAAcAAkAAEARgBpAGwAZQBEAGUAcwBjAHIAaQBwAHQAaQBvAG4AAAAAAFMA
+QwBfADAAMQA3AGYAMQBjADkAMwAxADEAMgA1ADQAOQBjADEAYQBlADUANwA2ADAAYwBhADkAMgBj
+ADQAMwAxADYAZQAAADAACAABAEYAaQBsAGUAVgBlAHIAcwBpAG8AbgAAAAAAMQAuADAALgAwAC4A
+MAAAAHAAKAABAEkAbgB0AGUAcgBuAGEAbABOAGEAbQBlAAAAUwBDAF8AMAAxADcAZgAxAGMAOQAz
+ADEAMQAyADUANAA5AGMAMQBhAGUANQA3ADYAMABjAGEAOQAyAGMANAAzADEANgBlAC4AZABsAGwA
+AABIABIAAQBMAGUAZwBhAGwAQwBvAHAAeQByAGkAZwBoAHQAAABDAG8AcAB5AHIAaQBnAGgAdAAg
+AEAAIAAgADIAMAAyADUAAAAqAAEAAQBMAGUAZwBhAGwAVAByAGEAZABlAG0AYQByAGsAcwAAAAAA
+AAAAAHgAKAABAE8AcgBpAGcAaQBuAGEAbABGAGkAbABlAG4AYQBtAGUAAABTAEMAXwAwADEANwBm
+ADEAYwA5ADMAMQAxADIANQA0ADkAYwAxAGEAZQA1ADcANgAwAGMAYQA5ADIAYwA0ADMAMQA2AGUA
+LgBkAGwAbAAAAGgAJAABAFAAcgBvAGQAdQBjAHQATgBhAG0AZQAAAAAAUwBDAF8AMAAxADcAZgAx
+AGMAOQAzADEAMQAyADUANAA5AGMAMQBhAGUANQA3ADYAMABjAGEAOQAyAGMANAAzADEANgBlAAAA
+NAAIAAEAUAByAG8AZAB1AGMAdABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAADgACAAB
+AEEAcwBzAGUAbQBiAGwAeQAgAFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADAALgAwAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAwAAADYOwAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom du projet Microsoft Visual Studio Tools for Applications. Les noms des projets doivent être uniques dans un package."
+                  name="VSTAProjectName"
+                  typeConverter="NOTBROWSABLE">SC_017f1c93112549c1ae5760ca92c4316e</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le langage de programmation utilisé par le script."
+                  name="ScriptLanguage"
+                  typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages">CSharp</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie une liste séparée par des virgules de variables en lecture seule."
+                  name="ReadOnlyVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie une liste séparée par des virgules de variables en lecture/écriture."
+                  name="ReadWriteVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="Liste des points d'arrêt présents dans le script."
+                  isArray="true"
+                  name="BreakpointCollection"
+                  typeConverter="NOTBROWSABLE">
+                  <arrayElements
+                    arrayElementCount="0" />
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Somme de contrôle pour faire correspondre les métadonnées de composant avec les codes compilés."
+                  name="MetadataChecksum140"
+                  typeConverter="NOTBROWSABLE">4C</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Migration de table Province vers destination SQL server\Remplacement des Nom_AR qui est Null.Inputs[Entrée 0]"
+                  hasSideEffects="true"
+                  name="Entrée 0">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Remplacement des Nom_AR qui est Null.Inputs[Entrée 0].Columns[ID]"
+                      cachedDataType="numeric"
+                      cachedName="ID"
+                      cachedPrecision="38"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[ID]" />
+                    <inputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Remplacement des Nom_AR qui est Null.Inputs[Entrée 0].Columns[REGION_CODE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="REGION_CODE"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[REGION_CODE]" />
+                    <inputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Remplacement des Nom_AR qui est Null.Inputs[Entrée 0].Columns[CODE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="CODE"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[CODE]" />
+                    <inputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Remplacement des Nom_AR qui est Null.Inputs[Entrée 0].Columns[NOM]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="NOM"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[NOM]"
+                      usageType="readWrite" />
+                    <inputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Remplacement des Nom_AR qui est Null.Inputs[Entrée 0].Columns[REGION_ID]"
+                      cachedDataType="numeric"
+                      cachedName="REGION_ID"
+                      cachedPrecision="38"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[REGION_ID]" />
+                    <inputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Remplacement des Nom_AR qui est Null.Inputs[Entrée 0].Columns[DELEGATION_ID]"
+                      cachedDataType="numeric"
+                      cachedName="DELEGATION_ID"
+                      cachedPrecision="38"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[DELEGATION_ID]" />
+                    <inputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Remplacement des Nom_AR qui est Null.Inputs[Entrée 0].Columns[NOM_ARR]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="NOM_ARR"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Conversion de données.Outputs[Sortie de conversion de données].Columns[NOM_ARR]"
+                      usageType="readWrite" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Migration de table Province vers destination SQL server\Remplacement des Nom_AR qui est Null.Outputs[Sortie 0]"
+                  name="Sortie 0"
+                  synchronousInputId="Package\Migration de table Province vers destination SQL server\Remplacement des Nom_AR qui est Null.Inputs[Entrée 0]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province"
+              componentClassID="Microsoft.SSISOracleSrc"
+              contactInfo="Source Oracle;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Source Oracle"
+              name="Source Oracle Table Province"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nom de la table à extraire."
+                  expressionType="Notify"
+                  name="TableName">"BITBOT"."C##SNIFOP_REFERENTIAL_PROVINCE"</property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT  
+id,
+region_code,
+code,
+nom,
+  TO_NCHAR(nom_ar) as nom_ar,
+region_id,
+delegation_id,
+is_urbain
+from  C##SNIFOP_REFERENTIAL_PROVINCE</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifiez le nombre de lignes extraites par lot."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Détermine l'allocation de taille de segment pour les colonnes LOB"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Int32"
+                  description="Page de codes à utiliser quand les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de lignes préextraites."
+                  expressionType="Notify"
+                  name="PrefetchCount">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">1</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Connections[ORACLEConnection]"
+                  connectionManagerID="{7D9F2A8F-4A51-46E9-AE9A-E41CB6D84E93}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[bitbot]"
+                  description="Connexion ORACLE en cours d'exécution utilisée pour accéder à la base de données."
+                  name="ORACLEConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle]"
+                  errorRowDisposition="FailComponent"
+                  name="Sortie de la source Oracle"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[ID]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].ExternalColumns[ID]"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[ID]"
+                      name="ID"
+                      precision="38" />
+                    <outputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[REGION_CODE]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].ExternalColumns[REGION_CODE]"
+                      length="255"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[REGION_CODE]"
+                      name="REGION_CODE" />
+                    <outputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[CODE]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].ExternalColumns[CODE]"
+                      length="255"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[CODE]"
+                      name="CODE" />
+                    <outputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[NOM]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].ExternalColumns[NOM]"
+                      length="255"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[NOM]"
+                      name="NOM" />
+                    <outputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[NOM_AR]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].ExternalColumns[NOM_AR]"
+                      length="637"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[NOM_AR]"
+                      name="NOM_AR" />
+                    <outputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[REGION_ID]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].ExternalColumns[REGION_ID]"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[REGION_ID]"
+                      name="REGION_ID"
+                      precision="38" />
+                    <outputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[DELEGATION_ID]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].ExternalColumns[DELEGATION_ID]"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[DELEGATION_ID]"
+                      name="DELEGATION_ID"
+                      precision="38" />
+                    <outputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[IS_URBAIN]"
+                      dataType="i1"
+                      externalMetadataColumnId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].ExternalColumns[IS_URBAIN]"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].Columns[IS_URBAIN]"
+                      name="IS_URBAIN" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].ExternalColumns[ID]"
+                      dataType="numeric"
+                      name="ID"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].ExternalColumns[REGION_CODE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="REGION_CODE" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].ExternalColumns[CODE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="CODE" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].ExternalColumns[NOM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="NOM" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].ExternalColumns[NOM_AR]"
+                      dataType="wstr"
+                      length="637"
+                      name="NOM_AR" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].ExternalColumns[REGION_ID]"
+                      dataType="numeric"
+                      name="REGION_ID"
+                      precision="19" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].ExternalColumns[DELEGATION_ID]"
+                      dataType="numeric"
+                      name="DELEGATION_ID"
+                      precision="19" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].ExternalColumns[IS_URBAIN]"
+                      dataType="i1"
+                      name="IS_URBAIN" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie d'erreur de la source Oracle]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de la source Oracle">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie d'erreur de la source Oracle].Columns[ID]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].ExternalColumns[ID]"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie d'erreur de la source Oracle].Columns[ID]"
+                      name="ID"
+                      precision="38" />
+                    <outputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie d'erreur de la source Oracle].Columns[REGION_CODE]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].ExternalColumns[REGION_CODE]"
+                      length="255"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie d'erreur de la source Oracle].Columns[REGION_CODE]"
+                      name="REGION_CODE" />
+                    <outputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie d'erreur de la source Oracle].Columns[CODE]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].ExternalColumns[CODE]"
+                      length="255"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie d'erreur de la source Oracle].Columns[CODE]"
+                      name="CODE" />
+                    <outputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie d'erreur de la source Oracle].Columns[NOM]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].ExternalColumns[NOM]"
+                      length="255"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie d'erreur de la source Oracle].Columns[NOM]"
+                      name="NOM" />
+                    <outputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie d'erreur de la source Oracle].Columns[NOM_AR]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].ExternalColumns[NOM_AR]"
+                      length="637"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie d'erreur de la source Oracle].Columns[NOM_AR]"
+                      name="NOM_AR" />
+                    <outputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie d'erreur de la source Oracle].Columns[REGION_ID]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].ExternalColumns[REGION_ID]"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie d'erreur de la source Oracle].Columns[REGION_ID]"
+                      name="REGION_ID"
+                      precision="19" />
+                    <outputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie d'erreur de la source Oracle].Columns[DELEGATION_ID]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].ExternalColumns[DELEGATION_ID]"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie d'erreur de la source Oracle].Columns[DELEGATION_ID]"
+                      name="DELEGATION_ID"
+                      precision="19" />
+                    <outputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie d'erreur de la source Oracle].Columns[IS_URBAIN]"
+                      dataType="i1"
+                      externalMetadataColumnId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle].ExternalColumns[IS_URBAIN]"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie d'erreur de la source Oracle].Columns[IS_URBAIN]"
+                      name="IS_URBAIN" />
+                    <outputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie d'erreur de la source Oracle].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie d'erreur de la source Oracle].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie d'erreur de la source Oracle].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie d'erreur de la source Oracle].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Migration de table Province vers destination SQL server.Paths[Sortie 0]"
+              endId="Package\Migration de table Province vers destination SQL server\Colonne dérivée.Inputs[Entrée de colonne dérivée]"
+              name="Sortie 0"
+              startId="Package\Migration de table Province vers destination SQL server\Remplacement des Nom_AR qui est Null.Outputs[Sortie 0]" />
+            <path
+              refId="Package\Migration de table Province vers destination SQL server.Paths[Sortie de colonne dérivée]"
+              endId="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province.Inputs[Entrée de destination OLE DB]"
+              name="Sortie de colonne dérivée"
+              startId="Package\Migration de table Province vers destination SQL server\Colonne dérivée.Outputs[Sortie de colonne dérivée]" />
+            <path
+              refId="Package\Migration de table Province vers destination SQL server.Paths[Sortie de conversion de données]"
+              endId="Package\Migration de table Province vers destination SQL server\Remplacement des Nom_AR qui est Null.Inputs[Entrée 0]"
+              name="Sortie de conversion de données"
+              startId="Package\Migration de table Province vers destination SQL server\Conversion de données.Outputs[Sortie de conversion de données]" />
+            <path
+              refId="Package\Migration de table Province vers destination SQL server.Paths[Sortie de la source Oracle]"
+              endId="Package\Migration de table Province vers destination SQL server\Conversion de données.Inputs[Entrée de conversion de données]"
+              name="Sortie de la source Oracle"
+              startId="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province.Outputs[Sortie de la source Oracle]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\vider la table Province"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tâche d'exécution de requêtes SQL"
+      DTS:DTSID="{0184bcb5-0308-4f68-a466-4677bca86c2b}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="vider la table Province"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6BB00ADA-10CA-4E25-823E-E1ECF15A8616}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE PROVINCE;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte]"
+      DTS:CreationName=""
+      DTS:DTSID="{697ed375-11a5-4707-bc8a-e29b65117a54}"
+      DTS:From="Package\vider la table Province"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte"
+      DTS:To="Package\Migration de table Province vers destination SQL server" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
+<!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
+<!--Le package pourra toujours se charger normalement, mais les informations de disposition précédente seront perdues et le concepteur réorganisera automatiquement les éléments sur l'aire de conception.-->
+<Objects
+  Version="8">
+  <!--Chaque nœud ci-dessous contiendra des propriétés qui n'affectent pas le comportement d'exécution.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="339,42"
+          Id="Package\Migration de table Province vers destination SQL server"
+          TopLeft="129.071428706756,217.676470454847" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\vider la table Province"
+          TopLeft="60,60" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte]"
+          TopLeft="151.2,101.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="147.471428706756,116.076470454847"
+              Start="0,0"
+              End="147.471428706756,108.576470454847">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.0382352274235" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,54.0382352274235"
+                    Point2="0,58.0382352274235"
+                    Point3="4,58.0382352274235" />
+                  <mssgle:LineSegment
+                    End="143.471428706756,58.0382352274235" />
+                  <mssgle:CubicBezierSegment
+                    Point1="143.471428706756,58.0382352274235"
+                    Point2="147.471428706756,58.0382352274235"
+                    Point3="147.471428706756,62.0382352274235" />
+                  <mssgle:LineSegment
+                    End="147.471428706756,108.576470454847" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Migration de table Province vers destination SQL server">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="189,42"
+          Id="Package\Migration de table Province vers destination SQL server\Conversion de données"
+          TopLeft="169,154" />
+        <NodeLayout
+          Size="216,42"
+          Id="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province"
+          TopLeft="22.0714286003189,54.9705881910547" />
+        <NodeLayout
+          Size="287,42"
+          Id="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province"
+          TopLeft="657.142858360799,254.176470386477" />
+        <NodeLayout
+          Size="268,42"
+          Id="Package\Migration de table Province vers destination SQL server\Remplacement des Nom_AR qui est Null"
+          TopLeft="537.357143161248,105.088235221726" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Migration de table Province vers destination SQL server\Colonne dérivée"
+          TopLeft="356,308" />
+        <EdgeLayout
+          Id="Package\Migration de table Province vers destination SQL server.Paths[Sortie 0]"
+          TopLeft="671.357143161248,147.088235221726">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-237.857143161248,160.911764778274"
+              Start="0,0"
+              End="-237.857143161248,153.411764778274">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,76.455882389137" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,76.455882389137"
+                    Point2="0,80.455882389137"
+                    Point3="-4,80.455882389137" />
+                  <mssgle:LineSegment
+                    End="-233.857143161248,80.455882389137" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-233.857143161248,80.455882389137"
+                    Point2="-237.857143161248,80.455882389137"
+                    Point3="-237.857143161248,84.455882389137" />
+                  <mssgle:LineSegment
+                    End="-237.857143161248,153.411764778274" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Migration de table Province vers destination SQL server.Paths[Sortie de la source Oracle]"
+          TopLeft="130.071428600319,96.9705881910547">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="133.428571399681,57.0294118089453"
+              Start="0,0"
+              End="133.428571399681,49.5294118089453">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5147059044726" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.5147059044726"
+                    Point2="0,28.5147059044726"
+                    Point3="4,28.5147059044726" />
+                  <mssgle:LineSegment
+                    End="129.428571399681,28.5147059044726" />
+                  <mssgle:CubicBezierSegment
+                    Point1="129.428571399681,28.5147059044726"
+                    Point2="133.428571399681,28.5147059044726"
+                    Point3="133.428571399681,32.5147059044726" />
+                  <mssgle:LineSegment
+                    End="133.428571399681,49.5294118089453" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Migration de table Province vers destination SQL server.Paths[Sortie de conversion de données]"
+          TopLeft="358,175">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="179.357143161248,-48.911764778274"
+              Start="0,0"
+              End="171.857143161248,-48.911764778274">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="85.678571580624,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="85.678571580624,0"
+                    Point2="89.678571580624,0"
+                    Point3="89.678571580624,-4" />
+                  <mssgle:LineSegment
+                    End="89.678571580624,-44.911764778274" />
+                  <mssgle:CubicBezierSegment
+                    Point1="89.678571580624,-44.911764778274"
+                    Point2="89.678571580624,-48.911764778274"
+                    Point3="93.678571580624,-48.911764778274" />
+                  <mssgle:LineSegment
+                    End="171.857143161248,-48.911764778274" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Migration de table Province vers destination SQL server.Paths[Sortie de colonne dérivée]"
+          TopLeft="511,329">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="146.142858360799,-53.823529613523"
+              Start="0,0"
+              End="138.642858360799,-53.823529613523">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="69.0714291803995,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="69.0714291803995,0"
+                    Point2="73.0714291803995,0"
+                    Point3="73.0714291803995,-4" />
+                  <mssgle:LineSegment
+                    End="73.0714291803995,-49.823529613523" />
+                  <mssgle:CubicBezierSegment
+                    Point1="73.0714291803995,-49.823529613523"
+                    Point2="73.0714291803995,-53.823529613523"
+                    Point3="77.0714291803995,-53.823529613523" />
+                  <mssgle:LineSegment
+                    End="138.642858360799,-53.823529613523" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Migration de table Province vers destination SQL server\Source Oracle Table Province">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Migration de table Province vers destination SQL server\Destination  vers Staging  de Table Province">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

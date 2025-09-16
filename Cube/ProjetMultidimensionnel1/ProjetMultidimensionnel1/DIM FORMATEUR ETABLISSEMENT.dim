@@ -1,0 +1,180 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="46046da2-fb5d-4aa6-8aba-2380da9e41be" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DIM FORMATEUR ETABLISSEMENT</ID>
+  <Name>DIM FORMATEUR ETABLISSEMENT</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="5b9e2e64-ec07-4907-a1ee-222e8064679d">
+    <DataSourceViewID>Snifop Dm</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="632a12bf-c3ea-4cf6-897e-c055e52b3f25">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="f7d34e81-da8b-417e-82f4-67b52231f58e">
+      <ID>FORMATEUR ETABLISSEMENT SK</ID>
+      <Name>FORMATEUR ETABLISSEMENT SK</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e602a484-6696-4810-8e48-67e4d1647945">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6e538e8f-f53a-484b-9bdd-7fba7d6be4be">
+            <TableID>dm_DIM_FORMATEUR_ETABLISSEMENT</TableID>
+            <ColumnID>FORMATEUR_ETABLISSEMENT_SK</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="0e116957-69d2-4cb1-9d45-8f961c968b8a">
+          <AttributeID>STATUT</AttributeID>
+          <Name>STATUT</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="113852aa-3f71-4302-993d-362ff9b11901">
+          <AttributeID>DATE DEBUT</AttributeID>
+          <Name>DATE DEBUT</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8acb399f-1a8b-4893-b140-dad9edde05a2">
+          <AttributeID>DATE FIN</AttributeID>
+          <Name>DATE FIN</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ffe5a004-73c4-4bce-a8dd-382374a114fc">
+          <AttributeID>ACTIF</AttributeID>
+          <Name>ACTIF</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d8a6d74c-9966-4aef-82f5-f900457e98fd">
+          <AttributeID>TYPE CONTRAT</AttributeID>
+          <Name>TYPE CONTRAT</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="106b91af-f622-406c-90e6-5863cb22a06a">
+      <ID>STATUT</ID>
+      <Name>STATUT</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="548c7ba4-84e0-43c5-baa7-1ce989027bc5">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="07b5951a-88fe-4018-9764-83807b900f1d">
+            <TableID>dm_DIM_FORMATEUR_ETABLISSEMENT</TableID>
+            <ColumnID>STATUT</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5c2d5a8e-3037-4509-bfba-83815afd1f95">
+      <ID>DATE DEBUT</ID>
+      <Name>DATE DEBUT</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="fe0820e4-12d4-4dd6-9782-16baf15c3780">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="465925e4-2bb1-446a-a38d-e1ff068629e9">
+            <TableID>dm_DIM_FORMATEUR_ETABLISSEMENT</TableID>
+            <ColumnID>DATE_DEBUT</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c8539b7e-5e68-4d94-bfa9-c02d484144c3">
+      <ID>DATE FIN</ID>
+      <Name>DATE FIN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c89329e5-9e4e-47ca-8961-e11fb548b48b">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2e7690ea-6f82-4060-8641-80b243caae30">
+            <TableID>dm_DIM_FORMATEUR_ETABLISSEMENT</TableID>
+            <ColumnID>DATE_FIN</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9651f824-8b45-4c9e-b00a-85948edc675a">
+      <ID>ACTIF</ID>
+      <Name>ACTIF</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="92e8dd25-224b-45a5-b9e0-92212d35e363">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="96b9ffbf-ae88-4dc4-9367-5474c0f62ff4">
+            <TableID>dm_DIM_FORMATEUR_ETABLISSEMENT</TableID>
+            <ColumnID>ACTIF</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="aec12218-2057-4f40-bf24-b36d29665841">
+      <ID>TYPE CONTRAT</ID>
+      <Name>TYPE CONTRAT</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e272dae7-2af5-44d8-980b-f5fb5435179c">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9ed802db-453a-43e7-9284-bb51dbffdc4b">
+            <TableID>dm_DIM_FORMATEUR_ETABLISSEMENT</TableID>
+            <ColumnID>TYPE_CONTRAT</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

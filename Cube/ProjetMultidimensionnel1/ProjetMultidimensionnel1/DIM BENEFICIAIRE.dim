@@ -1,0 +1,286 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c9ed325f-1e98-46c5-925e-d6789e402b4b" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DIM BENEFICIAIRE</ID>
+  <Name>DIM BENEFICIAIRE</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2547" scrolltop="-9524" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="9472" y="19024" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_BENEFICIAIRE" left="-774" top="-4762" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="4339" height="6561" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000f3100000a1190000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dm_DIM_BENEFICIAIRE" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-2547</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-9524</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>-774</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>-4762</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="23c65537-08ff-4448-8d42-f460bb125600">
+    <DataSourceViewID>Snifop Dm</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="14cffd1d-b5b8-4335-b58e-50d939a49e0d">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="4eb54d89-de22-4c8c-bf31-11df4b726451">
+      <ID>BENEFICIAIRE SK</ID>
+      <Name>BENEFICIAIRE SK</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d59ac03b-5a1a-4c56-aa2b-072d3fec0746">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="279cc137-7f47-4294-8103-5312c8b2e13b">
+            <TableID>dm_DIM_BENEFICIAIRE</TableID>
+            <ColumnID>BENEFICIAIRE_SK</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="a29b757e-8948-4590-bf7c-199cf23e0531">
+          <AttributeID>GENRE</AttributeID>
+          <Name>GENRE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="658f58b6-e6b7-41d1-b3d0-abcf3d3d5067">
+          <AttributeID>NATIONALITE</AttributeID>
+          <Name>NATIONALITE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4e365b3a-6036-4199-93b0-658ac74246e4">
+          <AttributeID>AGE</AttributeID>
+          <Name>AGE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2c02b4eb-34d0-4614-8d43-116d9ea56988">
+          <AttributeID>NIVEAU SCOLAIRE</AttributeID>
+          <Name>NIVEAU SCOLAIRE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4093ab20-83c2-4864-a44b-6752348d2ec6">
+          <AttributeID>TYPE</AttributeID>
+          <Name>TYPE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="592ca9f2-3cd6-4871-9f53-a66ce19bbb1d">
+          <AttributeID>STATUS FORMATION</AttributeID>
+          <Name>STATUS FORMATION</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="5203748a-009a-476e-bc83-4a7b68cdf54f">
+          <AttributeID>HANDICAPE</AttributeID>
+          <Name>HANDICAPE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="53207181-0925-4986-a05e-d7696a29a4a7">
+          <AttributeID>DETENU</AttributeID>
+          <Name>DETENU</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3ad0d7e0-74b1-4d96-8ce6-554d8b589fbf">
+          <AttributeID>Tranche Age</AttributeID>
+          <Name>Tranche Age</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="407b88eb-3111-4e5a-8ec1-b75be80a87fc">
+      <ID>GENRE</ID>
+      <Name>GENRE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d905ef4e-ce81-4802-9f12-50f9180eef8b">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1ac92991-67a1-416a-bfea-070aecc84253">
+            <TableID>dm_DIM_BENEFICIAIRE</TableID>
+            <ColumnID>GENRE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d7cd807a-8610-434d-80b9-3977de5caf00">
+      <ID>NATIONALITE</ID>
+      <Name>NATIONALITE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d827dd7d-ce8f-4a65-9ccf-20c928df2ef3">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3767a7ab-6d26-4890-891a-300060c21a10">
+            <TableID>dm_DIM_BENEFICIAIRE</TableID>
+            <ColumnID>NATIONALITE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c0669ab9-064c-4045-8874-9104b185169e">
+      <ID>AGE</ID>
+      <Name>AGE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3712832e-0bf8-4fcb-bd0e-4a6c96099a45">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d3fa358c-82f5-4524-8d42-69a4cb3ff721">
+            <TableID>dm_DIM_BENEFICIAIRE</TableID>
+            <ColumnID>AGE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6c8302af-b561-4796-bd50-197890cc6f14">
+      <ID>NIVEAU SCOLAIRE</ID>
+      <Name>NIVEAU SCOLAIRE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4f6e8367-e900-4058-8ca2-dffeab5d1b54">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ef08524c-94bb-4a8d-ba10-2d3e1f767275">
+            <TableID>dm_DIM_BENEFICIAIRE</TableID>
+            <ColumnID>NIVEAU_SCOLAIRE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8270d12d-c963-447b-ae64-f034808407b1">
+      <ID>TYPE</ID>
+      <Name>TYPE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="654c1c1c-458d-485b-8b97-4ad6dfc5ac9d">
+          <DataType>WChar</DataType>
+          <DataSize>40</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d465139f-7866-4795-8eac-c32406e1789c">
+            <TableID>dm_DIM_BENEFICIAIRE</TableID>
+            <ColumnID>TYPE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="96db146f-09b7-46f9-b172-8397d450e7cb">
+      <ID>STATUS FORMATION</ID>
+      <Name>STATUS FORMATION</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cb05f8d9-e9d4-4ad5-a8f1-4e44efe25151">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1bf9fbf4-f245-4a2b-abd9-48022172a9be">
+            <TableID>dm_DIM_BENEFICIAIRE</TableID>
+            <ColumnID>STATUS_FORMATION</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7ff91647-ca49-4f98-b604-7dc77af8e403">
+      <ID>HANDICAPE</ID>
+      <Name>HANDICAPE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0ecfe123-8637-4d87-9f67-1f432a97335c">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d2b52a5d-fc3b-4e57-9986-df96ad1514c3">
+            <TableID>dm_DIM_BENEFICIAIRE</TableID>
+            <ColumnID>HANDICAPE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f6c46052-4532-4d19-8413-7b8246fdff1e">
+      <ID>DETENU</ID>
+      <Name>DETENU</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="86380e83-ee7c-4b37-9927-7327a844e0fb">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f6dff6ca-d1e0-4509-a445-f39b125afe2e">
+            <TableID>dm_DIM_BENEFICIAIRE</TableID>
+            <ColumnID>DETENU</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="cab5e1c9-e455-4023-9da2-ad814e0aa08f">
+      <ID>Tranche Age</ID>
+      <Name>Tranche Age</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="537f1509-0b99-472b-9135-391e871b2900">
+          <DataType>WChar</DataType>
+          <DataSize>9</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="60a394cd-c714-495d-be5f-426b14b63837">
+            <TableID>dm_DIM_BENEFICIAIRE</TableID>
+            <ColumnID>Tranche_Age</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

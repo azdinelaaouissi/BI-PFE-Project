@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="LocalHost.snifop_dm"
+  DTS:DTSID="{F3A9199D-1B8F-44CB-963C-CA703E9E9395}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=.;Initial Catalog=snifop_dm;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-datamarts-{F3A9199D-1B8F-44CB-963C-CA703E9E9395}LocalHost.snifop_dm;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

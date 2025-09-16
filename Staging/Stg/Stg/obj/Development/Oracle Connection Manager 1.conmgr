@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Oracle Connection Manager 1"
+  DTS:DTSID="{85D57CA3-2729-4C58-9C96-457BE45F975A}"
+  DTS:CreationName="ORACLE">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager>
+      <OraConnectionString>SERVER=orclpdb;USERNAME=hr;WINAUTH=0;</OraConnectionString>
+      <OraRetain>False</OraRetain>
+      <OraInitialCatalog></OraInitialCatalog>
+      <OraServerName>orclpdb</OraServerName>
+      <OraUserName>hr</OraUserName>
+      <OraOracleHome></OraOracleHome>
+      <OraOracleHome64></OraOracleHome64>
+      <OraWinAuthentication>False</OraWinAuthentication>
+      <OraEnableDetailedTracing>False</OraEnableDetailedTracing>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

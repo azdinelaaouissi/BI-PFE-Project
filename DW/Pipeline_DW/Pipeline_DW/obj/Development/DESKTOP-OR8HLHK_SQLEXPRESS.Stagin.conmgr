@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="DESKTOP-OR8HLHK_SQLEXPRESS.Stagin"
+  DTS:DTSID="{5FB1F606-B9A6-4EDB-A104-9850DBA5C039}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=DESKTOP-OR8HLHK\SQLEXPRESS;Initial Catalog=Stagin;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Pipeline_DW-{5FB1F606-B9A6-4EDB-A104-9850DBA5C039}DESKTOP-OR8HLHK\SQLEXPRESS.Stagin;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

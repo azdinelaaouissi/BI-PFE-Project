@@ -1,0 +1,180 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="aa08e3d6-1a12-4da9-bb2d-276345cb2810" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DIM FILIERE</ID>
+  <Name>DIM FILIERE</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="ef4df780-0852-4535-952c-458aa5a1b6f3">
+    <DataSourceViewID>Snifop Dm</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="58407532-c636-4916-8b7c-91881b9f98fc">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="89c393d8-628d-45cd-bdb6-dff9685ab83d">
+      <ID>FILIERE SK</ID>
+      <Name>FILIERE SK</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="76815679-80fc-468f-8cdf-3e63a8b62ec9">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="82e3a3a3-5f57-4d2e-b0c0-905dce075d4b">
+            <TableID>dm_DIM_FILIERE</TableID>
+            <ColumnID>FILIERE_SK</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="f31113e7-a961-40a9-8859-d520adff80fb">
+          <AttributeID>FILIERE ID SRC</AttributeID>
+          <Name>FILIERE ID SRC</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="490a5fce-5430-4dea-884f-27fe43c65fa4">
+          <AttributeID>NOM</AttributeID>
+          <Name>NOM</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6c7f2921-f7be-4ebb-88b2-a72f670ea9b3">
+          <AttributeID>NIVEAU FORMATION</AttributeID>
+          <Name>NIVEAU FORMATION</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8bc41078-0f62-441e-9301-3fddd88e6bd3">
+          <AttributeID>PROGRAMME</AttributeID>
+          <Name>PROGRAMME</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b5a94977-257b-4370-9277-85b5000e41e3">
+          <AttributeID>DUREE</AttributeID>
+          <Name>DUREE</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f8136e56-3062-4933-9166-a4ca155006ff">
+      <ID>FILIERE ID SRC</ID>
+      <Name>FILIERE ID SRC</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9309c552-66e4-4a73-9ea4-d11a7b17f74d">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0fa7788a-aa63-49f4-b729-41b4ccd46c07">
+            <TableID>dm_DIM_FILIERE</TableID>
+            <ColumnID>FILIERE_ID_SRC</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d1eb4975-6e34-402a-be01-426b42ea3a06">
+      <ID>NOM</ID>
+      <Name>NOM</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="67332a09-18af-4abd-a6d9-f5823aea5cf3">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a17e05f1-0d93-480f-b43c-69e194ef4d0d">
+            <TableID>dm_DIM_FILIERE</TableID>
+            <ColumnID>NOM</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="aa0afe6b-5db8-4e7a-aaac-065d10962afc">
+      <ID>NIVEAU FORMATION</ID>
+      <Name>NIVEAU FORMATION</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="af579561-46aa-4b21-a917-b77f3ab0dc79">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4c332459-7fd6-40c6-bafe-793cc9b8917c">
+            <TableID>dm_DIM_FILIERE</TableID>
+            <ColumnID>NIVEAU_FORMATION</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="11d1c0b4-725d-4116-97b7-660dbae45782">
+      <ID>PROGRAMME</ID>
+      <Name>PROGRAMME</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d354259b-694e-4fb0-bd5e-5e4348b52c1b">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="117a7392-4746-495f-9047-e549819357eb">
+            <TableID>dm_DIM_FILIERE</TableID>
+            <ColumnID>PROGRAMME</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c27cfaa6-7a29-4bfc-b29c-be6fc4badd28">
+      <ID>DUREE</ID>
+      <Name>DUREE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="51991b61-c817-4362-bdbb-0f0b6b6e1186">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fa852606-186d-4bef-9140-172d0581e8f5">
+            <TableID>dm_DIM_FILIERE</TableID>
+            <ColumnID>DUREE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

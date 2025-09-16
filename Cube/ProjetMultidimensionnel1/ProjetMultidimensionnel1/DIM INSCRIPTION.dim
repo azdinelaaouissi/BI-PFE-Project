@@ -1,0 +1,223 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="27e15d98-1926-4aea-a19f-35f9aefe0a0f" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DIM INSCRIPTION</ID>
+  <Name>DIM INSCRIPTION</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="dec1b087-6b4c-4feb-abe7-a2747e09710c">
+    <DataSourceViewID>Snifop Dm</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="ddb30aa7-8c95-43f0-8213-f6c68556b227">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="e04a3d9c-5fb1-42a3-8e8d-26e03c656f0f">
+      <ID>INSCRIPTION SK</ID>
+      <Name>INSCRIPTION SK</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="24c5d5ce-ad46-4d45-b232-bf4e1b899f82">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="adc466a9-72f2-4b23-976f-a7f5cc2a4da8">
+            <TableID>dm_DIM_INSCRIPTION</TableID>
+            <ColumnID>INSCRIPTION_SK</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="f8fe241f-efe7-44f4-9227-2851937de27d">
+          <AttributeID>DATE INSCRIPTION</AttributeID>
+          <Name>DATE INSCRIPTION</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6d5001b5-fce7-4eda-b2ec-21c370eac303">
+          <AttributeID>DATE VALIDATION</AttributeID>
+          <Name>DATE VALIDATION</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="35f648a5-d2d7-45fb-90fa-2356ba1c23cd">
+          <AttributeID>ANNEE SCOLAIRE</AttributeID>
+          <Name>ANNEE SCOLAIRE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6f20d4f0-0632-4641-9475-1d3280ceb672">
+          <AttributeID>MODE FORMATION</AttributeID>
+          <Name>MODE FORMATION</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="82327eea-ed7c-4d66-8ab2-1a45a9ca1ba6">
+          <AttributeID>TYPE COURS</AttributeID>
+          <Name>TYPE COURS</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="85fa6e9b-ef7c-4452-816f-226dd81962d8">
+          <AttributeID>STATUT</AttributeID>
+          <Name>STATUT</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="85570388-5b0e-4ca2-bffb-c438c88d4272">
+          <AttributeID>ANNEE ETUDE</AttributeID>
+          <Name>ANNEE ETUDE</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a372c552-4064-47b5-86a6-2aa9dcba1de9">
+      <ID>DATE INSCRIPTION</ID>
+      <Name>DATE INSCRIPTION</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="096d65dd-443f-4a5c-85e9-aacf70286c9a">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="65f5fe96-c619-477c-b51a-8efa30cbe4b8">
+            <TableID>dm_DIM_INSCRIPTION</TableID>
+            <ColumnID>DATE_INSCRIPTION</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="75512f5b-3e68-44da-9d27-3e5060fe86c1">
+      <ID>DATE VALIDATION</ID>
+      <Name>DATE VALIDATION</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="18c997fe-a3bf-431e-a0b2-c499a9d9ad5e">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2cf7bec4-9baf-4628-87bb-14a94783a9ec">
+            <TableID>dm_DIM_INSCRIPTION</TableID>
+            <ColumnID>DATE_VALIDATION</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="863f4c1d-3477-4b91-b2e4-9813786f5c64">
+      <ID>ANNEE SCOLAIRE</ID>
+      <Name>ANNEE SCOLAIRE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="807a485f-df77-4991-94d4-4bc4becf828c">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e6ffb774-69bb-4033-a3e3-8388c3d7bb64">
+            <TableID>dm_DIM_INSCRIPTION</TableID>
+            <ColumnID>ANNEE_SCOLAIRE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1527c1e5-51e4-4864-8080-763216e2a988">
+      <ID>MODE FORMATION</ID>
+      <Name>MODE FORMATION</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="21c74032-5ead-448e-a66f-6611d2c2e63a">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a59a86a6-e87d-4491-9a46-c8d6db2824b2">
+            <TableID>dm_DIM_INSCRIPTION</TableID>
+            <ColumnID>MODE_FORMATION</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d0ee6710-7679-4029-8987-f12a88264e24">
+      <ID>TYPE COURS</ID>
+      <Name>TYPE COURS</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a3442974-4f9b-43c6-9fd7-348706a747f4">
+          <DataType>WChar</DataType>
+          <DataSize>40</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="70fe74f2-b7d1-4c6f-869f-2106137f4759">
+            <TableID>dm_DIM_INSCRIPTION</TableID>
+            <ColumnID>TYPE_COURS</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="81a70853-b479-46c1-ac95-25366d4b305b">
+      <ID>STATUT</ID>
+      <Name>STATUT</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="956b5a02-d659-4e52-838a-029d412d46c4">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f3b075a2-ad6d-4e24-8496-37cecb9b21bf">
+            <TableID>dm_DIM_INSCRIPTION</TableID>
+            <ColumnID>STATUT</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="60288fa1-a465-4e84-a847-eb8cfa0e7c1d">
+      <ID>ANNEE ETUDE</ID>
+      <Name>ANNEE ETUDE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="95947f93-2421-4447-97cc-1e58679f2781">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b31309a6-0a32-4b32-b157-c31b3e91c517">
+            <TableID>dm_DIM_INSCRIPTION</TableID>
+            <ColumnID>ANNEE_ETUDE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

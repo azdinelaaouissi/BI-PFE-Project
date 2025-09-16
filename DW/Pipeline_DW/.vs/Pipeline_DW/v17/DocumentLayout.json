@@ -1,0 +1,176 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\PC\\Desktop\\PFE\\DW\\Pipeline_DW\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1C392833-AAAA-9DAF-18DE-2EFFE5DBB074}|Pipeline_DW\\Pipeline_DW.dtproj|C:\\Users\\PC\\Desktop\\PFE\\DW\\Pipeline_DW\\Pipeline_DW\\DWH_Load_INSCRIPTION.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{1C392833-AAAA-9DAF-18DE-2EFFE5DBB074}|Pipeline_DW\\Pipeline_DW.dtproj|solutionrelative:Pipeline_DW\\DWH_Load_INSCRIPTION.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C392833-AAAA-9DAF-18DE-2EFFE5DBB074}|Pipeline_DW\\Pipeline_DW.dtproj|C:\\Users\\PC\\Desktop\\PFE\\DW\\Pipeline_DW\\Pipeline_DW\\DWH_Load_QUESTIONNAIRE.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{1C392833-AAAA-9DAF-18DE-2EFFE5DBB074}|Pipeline_DW\\Pipeline_DW.dtproj|solutionrelative:Pipeline_DW\\DWH_Load_QUESTIONNAIRE.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C392833-AAAA-9DAF-18DE-2EFFE5DBB074}|Pipeline_DW\\Pipeline_DW.dtproj|C:\\Users\\PC\\Desktop\\PFE\\DW\\Pipeline_DW\\Pipeline_DW\\DWH_Load_ETABLISSEMENT.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{1C392833-AAAA-9DAF-18DE-2EFFE5DBB074}|Pipeline_DW\\Pipeline_DW.dtproj|solutionrelative:Pipeline_DW\\DWH_Load_ETABLISSEMENT.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C392833-AAAA-9DAF-18DE-2EFFE5DBB074}|Pipeline_DW\\Pipeline_DW.dtproj|C:\\Users\\PC\\Desktop\\PFE\\DW\\Pipeline_DW\\Pipeline_DW\\DWH_Load_BENEFICIAIRE.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{1C392833-AAAA-9DAF-18DE-2EFFE5DBB074}|Pipeline_DW\\Pipeline_DW.dtproj|solutionrelative:Pipeline_DW\\DWH_Load_BENEFICIAIRE.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C392833-AAAA-9DAF-18DE-2EFFE5DBB074}|Pipeline_DW\\Pipeline_DW.dtproj|C:\\Users\\PC\\Desktop\\PFE\\DW\\Pipeline_DW\\Pipeline_DW\\Launch.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{1C392833-AAAA-9DAF-18DE-2EFFE5DBB074}|Pipeline_DW\\Pipeline_DW.dtproj|solutionrelative:Pipeline_DW\\Launch.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C392833-AAAA-9DAF-18DE-2EFFE5DBB074}|Pipeline_DW\\Pipeline_DW.dtproj|C:\\Users\\PC\\Desktop\\PFE\\DW\\Pipeline_DW\\Pipeline_DW\\DWH_Load_HOMOLOGATION.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{1C392833-AAAA-9DAF-18DE-2EFFE5DBB074}|Pipeline_DW\\Pipeline_DW.dtproj|solutionrelative:Pipeline_DW\\DWH_Load_HOMOLOGATION.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C392833-AAAA-9DAF-18DE-2EFFE5DBB074}|Pipeline_DW\\Pipeline_DW.dtproj|C:\\Users\\PC\\Desktop\\PFE\\DW\\Pipeline_DW\\Pipeline_DW\\DWH_Load_FORMATEUR_ETABLISSEMENT.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{1C392833-AAAA-9DAF-18DE-2EFFE5DBB074}|Pipeline_DW\\Pipeline_DW.dtproj|solutionrelative:Pipeline_DW\\DWH_Load_FORMATEUR_ETABLISSEMENT.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C392833-AAAA-9DAF-18DE-2EFFE5DBB074}|Pipeline_DW\\Pipeline_DW.dtproj|C:\\Users\\PC\\Desktop\\PFE\\DW\\Pipeline_DW\\Pipeline_DW\\DWH_Load_FORMATEUR.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{1C392833-AAAA-9DAF-18DE-2EFFE5DBB074}|Pipeline_DW\\Pipeline_DW.dtproj|solutionrelative:Pipeline_DW\\DWH_Load_FORMATEUR.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C392833-AAAA-9DAF-18DE-2EFFE5DBB074}|Pipeline_DW\\Pipeline_DW.dtproj|C:\\Users\\PC\\Desktop\\PFE\\DW\\Pipeline_DW\\Pipeline_DW\\DWH_Load_CANDIDAT.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{1C392833-AAAA-9DAF-18DE-2EFFE5DBB074}|Pipeline_DW\\Pipeline_DW.dtproj|solutionrelative:Pipeline_DW\\DWH_Load_CANDIDAT.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C392833-AAAA-9DAF-18DE-2EFFE5DBB074}|Pipeline_DW\\Pipeline_DW.dtproj|C:\\Users\\PC\\Desktop\\PFE\\DW\\Pipeline_DW\\Pipeline_DW\\DWH_Load_ETABLISSEMENT_FILIER.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{1C392833-AAAA-9DAF-18DE-2EFFE5DBB074}|Pipeline_DW\\Pipeline_DW.dtproj|solutionrelative:Pipeline_DW\\DWH_Load_ETABLISSEMENT_FILIER.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DWH_Load_INSCRIPTION.dtsx [Conception]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PFE\\DW\\Pipeline_DW\\Pipeline_DW\\DWH_Load_INSCRIPTION.dtsx",
+              "RelativeDocumentMoniker": "Pipeline_DW\\DWH_Load_INSCRIPTION.dtsx",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\PFE\\DW\\Pipeline_DW\\Pipeline_DW\\DWH_Load_INSCRIPTION.dtsx [Conception]",
+              "RelativeToolTip": "Pipeline_DW\\DWH_Load_INSCRIPTION.dtsx [Conception]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-07-17T22:19:47.71Z",
+              "EditorCaption": " [Conception]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DWH_Load_QUESTIONNAIRE.dtsx [Conception]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PFE\\DW\\Pipeline_DW\\Pipeline_DW\\DWH_Load_QUESTIONNAIRE.dtsx",
+              "RelativeDocumentMoniker": "Pipeline_DW\\DWH_Load_QUESTIONNAIRE.dtsx",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\PFE\\DW\\Pipeline_DW\\Pipeline_DW\\DWH_Load_QUESTIONNAIRE.dtsx [Conception]",
+              "RelativeToolTip": "Pipeline_DW\\DWH_Load_QUESTIONNAIRE.dtsx [Conception]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-08-08T23:10:26.206Z",
+              "EditorCaption": " [Conception]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Launch.dtsx [Conception]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PFE\\DW\\Pipeline_DW\\Pipeline_DW\\Launch.dtsx",
+              "RelativeDocumentMoniker": "Pipeline_DW\\Launch.dtsx",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\PFE\\DW\\Pipeline_DW\\Pipeline_DW\\Launch.dtsx [Conception]",
+              "RelativeToolTip": "Pipeline_DW\\Launch.dtsx [Conception]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-07-18T00:04:08.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DWH_Load_BENEFICIAIRE.dtsx [Conception]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PFE\\DW\\Pipeline_DW\\Pipeline_DW\\DWH_Load_BENEFICIAIRE.dtsx",
+              "RelativeDocumentMoniker": "Pipeline_DW\\DWH_Load_BENEFICIAIRE.dtsx",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\PFE\\DW\\Pipeline_DW\\Pipeline_DW\\DWH_Load_BENEFICIAIRE.dtsx [Conception]",
+              "RelativeToolTip": "Pipeline_DW\\DWH_Load_BENEFICIAIRE.dtsx [Conception]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-07-30T16:21:12.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DWH_Load_ETABLISSEMENT.dtsx [Conception]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PFE\\DW\\Pipeline_DW\\Pipeline_DW\\DWH_Load_ETABLISSEMENT.dtsx",
+              "RelativeDocumentMoniker": "Pipeline_DW\\DWH_Load_ETABLISSEMENT.dtsx",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\PFE\\DW\\Pipeline_DW\\Pipeline_DW\\DWH_Load_ETABLISSEMENT.dtsx [Conception]",
+              "RelativeToolTip": "Pipeline_DW\\DWH_Load_ETABLISSEMENT.dtsx [Conception]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-08-24T21:55:40.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DWH_Load_HOMOLOGATION.dtsx [Conception]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PFE\\DW\\Pipeline_DW\\Pipeline_DW\\DWH_Load_HOMOLOGATION.dtsx",
+              "RelativeDocumentMoniker": "Pipeline_DW\\DWH_Load_HOMOLOGATION.dtsx",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\PFE\\DW\\Pipeline_DW\\Pipeline_DW\\DWH_Load_HOMOLOGATION.dtsx [Conception]",
+              "RelativeToolTip": "Pipeline_DW\\DWH_Load_HOMOLOGATION.dtsx [Conception]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-07-21T21:02:09.187Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DWH_Load_FORMATEUR_ETABLISSEMENT.dtsx [Conception]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PFE\\DW\\Pipeline_DW\\Pipeline_DW\\DWH_Load_FORMATEUR_ETABLISSEMENT.dtsx",
+              "RelativeDocumentMoniker": "Pipeline_DW\\DWH_Load_FORMATEUR_ETABLISSEMENT.dtsx",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\PFE\\DW\\Pipeline_DW\\Pipeline_DW\\DWH_Load_FORMATEUR_ETABLISSEMENT.dtsx [Conception]",
+              "RelativeToolTip": "Pipeline_DW\\DWH_Load_FORMATEUR_ETABLISSEMENT.dtsx [Conception]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-08-24T21:58:52.312Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DWH_Load_FORMATEUR.dtsx [Conception]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PFE\\DW\\Pipeline_DW\\Pipeline_DW\\DWH_Load_FORMATEUR.dtsx",
+              "RelativeDocumentMoniker": "Pipeline_DW\\DWH_Load_FORMATEUR.dtsx",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\PFE\\DW\\Pipeline_DW\\Pipeline_DW\\DWH_Load_FORMATEUR.dtsx [Conception]",
+              "RelativeToolTip": "Pipeline_DW\\DWH_Load_FORMATEUR.dtsx [Conception]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-08-24T22:04:08.48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DWH_Load_CANDIDAT.dtsx [Conception]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PFE\\DW\\Pipeline_DW\\Pipeline_DW\\DWH_Load_CANDIDAT.dtsx",
+              "RelativeDocumentMoniker": "Pipeline_DW\\DWH_Load_CANDIDAT.dtsx",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\PFE\\DW\\Pipeline_DW\\Pipeline_DW\\DWH_Load_CANDIDAT.dtsx [Conception]",
+              "RelativeToolTip": "Pipeline_DW\\DWH_Load_CANDIDAT.dtsx [Conception]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-07-13T14:19:47.759Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DWH_Load_ETABLISSEMENT_FILIER.dtsx [Conception]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PFE\\DW\\Pipeline_DW\\Pipeline_DW\\DWH_Load_ETABLISSEMENT_FILIER.dtsx",
+              "RelativeDocumentMoniker": "Pipeline_DW\\DWH_Load_ETABLISSEMENT_FILIER.dtsx",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\PFE\\DW\\Pipeline_DW\\Pipeline_DW\\DWH_Load_ETABLISSEMENT_FILIER.dtsx [Conception]",
+              "RelativeToolTip": "Pipeline_DW\\DWH_Load_ETABLISSEMENT_FILIER.dtsx [Conception]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-07-29T09:29:29.558Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

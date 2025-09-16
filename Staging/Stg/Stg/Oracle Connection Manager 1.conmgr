@@ -1,0 +1,21 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Oracle Connection Manager 1"
+  DTS:DTSID="{85D57CA3-2729-4C58-9C96-457BE45F975A}"
+  DTS:CreationName="ORACLE">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager>
+      <OraConnectionString>SERVER=orclpdb;USERNAME=hr;WINAUTH=0;</OraConnectionString>
+      <OraPassword
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6QTRcRXod0md59UMStDoLAAAAAACAAAAAAAQZgAAAAEAACAAAABumzBCA2MmgXxWEBSgtA3thdYZy0SwOOhbdVbkvCu1KQAAAAAOgAAAAAIAACAAAADlQOb0SgGbxlhr6MwDmUR8HRH+1SKQwpiuA58B/hxw6zAAAADnwfvIVDr9ZPWwiekWU1tgSV0O0jtAZsh5jFPA5ikhRGIh9WfCOqAx9xwsuGATq2dAAAAATtwGc8ZqNdDioKDOwiNq1Pr1nlMmkmNLSj1at0Gui5o9LdvtSoP5EMF0lfvfDW+ijJT4SIF6TM7MyRHwKpvJKA==</OraPassword>
+      <OraRetain>False</OraRetain>
+      <OraInitialCatalog></OraInitialCatalog>
+      <OraServerName>orclpdb</OraServerName>
+      <OraUserName>hr</OraUserName>
+      <OraOracleHome></OraOracleHome>
+      <OraOracleHome64></OraOracleHome64>
+      <OraWinAuthentication>False</OraWinAuthentication>
+      <OraEnableDetailedTracing>False</OraEnableDetailedTracing>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

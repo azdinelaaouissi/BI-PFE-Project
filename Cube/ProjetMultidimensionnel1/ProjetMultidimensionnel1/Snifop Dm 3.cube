@@ -1,0 +1,976 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="db888c81-a64c-4243-af14-533f4786d161" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Snifop Dm 3</ID>
+  <Name>Snifop Dm 3</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="30" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1154" scrolltop="-3713" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="21881" y="20188" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_PROVINCE" left="11455" top="3060" logicalid="15" controlid="1" masterid="0" hint1="0" hint2="0" width="3863" height="4842" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000170f0000ea120000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dm_DIM_PROVINCE" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="FACT_ENQUETE_LAUREAT" left="5086" top="6607" logicalid="16" controlid="2" masterid="0" hint1="0" hint2="0" width="4128" height="7460" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e000020100000241d0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dm_FACT_ENQUETE_LAUREAT" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="dim_ENQUETE_LAUREAT" left="-588" top="4720" logicalid="17" controlid="3" masterid="0" hint1="0" hint2="0" width="4471" height="4842" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e000077110000ea120000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dm_dim_ENQUETE_LAUREAT" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_DATE" left="126" top="-2143" logicalid="18" controlid="4" masterid="0" hint1="0" hint2="0" width="5159" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00002714000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dm_DIM_DATE" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="8914" top="6732" logicalid="19" controlid="5" masterid="0" hint1="0" hint2="0" width="2841" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_FACT_ENQUETE_LAUREAT_PROVINCE]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="2" sourceattachpoint="28" destattachpoint="15" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="11455" y="7131" />
+              <point x="9679" y="7131" />
+              <point x="9679" y="7037" />
+              <point x="9214" y="7037" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="3583" top="5642" logicalid="20" controlid="6" masterid="0" hint1="0" hint2="0" width="1803" height="3895" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_FACT_ENQUETE_LAUREAT_ENQUETE_LAUREAT]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="2" sourceattachpoint="19" destattachpoint="22" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="3883" y="6041" />
+              <point x="4759" y="6041" />
+              <point x="4759" y="8066" />
+              <point x="4554" y="8066" />
+              <point x="4554" y="9237" />
+              <point x="5086" y="9237" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="4506" top="2358" logicalid="21" controlid="7" masterid="0" hint1="0" hint2="0" width="2394" height="4549" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FACT_ENQUETE_LAUREAT-DIM_DATE]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="2" sourceattachpoint="17" destattachpoint="4" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="4905" y="2857" />
+              <point x="4905" y="4732" />
+              <point x="6600" y="4732" />
+              <point x="6600" y="6607" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="3956" top="2358" logicalid="22" controlid="8" masterid="0" hint1="0" hint2="0" width="2394" height="4549" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FACT_ENQUETE_LAUREAT-DIM_DATE1]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="2" sourceattachpoint="15" destattachpoint="2" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="4355" y="2857" />
+              <point x="4355" y="4732" />
+              <point x="6050" y="4732" />
+              <point x="6050" y="6607" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="3406" top="2358" logicalid="23" controlid="9" masterid="0" hint1="0" hint2="0" width="2394" height="4549" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FACT_ENQUETE_LAUREAT-DIM_DATE12]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="2" sourceattachpoint="13" destattachpoint="0" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="3805" y="2857" />
+              <point x="3805" y="4732" />
+              <point x="5500" y="4732" />
+              <point x="5500" y="6607" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="dim_Enquete_Employeur" left="6439" top="2333" logicalid="24" controlid="10" masterid="0" hint1="0" hint2="0" width="3836" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000fc0e0000f40d0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dm_dim_Enquete_Employeur" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="FACT_Enquete_Employeur" left="7699" top="-2010" logicalid="25" controlid="11" masterid="0" hint1="0" hint2="0" width="3889" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000310f0000f40d0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dm_FACT_Enquete_Employeur" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="7693" top="1262" logicalid="26" controlid="12" masterid="0" hint1="0" hint2="0" width="6093" height="2298" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_FACT_Enquete_Employeur_PROVINCE]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="11" sourceattachpoint="6" destattachpoint="1" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="13386" y="3060" />
+              <point x="13386" y="2086" />
+              <point x="7993" y="2086" />
+              <point x="7993" y="1562" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="7408" top="1262" logicalid="27" controlid="13" masterid="0" hint1="0" hint2="0" width="885" height="1571" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_FACT_Enquete_Employeur_Enquete_Employeur]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="10" destid="11" sourceattachpoint="4" destattachpoint="1" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="7807" y="2333" />
+              <point x="7807" y="1933" />
+              <point x="7993" y="1933" />
+              <point x="7993" y="1562" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="4985" top="-42" logicalid="28" controlid="14" masterid="0" hint1="0" hint2="0" width="3014" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FACT_Enquete_Employeur-DIM_DATE]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="11" sourceattachpoint="27" destattachpoint="22" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="5285" y="357" />
+              <point x="6439" y="357" />
+              <point x="6439" y="326" />
+              <point x="7699" y="326" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1154</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-3713</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>-588</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>-2143</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="4eb279b9-49e1-46d9-9ec0-1c46cabca497">
+      <ID>DIM PROVINCE</ID>
+      <Name>DIM PROVINCE</Name>
+      <DimensionID>DIM PROVINCE</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="907d883f-63b5-4555-a19c-c7acd16b6cbd">
+          <AttributeID>PROVINCE SK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bbf5df62-b8c4-4fa0-a134-3d3c71f6c54b">
+          <AttributeID>NOM PROVINCE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8f543a74-9396-40a8-a580-b571c86d80df">
+          <AttributeID>NOM REGION</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="65efb175-ff82-4055-b636-573cb9806b42">
+          <AttributeID>Lat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4345b491-1918-4379-a988-88f2af4b9d95">
+          <AttributeID>Lon</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="910d5066-6e87-425a-bf65-349847c38667">
+          <AttributeID>Lat P</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="266e862e-05fe-4915-b8cd-85d558437ee9">
+          <AttributeID>Lon P</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="e6c89f6a-9718-4efe-ace1-91e81207699b">
+          <HierarchyID>Hiérarchie</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="3787f6b5-7f13-4126-a477-7b810b20e5cd">
+      <ID>Dim ENQUETE LAUREAT</ID>
+      <Name>Dim ENQUETE LAUREAT</Name>
+      <DimensionID>Dim ENQUETE LAUREAT</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="3e22098a-5df0-4dc0-bce1-7fc8cb5813b5">
+          <AttributeID>ID ENQUETE SK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8252d2c1-fb56-4b42-bb78-2bb9be362f58">
+          <AttributeID>ID ENQUETE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="34e090b4-3cbe-424c-b044-1d03403edd76">
+          <AttributeID>DATE ENQUETE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0a4caf10-b548-4699-8a13-cd23601b1a57">
+          <AttributeID>NOM LAUREAT</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="85339072-e73e-449b-85a5-17acb8b22a03">
+          <AttributeID>SEXE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6f7edab5-9e19-48ba-ab0b-2abd8a8fe879">
+          <AttributeID>AGE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="69a2519e-e1f5-4e95-8596-b590fc92f0d8">
+          <AttributeID>DATE ENTREE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cd6dccff-0996-46e1-9a65-a756ba56e340">
+          <AttributeID>DATE SORTIE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e6d5c5cb-425c-4735-a37f-06a54c046236">
+          <AttributeID>Sex T</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="6a5f0e1c-5929-4cd2-97d2-86ed20538587">
+      <ID>DATE ENQUETE</ID>
+      <Name>DATE ENQUETE</Name>
+      <DimensionID>DIM DATE</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="97ab5436-8203-460c-880b-95ca4ce1adb8">
+          <AttributeID>DATE SK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cc41a562-a329-471e-b82d-ae538764fef6">
+          <AttributeID>Date Complete</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b91d5f2a-cef8-49ac-a009-2ddbcf64f2b8">
+          <AttributeID>Jour Du Mois</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fc2e0ff8-7d7d-4d30-a835-379a60cd9867">
+          <AttributeID>Nom Du Jour</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="93e5967a-544b-414b-90d6-e720f997727b">
+          <AttributeID>Mois</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fdf287c1-7c93-4164-ae6d-9e95f606fc95">
+          <AttributeID>Nom Du Mois</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="11ca5e87-5376-47ac-b4ee-9b12162642be">
+          <AttributeID>Trimestre</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="df6d7ad6-a46e-4d49-b7c0-131b20b8e556">
+          <AttributeID>Annee</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1076fdf3-46f0-4a80-b90f-a2e98d9b0677">
+          <AttributeID>Semestre</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="00f39dbf-9194-487c-9b5f-aa7a43fd38b5">
+          <HierarchyID>Hiérarchie</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="034da852-c35c-415d-bb3f-e4d3414befe0">
+      <ID>DATE ENTREE</ID>
+      <Name>DATE ENTREE</Name>
+      <DimensionID>DIM DATE</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="fc33a85e-5587-4639-8e97-46bf95ce2590">
+          <AttributeID>DATE SK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7294d9cf-30e9-4128-b6f2-2fe02db69cc8">
+          <AttributeID>Date Complete</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="aaaa6965-a5f1-4470-8c86-2d0146890755">
+          <AttributeID>Jour Du Mois</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="04124e72-2c9c-44b1-8e9d-4ff452e81fa8">
+          <AttributeID>Nom Du Jour</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ae69e876-4767-492f-aa6f-97a323b84209">
+          <AttributeID>Mois</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ead41bf8-5f4c-447a-81aa-ab20afe0818f">
+          <AttributeID>Nom Du Mois</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4dfe4381-4cab-45c8-a56a-66a4e821c014">
+          <AttributeID>Trimestre</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="47d877fb-c41a-4a00-9fcc-c860604254af">
+          <AttributeID>Annee</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="21a75457-4360-416d-baf1-f8f2cfa5cfc1">
+          <AttributeID>Semestre</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="0f969b8e-440c-4b50-867e-e2826853848b">
+          <HierarchyID>Hiérarchie</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="3dd0098d-d305-4645-8175-8e7e51f9713f">
+      <ID>DATE SORTIE</ID>
+      <Name>DATE SORTIE</Name>
+      <DimensionID>DIM DATE</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="d4debf75-42ce-475d-950c-e46abfbe8f7e">
+          <AttributeID>DATE SK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2faa2f81-914e-4e97-bfd8-8d48e89bb7b9">
+          <AttributeID>Date Complete</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="09585915-0687-4dbe-9942-1c35c3f8a9b9">
+          <AttributeID>Jour Du Mois</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d2898c4a-3633-4e0b-b418-450f7476d0d6">
+          <AttributeID>Nom Du Jour</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6097c46a-16d9-438b-9ef8-ce897dfae603">
+          <AttributeID>Mois</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="44799a7d-04a9-46a5-a77b-d181a0334217">
+          <AttributeID>Nom Du Mois</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a75a7341-5fc3-47e7-a9ff-10ad02f6bb0b">
+          <AttributeID>Trimestre</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a2cba894-e2be-401e-8442-84026cc7c09e">
+          <AttributeID>Annee</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e1f63837-582e-4278-87d9-74fa230195ce">
+          <AttributeID>Semestre</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="6a6fd5db-cf97-4f21-b54e-ccb048969931">
+          <HierarchyID>Hiérarchie</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="e10337a9-26dc-46fd-8fa8-a7314863b130">
+      <ID>Dim Enquete Employeur</ID>
+      <Name>Dim Enquete Employeur</Name>
+      <DimensionID>Dim Enquete Employeur</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="576cfa70-4341-4da4-9d7b-d5ca812baedf">
+          <AttributeID>Id Sk</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e657cf29-604d-42da-974a-6f96e18ad47b">
+          <AttributeID>ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="493a6c60-f1b9-46b5-ae90-a3e90feababd">
+          <AttributeID>Nom Entreprise</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c1b04691-ff6a-4e98-b4ae-0db128e4373d">
+          <AttributeID>Secteur Activite</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2f317573-e044-4852-ad8c-e9cd1164647c">
+          <AttributeID>Date Enquete</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="54c474ac-6770-446d-b7b4-392de551a602">
+      <ID>FACT ENQUETE LAUREAT</ID>
+      <Name>FACT ENQUETE LAUREAT</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="b9d7cc9e-166e-4945-ac03-71cbf67981db">
+          <ID>Q1</ID>
+          <Name>Q1</Name>
+          <Source dwd:design-time-name="b629ff09-c5e7-4fea-accf-e553f0595d16">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ce143166-9514-44ba-876a-fbac144ccf12">
+              <TableID>dm_FACT_ENQUETE_LAUREAT</TableID>
+              <ColumnID>Q1</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="0f47e129-2780-4fbf-a528-11512c268290">
+          <ID>Q2</ID>
+          <Name>Q2</Name>
+          <Source dwd:design-time-name="58e74342-f915-43df-895b-b488426481f3">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="d2ab3cfa-170e-4db4-aac4-8a40a228be59">
+              <TableID>dm_FACT_ENQUETE_LAUREAT</TableID>
+              <ColumnID>Q2</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="8ff58039-82f3-4007-b896-81326802f406">
+          <ID>Q3</ID>
+          <Name>Q3</Name>
+          <Source dwd:design-time-name="99beb19f-4641-43ab-b206-7cde626f04d3">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="b5d317d5-734b-4460-a9d0-f22594307a81">
+              <TableID>dm_FACT_ENQUETE_LAUREAT</TableID>
+              <ColumnID>Q3</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="6fc3e8b1-287f-41b9-b354-8ef4a4764225">
+          <ID>Q4</ID>
+          <Name>Q4</Name>
+          <Source dwd:design-time-name="d3a8b89e-3755-4436-b521-a94f208c98eb">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="a2684dbd-7239-4a96-b080-640327946c5e">
+              <TableID>dm_FACT_ENQUETE_LAUREAT</TableID>
+              <ColumnID>Q4</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="7c29c185-6c5c-4fb3-b439-8c92c78de194">
+          <ID>Q5</ID>
+          <Name>Q5</Name>
+          <Source dwd:design-time-name="4d8129ad-e667-427a-93c5-bc131bbc58be">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f61a9e30-b76d-4b25-9345-f14253ead95a">
+              <TableID>dm_FACT_ENQUETE_LAUREAT</TableID>
+              <ColumnID>Q5</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="bf53495a-ff9d-4b74-a973-29e770fe3e71">
+          <ID>Q6</ID>
+          <Name>Q6</Name>
+          <Source dwd:design-time-name="4ca17c43-416f-440f-b965-76c2024c10b0">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="967b6646-ad95-400d-be9c-3f821748b1b8">
+              <TableID>dm_FACT_ENQUETE_LAUREAT</TableID>
+              <ColumnID>Q6</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="c00ef0a1-ce03-4afa-aa9c-5ba1f3e934cf">
+          <ID>Q7</ID>
+          <Name>Q7</Name>
+          <Source dwd:design-time-name="47593867-ed97-4065-90e5-0bd833910f6e">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ab74941e-75a5-46e1-9360-68cd6adc2537">
+              <TableID>dm_FACT_ENQUETE_LAUREAT</TableID>
+              <ColumnID>Q7</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="5df08afe-cedf-43c3-ab26-a3f3cc3ab19d">
+          <ID>Q8</ID>
+          <Name>Q8</Name>
+          <Source dwd:design-time-name="f8c9471d-d072-4070-818e-855d9eafe237">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6d180ef8-cd6c-4594-b499-f68247757f6e">
+              <TableID>dm_FACT_ENQUETE_LAUREAT</TableID>
+              <ColumnID>Q8</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="b8e8811e-82ac-40ed-9872-8f89561e3e79">
+          <ID>FACT ENQUETE LAUREAT Nombre</ID>
+          <Name>FACT ENQUETE LAUREAT Nombre</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="0b273662-62ef-4ac9-a71b-6993bd4f92bb">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="07a15690-c96f-4b98-8033-853015b8d21a">
+              <TableID>dm_FACT_ENQUETE_LAUREAT</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="0ed02313-924a-4709-b9c2-a4e94ba79348">
+          <CubeDimensionID>DIM PROVINCE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1b180145-5ba6-4683-a614-3cb493f7cce5">
+              <AttributeID>PROVINCE SK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="2dc3bef7-0785-4522-97bb-4aacc2d05f2b">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7a2607a0-b15f-4fe7-b00f-539a680e49e7">
+                    <TableID>dm_FACT_ENQUETE_LAUREAT</TableID>
+                    <ColumnID>PROVINCE_SK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6149d64c-922e-4f16-8f8f-b6eabdd2857d">
+          <CubeDimensionID>Dim ENQUETE LAUREAT</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="6b317dd8-d86d-446e-8856-5709ebf69a42">
+              <AttributeID>ID ENQUETE SK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="1229591d-99b7-4dfc-9e6e-f927ad9bf631">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e45b6379-dffa-478b-8d21-6eb4ab538e9f">
+                    <TableID>dm_FACT_ENQUETE_LAUREAT</TableID>
+                    <ColumnID>ID_ENQUETE_SK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="9c60e52b-7b6e-434e-8e4f-fa697150b30e">
+          <CubeDimensionID>DATE ENQUETE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="4289aba6-314b-4f0e-b317-8787063f1398">
+              <AttributeID>DATE SK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="52743889-cdf4-454d-a499-ca3068154ecd">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5abbb0d0-945d-4a85-8204-9c72f8b073fa">
+                    <TableID>dm_FACT_ENQUETE_LAUREAT</TableID>
+                    <ColumnID>DATE_ENQUETE_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="97925df0-02b0-456c-8440-e8d9e6f71689">
+          <CubeDimensionID>DATE ENTREE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="f5cd2aaa-4d1d-4bff-91cb-eb33cad30ea5">
+              <AttributeID>DATE SK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="39ad011b-8c44-4771-8f7a-3557d8d5c4f6">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="192e33bd-8c2d-4bdd-8a39-1b84d235f123">
+                    <TableID>dm_FACT_ENQUETE_LAUREAT</TableID>
+                    <ColumnID>DATE_ENTREE_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6d15f842-f2ba-486a-93e3-b4631481bc52">
+          <CubeDimensionID>DATE SORTIE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="bf993ad5-552f-493f-a5ec-e96b27d583fc">
+              <AttributeID>DATE SK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a96661d0-5ee8-4a42-ae40-4f1bd3e636ea">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c2fc6bd5-c187-4db0-a323-8915bf24e640">
+                    <TableID>dm_FACT_ENQUETE_LAUREAT</TableID>
+                    <ColumnID>DATE_SORTIE_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="2f7aa4d5-a007-4b44-915c-ba6773313e5a">
+      <ID>FACT Enquete Employeur</ID>
+      <Name>FACT Enquete Employeur</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="905c6429-7802-4d48-b2e9-13d400e58a48">
+          <ID>Q1 - FACT Enquete Employeur</ID>
+          <Name>Q1 - FACT Enquete Employeur</Name>
+          <Source dwd:design-time-name="61a65658-c02f-40f8-b7c0-84647b53354d">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="92e3ab72-7d1a-4e37-bb2b-c0eadf78966c">
+              <TableID>dm_FACT_Enquete_Employeur</TableID>
+              <ColumnID>Q1</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="ed86a12b-8932-43d3-9af2-22e127fab936">
+          <ID>Q2 - FACT Enquete Employeur</ID>
+          <Name>Q2 - FACT Enquete Employeur</Name>
+          <Source dwd:design-time-name="f9bd4eac-ce69-49a5-8734-41a307d6c3c6">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="acae40a8-7620-4c3b-91ac-916912417767">
+              <TableID>dm_FACT_Enquete_Employeur</TableID>
+              <ColumnID>Q2</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="d27a578b-7a7e-45b5-aa3d-42da39ddcb47">
+          <ID>FACT Enquete Employeur Nombre</ID>
+          <Name>FACT Enquete Employeur Nombre</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="b5ca0944-f204-46e0-ab47-f74abd76bb99">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="1fc1f584-3bfd-4749-870e-67d0a2d1afeb">
+              <TableID>dm_FACT_Enquete_Employeur</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="df9b63cf-e1aa-4d62-a756-97ea96b541d7">
+          <CubeDimensionID>DIM PROVINCE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="3e6d29ee-4ed2-4bef-a197-e9d065a26fec">
+              <AttributeID>PROVINCE SK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="86282898-ba26-47ed-998d-930268e74a9c">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="854e2fe3-aad3-4de3-892f-f2e899cd2b6b">
+                    <TableID>dm_FACT_Enquete_Employeur</TableID>
+                    <ColumnID>PROVINCE_SK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c630b80d-df38-4f81-a0dd-33ccc02bf7ce">
+          <CubeDimensionID>Dim Enquete Employeur</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="93c8594d-f0bc-4285-936d-b1f56844b47f">
+              <AttributeID>Id Sk</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7b366388-3f01-4941-a921-5d25ced3476e">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="59019893-a648-48ba-b5e3-5f1d48bb607c">
+                    <TableID>dm_FACT_Enquete_Employeur</TableID>
+                    <ColumnID>id_sk</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="49cf5783-9761-4dee-941b-5dd37c5e1622">
+          <CubeDimensionID>DATE ENQUETE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="909b0b7d-68d7-4ba8-ac9c-29f000ee8542">
+              <AttributeID>DATE SK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="bda91bd8-5433-4ab1-b1ee-9512fcdc3527">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9ddcbe67-0afd-46e9-a439-3c01652b954d">
+                    <TableID>dm_FACT_Enquete_Employeur</TableID>
+                    <ColumnID>DATE_ENQUETE_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="ae822cd8-d2a9-4a91-b0e8-a544937fbfa7">
+    <DataSourceViewID>Snifop Dm</DataSourceViewID>
+  </Source>
+  <MdxScripts>
+    <MdxScript dwd:design-time-name="e9e63616-da17-4bc8-8b35-6bfd4dfdbcf5">
+      <ID>MdxScript</ID>
+      <Name>MdxScript</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Commands>
+        <Command>
+          <Text>/*
+La commande CALCULATE contrôle l'agrégation des cellules feuilles dans le cube.
+Si la commande CALCULATE est supprimée ou modifiée, les données au sein du cube sont affectées.
+Vous devez modifier cette commande uniquement si vous spécifiez manuellement la façon dont le cube est agrégé.
+*/
+CALCULATE; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Occupe_9_mois]
+ AS (
+        SUM(
+           [dim ENQUETE LAUREAT].[ID ENQUETE SK].[ID ENQUETE SK], 
+            [Measures].[Q1]
+        )
+        / [Measures].[FACT ENQUETE LAUREAT Nombre]
+    ) * 100, 
+VISIBLE = 1  ; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Occupe_36_mois]
+ AS (
+        SUM(
+          EXISTING  [dim ENQUETE LAUREAT].[ID ENQUETE SK].[ID ENQUETE SK], 
+            [Measures].[Q2]
+        )
+        / [Measures].[total  lauréats]
+    ) * 100, 
+VISIBLE = 1  ; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux d’emploi des lauréats de la FP]
+ AS ( DISTINCTCOUNT(
+        FILTER(
+     
+    EXISTING [dim ENQUETE LAUREAT].[ID ENQUETE SK].[ID ENQUETE SK].MEMBERS,
+            [Measures].[Q3] = 0
+        )
+    )
+	/[Measures].[total  lauréats]
+	) * 100, 
+VISIBLE = 1  ; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux d’adéquation ]
+ AS ( DISTINCTCOUNT(
+        FILTER(
+           EXISTING  [dim ENQUETE LAUREAT].[ID ENQUETE SK].[ID ENQUETE SK].MEMBERS,
+            [Measures].[Q4] = 1
+        )
+    )
+	/[Measures].[total  lauréats]
+	) * 100, 
+VISIBLE = 1  ; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux de chômage 9m ]
+ AS ( DISTINCTCOUNT(
+        FILTER(
+         EXISTING     [dim ENQUETE LAUREAT].[ID ENQUETE SK].[ID ENQUETE SK].MEMBERS,
+            [Measures].[Q1] = 1
+			AND  
+			 [Measures].[Q3] = 1
+        )
+    )
+	/[Measures].[total  lauréats]
+	) * 100, 
+VISIBLE = 1  ; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux de chômage 36 m ]
+ AS ( DISTINCTCOUNT(
+        FILTER(
+            EXISTING [dim ENQUETE LAUREAT].[ID ENQUETE SK].[ID ENQUETE SK].MEMBERS,
+            [Measures].[Q2] = 1
+			AND  
+			 [Measures].[Q3] = 1
+        )
+    )
+	/[Measures].[total  lauréats]
+	) * 100, 
+VISIBLE = 1  ; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Handicap_9_mois]
+ AS ( DISTINCTCOUNT(
+        FILTER(
+           EXISTING  [dim ENQUETE LAUREAT].[ID ENQUETE SK].[ID ENQUETE SK].MEMBERS,
+            [Measures].[Q1] = 1
+			AND  
+			 [Measures].[Q5] = 1
+        )
+    )
+	/[Measures].[total  lauréats]
+	) * 100, 
+VISIBLE = 1  ; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Handicap_chômage _9_mois]
+ AS ( DISTINCTCOUNT(
+        FILTER(
+           EXISTING  [dim ENQUETE LAUREAT].[ID ENQUETE SK].[ID ENQUETE SK].MEMBERS,
+            [Measures].[Q1] = 1
+			AND  
+			 [Measures].[Q5] = 1
+			 and
+			 [Measures].[Q3]=1
+        )
+    )
+	/[Measures].[total  lauréats]
+	) * 100, 
+VISIBLE = 1  ; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Degré d’appréciation ]
+ AS ( DISTINCTCOUNT(
+        FILTER(
+          EXISTING   [dim ENQUETE LAUREAT].[ID ENQUETE SK].[ID ENQUETE SK].MEMBERS,
+            [Measures].[Q6] = 1
+		
+        )
+    )
+	/[Measures].[total  lauréats]
+	) * 100, 
+VISIBLE = 1  ; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux de Neet chez les jeunes âgés de 15‐24 ]
+ AS (
+    DISTINCTCOUNT(
+        FILTER(
+         EXISTING    [dim ENQUETE LAUREAT].[ID ENQUETE SK].[ID ENQUETE SK].MEMBERS,
+            [Dim ENQUETE LAUREAT].[AGE].CURRENTMEMBER.MEMBER_VALUE &gt;= 15
+            AND [Dim ENQUETE LAUREAT].[AGE].CURRENTMEMBER.MEMBER_VALUE &lt;= 24
+            AND [Measures].[Q7] = 1
+        )
+    )
+    / [Measures].[total  lauréats]
+) * 100, 
+VISIBLE = 1  ; 
+CREATE MEMBER CURRENTCUBE.[Measures].[total  lauréats]
+ AS COUNT(
+        NONEMPTY(
+         EXISTING    [dim ENQUETE LAUREAT].[ID ENQUETE SK].[ID ENQUETE SK],
+             [Measures].[FACT ENQUETE LAUREAT Nombre] -- ou toute mesure non vide
+        )
+    ), 
+VISIBLE = 1  ; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Satisfaction_des_diplomes]
+ AS ( DISTINCTCOUNT(
+        FILTER(
+          EXISTING   [Dim Enquete Employeur].[Id Sk].[Id Sk].MEMBERS,
+           [Measures].[Q1 - FACT Enquete Employeur]  = 1
+		
+        )
+    )
+	/ [Measures].[FACT Enquete Employeur Nombre]
+	) * 100, 
+VISIBLE = 1  ; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Adaptation_des_formations]
+ AS ( DISTINCTCOUNT(
+        FILTER(
+         EXISTING    [Dim Enquete Employeur].[Id Sk].[Id Sk].MEMBERS,
+           [Measures].[Q2 - FACT Enquete Employeur]  = 1
+		
+        )
+    )
+	/ [Measures].[FACT Enquete Employeur Nombre]
+	) * 100, 
+VISIBLE = 1  ; </Text>
+        </Command>
+      </Commands>
+    </MdxScript>
+  </MdxScripts>
+</Cube>

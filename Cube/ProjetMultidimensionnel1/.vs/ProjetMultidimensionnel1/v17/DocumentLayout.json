@@ -1,0 +1,280 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\Snifop Dm 3.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|solutionrelative:ProjetMultidimensionnel1\\Snifop Dm 3.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\Snifop Dm 1.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|solutionrelative:ProjetMultidimensionnel1\\Snifop Dm 1.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\Snifop Dm.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|solutionrelative:ProjetMultidimensionnel1\\Snifop Dm.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\Snifop Dm 2.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|solutionrelative:ProjetMultidimensionnel1\\Snifop Dm 2.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\Dim ENQUETE LAUREAT.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|solutionrelative:ProjetMultidimensionnel1\\Dim ENQUETE LAUREAT.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\Dim Enquete Employeur.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|solutionrelative:ProjetMultidimensionnel1\\Dim Enquete Employeur.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\Snifop Dm.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|solutionrelative:ProjetMultidimensionnel1\\Snifop Dm.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM BENEFICIAIRE.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|solutionrelative:ProjetMultidimensionnel1\\DIM BENEFICIAIRE.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM ETABLISSEMENT.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|solutionrelative:ProjetMultidimensionnel1\\DIM ETABLISSEMENT.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM PROVINCE.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|solutionrelative:ProjetMultidimensionnel1\\DIM PROVINCE.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM DATE.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|solutionrelative:ProjetMultidimensionnel1\\DIM DATE.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM ETABLISSEMENT FILIERE.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|solutionrelative:ProjetMultidimensionnel1\\DIM ETABLISSEMENT FILIERE.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM FORMATEUR.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|solutionrelative:ProjetMultidimensionnel1\\DIM FORMATEUR.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM INSCRIPTION.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|solutionrelative:ProjetMultidimensionnel1\\DIM INSCRIPTION.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM FORMATEUR ETABLISSEMENT.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|solutionrelative:ProjetMultidimensionnel1\\DIM FORMATEUR ETABLISSEMENT.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM FILIERE.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|solutionrelative:ProjetMultidimensionnel1\\DIM FILIERE.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM ETABLISSEMENT HOMOLOGATION.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{B58BA2D6-A391-3619-2AC1-BFA5EE3FF4D0}|ProjetMultidimensionnel1\\ProjetMultidimensionnel1.dwproj|solutionrelative:ProjetMultidimensionnel1\\DIM ETABLISSEMENT HOMOLOGATION.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Snifop Dm 3.cube [Conception]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\Snifop Dm 3.cube",
+              "RelativeDocumentMoniker": "ProjetMultidimensionnel1\\Snifop Dm 3.cube",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\Snifop Dm 3.cube [Conception]",
+              "RelativeToolTip": "ProjetMultidimensionnel1\\Snifop Dm 3.cube [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-08-09T23:16:00.259Z",
+              "EditorCaption": " [Conception]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Snifop Dm 2.cube [Conception]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\Snifop Dm 2.cube",
+              "RelativeDocumentMoniker": "ProjetMultidimensionnel1\\Snifop Dm 2.cube",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\Snifop Dm 2.cube [Conception]",
+              "RelativeToolTip": "..\\..\\..\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\Snifop Dm 2.cube [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-07-18T23:54:04.458Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Dim Enquete Employeur.dim [Conception]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\Dim Enquete Employeur.dim",
+              "RelativeDocumentMoniker": "ProjetMultidimensionnel1\\Dim Enquete Employeur.dim",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\Dim Enquete Employeur.dim [Conception]",
+              "RelativeToolTip": "..\\..\\..\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\Dim Enquete Employeur.dim [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-08-09T23:15:27.333Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Snifop Dm 1.cube [Conception]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\Snifop Dm 1.cube",
+              "RelativeDocumentMoniker": "ProjetMultidimensionnel1\\Snifop Dm 1.cube",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\Snifop Dm 1.cube [Conception]",
+              "RelativeToolTip": "..\\..\\..\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\Snifop Dm 1.cube [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-07-03T19:56:19.475Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Snifop Dm.cube [Conception]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\Snifop Dm.cube",
+              "RelativeDocumentMoniker": "ProjetMultidimensionnel1\\Snifop Dm.cube",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\Snifop Dm.cube [Conception]",
+              "RelativeToolTip": "..\\..\\..\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\Snifop Dm.cube [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-07-03T11:08:20.247Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Snifop Dm.dsv [Conception]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\Snifop Dm.dsv",
+              "RelativeDocumentMoniker": "ProjetMultidimensionnel1\\Snifop Dm.dsv",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\Snifop Dm.dsv [Conception]",
+              "RelativeToolTip": "..\\..\\..\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\Snifop Dm.dsv [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-07-02T22:07:13.544Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Dim ENQUETE LAUREAT.dim [Conception]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\Dim ENQUETE LAUREAT.dim",
+              "RelativeDocumentMoniker": "ProjetMultidimensionnel1\\Dim ENQUETE LAUREAT.dim",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\Dim ENQUETE LAUREAT.dim [Conception]",
+              "RelativeToolTip": "..\\..\\..\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\Dim ENQUETE LAUREAT.dim [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-08-09T23:14:57.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DIM INSCRIPTION.dim [Conception]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM INSCRIPTION.dim",
+              "RelativeDocumentMoniker": "ProjetMultidimensionnel1\\DIM INSCRIPTION.dim",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM INSCRIPTION.dim [Conception]",
+              "RelativeToolTip": "..\\..\\..\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM INSCRIPTION.dim [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-07-03T10:22:19.398Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DIM FORMATEUR ETABLISSEMENT.dim [Conception]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM FORMATEUR ETABLISSEMENT.dim",
+              "RelativeDocumentMoniker": "ProjetMultidimensionnel1\\DIM FORMATEUR ETABLISSEMENT.dim",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM FORMATEUR ETABLISSEMENT.dim [Conception]",
+              "RelativeToolTip": "..\\..\\..\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM FORMATEUR ETABLISSEMENT.dim [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-07-03T10:21:47.665Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DIM FORMATEUR.dim [Conception]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM FORMATEUR.dim",
+              "RelativeDocumentMoniker": "ProjetMultidimensionnel1\\DIM FORMATEUR.dim",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM FORMATEUR.dim [Conception]",
+              "RelativeToolTip": "..\\..\\..\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM FORMATEUR.dim [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-07-03T10:21:21.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DIM BENEFICIAIRE.dim [Conception]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM BENEFICIAIRE.dim",
+              "RelativeDocumentMoniker": "ProjetMultidimensionnel1\\DIM BENEFICIAIRE.dim",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM BENEFICIAIRE.dim [Conception]",
+              "RelativeToolTip": "..\\..\\..\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM BENEFICIAIRE.dim [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-07-03T10:16:46.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DIM ETABLISSEMENT HOMOLOGATION.dim [Conception]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM ETABLISSEMENT HOMOLOGATION.dim",
+              "RelativeDocumentMoniker": "ProjetMultidimensionnel1\\DIM ETABLISSEMENT HOMOLOGATION.dim",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM ETABLISSEMENT HOMOLOGATION.dim [Conception]",
+              "RelativeToolTip": "..\\..\\..\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM ETABLISSEMENT HOMOLOGATION.dim [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-07-03T10:10:23.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DIM FILIERE.dim [Conception]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM FILIERE.dim",
+              "RelativeDocumentMoniker": "ProjetMultidimensionnel1\\DIM FILIERE.dim",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM FILIERE.dim [Conception]",
+              "RelativeToolTip": "..\\..\\..\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM FILIERE.dim [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-07-03T10:07:01.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DIM DATE.dim [Conception]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM DATE.dim",
+              "RelativeDocumentMoniker": "ProjetMultidimensionnel1\\DIM DATE.dim",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM DATE.dim [Conception]",
+              "RelativeToolTip": "..\\..\\..\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM DATE.dim [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-07-02T22:06:51.846Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DIM ETABLISSEMENT.dim [Conception]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM ETABLISSEMENT.dim",
+              "RelativeDocumentMoniker": "ProjetMultidimensionnel1\\DIM ETABLISSEMENT.dim",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM ETABLISSEMENT.dim [Conception]",
+              "RelativeToolTip": "..\\..\\..\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM ETABLISSEMENT.dim [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-07-02T22:05:39.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DIM ETABLISSEMENT FILIERE.dim [Conception]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM ETABLISSEMENT FILIERE.dim",
+              "RelativeDocumentMoniker": "ProjetMultidimensionnel1\\DIM ETABLISSEMENT FILIERE.dim",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM ETABLISSEMENT FILIERE.dim [Conception]",
+              "RelativeToolTip": "..\\..\\..\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM ETABLISSEMENT FILIERE.dim [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-07-02T22:04:33.973Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DIM PROVINCE.dim [Conception]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PFE\\Cube\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM PROVINCE.dim",
+              "RelativeDocumentMoniker": "ProjetMultidimensionnel1\\DIM PROVINCE.dim",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM PROVINCE.dim [Conception]",
+              "RelativeToolTip": "..\\..\\..\\SAAAAAAAAS\\ProjetMultidimensionnel1\\ProjetMultidimensionnel1\\DIM PROVINCE.dim [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-07-02T22:03:58.328Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

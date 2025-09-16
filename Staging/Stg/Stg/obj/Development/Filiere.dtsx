@@ -1,0 +1,765 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/19/2025 5:02:23 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-OR8HLHK"
+  DTS:CreatorName="DESKTOP-OR8HLHK\HP EliteBook 840 G6"
+  DTS:DTSID="{C5F41506-0064-477C-8BB2-EB32004DA1A3}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="1036"
+  DTS:ObjectName="Filiere"
+  DTS:PackageType="5"
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{A8C3CB82-4B63-45AB-8CEB-A61687F46349}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tâche de flux de données"
+      DTS:DTSID="{79462c95-5cf8-4016-ac4a-a8617dcb6ca7}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Migration de Table Filiere de Oracle ver Staging SQL SERVER"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Destination Staging Table Filere"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
+              description="Destination OLE DB"
+              name="Destination Staging Table Filere"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset">[dbo].[Filiere]</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie les options à utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie quand les validations sont émises pendant l'insertion des données.  Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Destination Staging Table Filere.Connections[OleDbConnection]"
+                  connectionManagerID="{6BB00ADA-10CA-4E25-823E-E1ECF15A8616}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.snifop_stg]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Destination Staging Table Filere.Inputs[Entrée de destination OLE DB]"
+                  errorOrTruncationOperation="Insérer"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrée de destination OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Destination Staging Table Filere.Inputs[Entrée de destination OLE DB].Columns[ID]"
+                      cachedDataType="numeric"
+                      cachedName="ID"
+                      cachedPrecision="38"
+                      externalMetadataColumnId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Destination Staging Table Filere.Inputs[Entrée de destination OLE DB].ExternalColumns[ID]"
+                      lineageId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].Columns[ID]" />
+                    <inputColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Destination Staging Table Filere.Inputs[Entrée de destination OLE DB].Columns[SECTEUR_ID]"
+                      cachedDataType="numeric"
+                      cachedName="SECTEUR_ID"
+                      cachedPrecision="38"
+                      externalMetadataColumnId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Destination Staging Table Filere.Inputs[Entrée de destination OLE DB].ExternalColumns[SECTEUR_ID]"
+                      lineageId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].Columns[SECTEUR_ID]" />
+                    <inputColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Destination Staging Table Filere.Inputs[Entrée de destination OLE DB].Columns[NOM]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="NOM"
+                      externalMetadataColumnId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Destination Staging Table Filere.Inputs[Entrée de destination OLE DB].ExternalColumns[NOM]"
+                      lineageId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].Columns[NOM]" />
+                    <inputColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Destination Staging Table Filere.Inputs[Entrée de destination OLE DB].Columns[NIVEAU_FORMATION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="NIVEAU_FORMATION"
+                      externalMetadataColumnId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Destination Staging Table Filere.Inputs[Entrée de destination OLE DB].ExternalColumns[NIVEAU_FORMATION]"
+                      lineageId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].Columns[NIVEAU_FORMATION]" />
+                    <inputColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Destination Staging Table Filere.Inputs[Entrée de destination OLE DB].Columns[PROGRAMME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="PROGRAMME"
+                      externalMetadataColumnId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Destination Staging Table Filere.Inputs[Entrée de destination OLE DB].ExternalColumns[PROGRAMME]"
+                      lineageId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].Columns[PROGRAMME]" />
+                    <inputColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Destination Staging Table Filere.Inputs[Entrée de destination OLE DB].Columns[DUREE]"
+                      cachedDataType="numeric"
+                      cachedName="DUREE"
+                      cachedPrecision="38"
+                      externalMetadataColumnId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Destination Staging Table Filere.Inputs[Entrée de destination OLE DB].ExternalColumns[DUREE]"
+                      lineageId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].Columns[DUREE]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Destination Staging Table Filere.Inputs[Entrée de destination OLE DB].ExternalColumns[ID]"
+                      dataType="numeric"
+                      name="ID"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Destination Staging Table Filere.Inputs[Entrée de destination OLE DB].ExternalColumns[SECTEUR_ID]"
+                      dataType="numeric"
+                      name="SECTEUR_ID"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Destination Staging Table Filere.Inputs[Entrée de destination OLE DB].ExternalColumns[NOM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="NOM" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Destination Staging Table Filere.Inputs[Entrée de destination OLE DB].ExternalColumns[NIVEAU_FORMATION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="NIVEAU_FORMATION" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Destination Staging Table Filere.Inputs[Entrée de destination OLE DB].ExternalColumns[PROGRAMME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="PROGRAMME" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Destination Staging Table Filere.Inputs[Entrée de destination OLE DB].ExternalColumns[DUREE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="DUREE" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Destination Staging Table Filere.Outputs[Sortie d'erreur de destination OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de destination OLE DB"
+                  synchronousInputId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Destination Staging Table Filere.Inputs[Entrée de destination OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Destination Staging Table Filere.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Destination Staging Table Filere.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Destination Staging Table Filere.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Destination Staging Table Filere.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle"
+              componentClassID="Microsoft.SSISOracleSrc"
+              contactInfo="Source Oracle;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Source Oracle"
+              name="Source Table Filiere Oracle"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nom de la table à extraire."
+                  expressionType="Notify"
+                  name="TableName">"BITBOT"."C##SNIFOP_REFERENTIAL_FILIERE"</property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifiez le nombre de lignes extraites par lot."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Détermine l'allocation de taille de segment pour les colonnes LOB"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Int32"
+                  description="Page de codes à utiliser quand les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de lignes préextraites."
+                  expressionType="Notify"
+                  name="PrefetchCount">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Connections[ORACLEConnection]"
+                  connectionManagerID="{7D9F2A8F-4A51-46E9-AE9A-E41CB6D84E93}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[bitbot]"
+                  description="Connexion ORACLE en cours d'exécution utilisée pour accéder à la base de données."
+                  name="ORACLEConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle]"
+                  errorRowDisposition="FailComponent"
+                  name="Sortie de la source Oracle"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].Columns[ID]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[ID]"
+                      lineageId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].Columns[ID]"
+                      name="ID"
+                      precision="38" />
+                    <outputColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].Columns[SECTEUR_ID]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[SECTEUR_ID]"
+                      lineageId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].Columns[SECTEUR_ID]"
+                      name="SECTEUR_ID"
+                      precision="38" />
+                    <outputColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].Columns[NOM]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[NOM]"
+                      length="255"
+                      lineageId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].Columns[NOM]"
+                      name="NOM" />
+                    <outputColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].Columns[NIVEAU_FORMATION]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[NIVEAU_FORMATION]"
+                      length="10"
+                      lineageId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].Columns[NIVEAU_FORMATION]"
+                      name="NIVEAU_FORMATION" />
+                    <outputColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].Columns[PROGRAMME]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[PROGRAMME]"
+                      length="255"
+                      lineageId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].Columns[PROGRAMME]"
+                      name="PROGRAMME" />
+                    <outputColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].Columns[DUREE]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[DUREE]"
+                      lineageId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].Columns[DUREE]"
+                      name="DUREE"
+                      precision="38" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[CREATED_DATE]"
+                      dataType="dbTimeStamp"
+                      name="CREATED_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[LAST_MODIFIED_DATE]"
+                      dataType="dbTimeStamp"
+                      name="LAST_MODIFIED_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[ID]"
+                      dataType="numeric"
+                      name="ID"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[CREATED_BY]"
+                      dataType="numeric"
+                      name="CREATED_BY"
+                      precision="19" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[LAST_MODIFIED_BY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="LAST_MODIFIED_BY" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[STATUT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="STATUT" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[NOM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="NOM" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[NOM_AR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="350"
+                      name="NOM_AR" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[SECTEUR_ID]"
+                      dataType="numeric"
+                      name="SECTEUR_ID"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[SOUS_SECTEUR_ID]"
+                      dataType="numeric"
+                      name="SOUS_SECTEUR_ID"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[NUMERO]"
+                      dataType="numeric"
+                      name="NUMERO"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[NIVEAU_FORMATION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="NIVEAU_FORMATION" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[PROGRAMME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="PROGRAMME" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[DUREE]"
+                      dataType="numeric"
+                      name="DUREE"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[OBJECTIFS_FORMATION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="OBJECTIFS_FORMATION" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[OBJECTIFS_PEDAGOGIQUES]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="OBJECTIFS_PEDAGOGIQUES" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[SYSTEME_EVALUATION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="SYSTEME_EVALUATION" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[NIVEAU_MINIMUM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NIVEAU_MINIMUM" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[CONDITIONS_ENTREE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="CONDITIONS_ENTREE" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[DESCRIPTION_METIER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="500"
+                      name="DESCRIPTION_METIER" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[DESCRIPTION_METIER_AR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="500"
+                      name="DESCRIPTION_METIER_AR" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[OPERATEUR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="OPERATEUR" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[OPERATEUR_AR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="OPERATEUR_AR" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[PROFILE_FORMATION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="500"
+                      name="PROFILE_FORMATION" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[PROFILE_FORMATION_AR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="500"
+                      name="PROFILE_FORMATION_AR" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[MODE_SELECTION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="MODE_SELECTION" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[DUREE_UNITE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="DUREE_UNITE" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[PERSPECTIVE_PROFESSIONNEL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="500"
+                      name="PERSPECTIVE_PROFESSIONNEL" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[PERSPECTIVE_PROFESSIONNEL_AR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="500"
+                      name="PERSPECTIVE_PROFESSIONNEL_AR" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[NIVEAU_FORMATION_AR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="NIVEAU_FORMATION_AR" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[OBJECTIFS_FORMATION_AR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1000"
+                      name="OBJECTIFS_FORMATION_AR" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[OBJECTIFS_PEDAGOGIQUES_AR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1000"
+                      name="OBJECTIFS_PEDAGOGIQUES_AR" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[SYSTEME_EVALUATION_AR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="500"
+                      name="SYSTEME_EVALUATION_AR" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[NIVEAU_MINIMUM_AR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="NIVEAU_MINIMUM_AR" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[CONDITIONS_ENTREE_AR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1000"
+                      name="CONDITIONS_ENTREE_AR" />
+                    <externalMetadataColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[TEMP_RAND]"
+                      dataType="r8"
+                      name="TEMP_RAND" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie d'erreur de la source Oracle]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de la source Oracle">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[ID]"
+                      dataType="numeric"
+                      lineageId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[ID]"
+                      name="ID"
+                      precision="38" />
+                    <outputColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[SECTEUR_ID]"
+                      dataType="numeric"
+                      lineageId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[SECTEUR_ID]"
+                      name="SECTEUR_ID"
+                      precision="38" />
+                    <outputColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[NOM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[NOM]"
+                      name="NOM" />
+                    <outputColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[NIVEAU_FORMATION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[NIVEAU_FORMATION]"
+                      name="NIVEAU_FORMATION" />
+                    <outputColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[PROGRAMME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[PROGRAMME]"
+                      name="PROGRAMME" />
+                    <outputColumn
+                      refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[DUREE]"
+                      dataType="numeric"
+                      lineageId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[DUREE]"
+                      name="DUREE"
+                      precision="38" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER.Paths[Sortie de la source Oracle]"
+              endId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Destination Staging Table Filere.Inputs[Entrée de destination OLE DB]"
+              name="Sortie de la source Oracle"
+              startId="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle.Outputs[Sortie de la source Oracle]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Vider la table filiere"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tâche d'exécution de requêtes SQL"
+      DTS:DTSID="{3e9043de-0c9f-4fa3-87f8-c9b33fd04b8c}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Vider la table filiere"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6BB00ADA-10CA-4E25-823E-E1ECF15A8616}"
+          SQLTask:SqlStatementSource="Truncate table  [dbo].[Filiere]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte]"
+      DTS:CreationName=""
+      DTS:DTSID="{ff3c38a4-830a-4242-a9ec-0176fd72056f}"
+      DTS:From="Package\Vider la table filiere"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte"
+      DTS:To="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
+<!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
+<!--Le package pourra toujours se charger normalement, mais les informations de disposition précédente seront perdues et le concepteur réorganisera automatiquement les éléments sur l'aire de conception.-->
+<Objects
+  Version="8">
+  <!--Chaque nœud ci-dessous contiendra des propriétés qui n'affectent pas le comportement d'exécution.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="366,42"
+          Id="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER"
+          TopLeft="335.28571456093,155.117646928116" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Vider la table filiere"
+          TopLeft="60,60" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte]"
+          TopLeft="145,102">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="373.28571456093,53.117646928116"
+              Start="0,0"
+              End="373.28571456093,45.617646928116">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.558823464058" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.558823464058"
+                    Point2="0,26.558823464058"
+                    Point3="4,26.558823464058" />
+                  <mssgle:LineSegment
+                    End="369.28571456093,26.558823464058" />
+                  <mssgle:CubicBezierSegment
+                    Point1="369.28571456093,26.558823464058"
+                    Point2="373.28571456093,26.558823464058"
+                    Point3="373.28571456093,30.558823464058" />
+                  <mssgle:LineSegment
+                    End="373.28571456093,45.617646928116" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="228,42"
+          Id="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Destination Staging Table Filere"
+          TopLeft="379.214286120266,198.558823492546" />
+        <NodeLayout
+          Size="204,42"
+          Id="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle"
+          TopLeft="71.9285715699804,12.3823529351438" />
+        <EdgeLayout
+          Id="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER.Paths[Sortie de la source Oracle]"
+          TopLeft="173.92857156998,54.3823529351438">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="319.285714550286,144.176470557402"
+              Start="0,0"
+              End="319.285714550286,136.676470557402">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,68.0882352787009" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,68.0882352787009"
+                    Point2="0,72.0882352787009"
+                    Point3="4,72.0882352787009" />
+                  <mssgle:LineSegment
+                    End="315.285714550286,72.0882352787009" />
+                  <mssgle:CubicBezierSegment
+                    Point1="315.285714550286,72.0882352787009"
+                    Point2="319.285714550286,72.0882352787009"
+                    Point3="319.285714550286,76.0882352787009" />
+                  <mssgle:LineSegment
+                    End="319.285714550286,136.676470557402" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Destination Staging Table Filere">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Migration de Table Filiere de Oracle ver Staging SQL SERVER\Source Table Filiere Oracle">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

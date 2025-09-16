@@ -1,0 +1,622 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/19/2025 5:05:28 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-OR8HLHK"
+  DTS:CreatorName="DESKTOP-OR8HLHK\HP EliteBook 840 G6"
+  DTS:DTSID="{6B0F8AE8-8D08-413F-B6AA-BAC091F92299}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="1036"
+  DTS:ObjectName="Package2"
+  DTS:PackageType="5"
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{9592AD32-E0EC-44E5-BBF0-062BDFA319D6}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tâche de flux de données"
+      DTS:DTSID="{8c9fa830-61bc-4116-969a-dbc60e9c833f}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Destination table SUIVI_HEURE_FORMATEUR vers Staging"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
+              description="Destination OLE DB"
+              name="Destination table SUIVI_HEURE_FORMATEUR vers Staging"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset">[SUIVI_HEURE_FORMATEUR]</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie les options à utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie quand les validations sont émises pendant l'insertion des données.  Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Destination table SUIVI_HEURE_FORMATEUR vers Staging.Connections[OleDbConnection]"
+                  connectionManagerID="{6BB00ADA-10CA-4E25-823E-E1ECF15A8616}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.snifop_stg]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Destination table SUIVI_HEURE_FORMATEUR vers Staging.Inputs[Entrée de destination OLE DB]"
+                  errorOrTruncationOperation="Insérer"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrée de destination OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Destination table SUIVI_HEURE_FORMATEUR vers Staging.Inputs[Entrée de destination OLE DB].Columns[ID]"
+                      cachedDataType="numeric"
+                      cachedName="ID"
+                      cachedPrecision="38"
+                      externalMetadataColumnId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Destination table SUIVI_HEURE_FORMATEUR vers Staging.Inputs[Entrée de destination OLE DB].ExternalColumns[ID]"
+                      lineageId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].Columns[ID]" />
+                    <inputColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Destination table SUIVI_HEURE_FORMATEUR vers Staging.Inputs[Entrée de destination OLE DB].Columns[DATE_SUIVI]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DATE_SUIVI"
+                      externalMetadataColumnId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Destination table SUIVI_HEURE_FORMATEUR vers Staging.Inputs[Entrée de destination OLE DB].ExternalColumns[DATE_SUIVI]"
+                      lineageId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].Columns[DATE_SUIVI]" />
+                    <inputColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Destination table SUIVI_HEURE_FORMATEUR vers Staging.Inputs[Entrée de destination OLE DB].Columns[HEURE_COURS_TH]"
+                      cachedDataType="numeric"
+                      cachedName="HEURE_COURS_TH"
+                      cachedPrecision="38"
+                      externalMetadataColumnId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Destination table SUIVI_HEURE_FORMATEUR vers Staging.Inputs[Entrée de destination OLE DB].ExternalColumns[HEURE_COURS_TH]"
+                      lineageId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].Columns[HEURE_COURS_TH]" />
+                    <inputColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Destination table SUIVI_HEURE_FORMATEUR vers Staging.Inputs[Entrée de destination OLE DB].Columns[HEURE_COURS_PR]"
+                      cachedDataType="numeric"
+                      cachedName="HEURE_COURS_PR"
+                      cachedPrecision="38"
+                      externalMetadataColumnId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Destination table SUIVI_HEURE_FORMATEUR vers Staging.Inputs[Entrée de destination OLE DB].ExternalColumns[HEURE_COURS_PR]"
+                      lineageId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].Columns[HEURE_COURS_PR]" />
+                    <inputColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Destination table SUIVI_HEURE_FORMATEUR vers Staging.Inputs[Entrée de destination OLE DB].Columns[FORMATEUR_ID]"
+                      cachedDataType="numeric"
+                      cachedName="FORMATEUR_ID"
+                      cachedPrecision="38"
+                      externalMetadataColumnId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Destination table SUIVI_HEURE_FORMATEUR vers Staging.Inputs[Entrée de destination OLE DB].ExternalColumns[FORMATEUR_ID]"
+                      lineageId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].Columns[FORMATEUR_ID]" />
+                    <inputColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Destination table SUIVI_HEURE_FORMATEUR vers Staging.Inputs[Entrée de destination OLE DB].Columns[UNITE_FORMATION_ID]"
+                      cachedDataType="numeric"
+                      cachedName="UNITE_FORMATION_ID"
+                      cachedPrecision="38"
+                      externalMetadataColumnId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Destination table SUIVI_HEURE_FORMATEUR vers Staging.Inputs[Entrée de destination OLE DB].ExternalColumns[UNITE_FORMATION_ID]"
+                      lineageId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].Columns[UNITE_FORMATION_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Destination table SUIVI_HEURE_FORMATEUR vers Staging.Inputs[Entrée de destination OLE DB].ExternalColumns[ID]"
+                      dataType="numeric"
+                      name="ID"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Destination table SUIVI_HEURE_FORMATEUR vers Staging.Inputs[Entrée de destination OLE DB].ExternalColumns[DATE_SUIVI]"
+                      dataType="dbTimeStamp"
+                      name="DATE_SUIVI" />
+                    <externalMetadataColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Destination table SUIVI_HEURE_FORMATEUR vers Staging.Inputs[Entrée de destination OLE DB].ExternalColumns[HEURE_COURS_TH]"
+                      dataType="numeric"
+                      name="HEURE_COURS_TH"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Destination table SUIVI_HEURE_FORMATEUR vers Staging.Inputs[Entrée de destination OLE DB].ExternalColumns[HEURE_COURS_PR]"
+                      dataType="numeric"
+                      name="HEURE_COURS_PR"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Destination table SUIVI_HEURE_FORMATEUR vers Staging.Inputs[Entrée de destination OLE DB].ExternalColumns[FORMATEUR_ID]"
+                      dataType="numeric"
+                      name="FORMATEUR_ID"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Destination table SUIVI_HEURE_FORMATEUR vers Staging.Inputs[Entrée de destination OLE DB].ExternalColumns[UNITE_FORMATION_ID]"
+                      dataType="numeric"
+                      name="UNITE_FORMATION_ID"
+                      precision="38" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Destination table SUIVI_HEURE_FORMATEUR vers Staging.Outputs[Sortie d'erreur de destination OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de destination OLE DB"
+                  synchronousInputId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Destination table SUIVI_HEURE_FORMATEUR vers Staging.Inputs[Entrée de destination OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Destination table SUIVI_HEURE_FORMATEUR vers Staging.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Destination table SUIVI_HEURE_FORMATEUR vers Staging.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Destination table SUIVI_HEURE_FORMATEUR vers Staging.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Destination table SUIVI_HEURE_FORMATEUR vers Staging.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle"
+              componentClassID="Microsoft.SSISOracleSrc"
+              contactInfo="Source Oracle;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Source Oracle"
+              name="Source table SUIVI_HEURE_FORMATEUR Oracle"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nom de la table à extraire."
+                  expressionType="Notify"
+                  name="TableName">"BITBOT"."C##SNIFOP_REFERENTIAL_SUIVI_HEURE_FORMATEUR"</property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifiez le nombre de lignes extraites par lot."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Détermine l'allocation de taille de segment pour les colonnes LOB"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Int32"
+                  description="Page de codes à utiliser quand les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de lignes préextraites."
+                  expressionType="Notify"
+                  name="PrefetchCount">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Connections[ORACLEConnection]"
+                  connectionManagerID="{7D9F2A8F-4A51-46E9-AE9A-E41CB6D84E93}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[bitbot]"
+                  description="Connexion ORACLE en cours d'exécution utilisée pour accéder à la base de données."
+                  name="ORACLEConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle]"
+                  errorRowDisposition="FailComponent"
+                  name="Sortie de la source Oracle"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].Columns[ID]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[ID]"
+                      lineageId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].Columns[ID]"
+                      name="ID"
+                      precision="38" />
+                    <outputColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].Columns[DATE_SUIVI]"
+                      dataType="dbTimeStamp"
+                      externalMetadataColumnId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[DATE_SUIVI]"
+                      lineageId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].Columns[DATE_SUIVI]"
+                      name="DATE_SUIVI" />
+                    <outputColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].Columns[HEURE_COURS_TH]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[HEURE_COURS_TH]"
+                      lineageId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].Columns[HEURE_COURS_TH]"
+                      name="HEURE_COURS_TH"
+                      precision="38" />
+                    <outputColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].Columns[HEURE_COURS_PR]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[HEURE_COURS_PR]"
+                      lineageId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].Columns[HEURE_COURS_PR]"
+                      name="HEURE_COURS_PR"
+                      precision="38" />
+                    <outputColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].Columns[FORMATEUR_ID]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[FORMATEUR_ID]"
+                      lineageId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].Columns[FORMATEUR_ID]"
+                      name="FORMATEUR_ID"
+                      precision="38" />
+                    <outputColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].Columns[UNITE_FORMATION_ID]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[UNITE_FORMATION_ID]"
+                      lineageId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].Columns[UNITE_FORMATION_ID]"
+                      name="UNITE_FORMATION_ID"
+                      precision="38" />
+                    <outputColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].Columns[CREATED_BY]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[CREATED_BY]"
+                      lineageId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].Columns[CREATED_BY]"
+                      name="CREATED_BY"
+                      precision="19" />
+                    <outputColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].Columns[LAST_MODIFIED_BY]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[LAST_MODIFIED_BY]"
+                      length="255"
+                      lineageId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].Columns[LAST_MODIFIED_BY]"
+                      name="LAST_MODIFIED_BY" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[CREATED_DATE]"
+                      dataType="dbTimeStamp"
+                      name="CREATED_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[LAST_MODIFIED_DATE]"
+                      dataType="dbTimeStamp"
+                      name="LAST_MODIFIED_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[ID]"
+                      dataType="numeric"
+                      name="ID"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[DATE_SUIVI]"
+                      dataType="dbTimeStamp"
+                      name="DATE_SUIVI" />
+                    <externalMetadataColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[HEURE_COURS_TH]"
+                      dataType="numeric"
+                      name="HEURE_COURS_TH"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[HEURE_COURS_PR]"
+                      dataType="numeric"
+                      name="HEURE_COURS_PR"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[FORMATEUR_ID]"
+                      dataType="numeric"
+                      name="FORMATEUR_ID"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[UNITE_FORMATION_ID]"
+                      dataType="numeric"
+                      name="UNITE_FORMATION_ID"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[CREATED_BY]"
+                      dataType="numeric"
+                      name="CREATED_BY"
+                      precision="19" />
+                    <externalMetadataColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[LAST_MODIFIED_BY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="LAST_MODIFIED_BY" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie d'erreur de la source Oracle]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de la source Oracle">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[ID]"
+                      dataType="numeric"
+                      lineageId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[ID]"
+                      name="ID"
+                      precision="38" />
+                    <outputColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[DATE_SUIVI]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[DATE_SUIVI]"
+                      name="DATE_SUIVI" />
+                    <outputColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[HEURE_COURS_TH]"
+                      dataType="numeric"
+                      lineageId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[HEURE_COURS_TH]"
+                      name="HEURE_COURS_TH"
+                      precision="38" />
+                    <outputColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[HEURE_COURS_PR]"
+                      dataType="numeric"
+                      lineageId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[HEURE_COURS_PR]"
+                      name="HEURE_COURS_PR"
+                      precision="38" />
+                    <outputColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[CREATED_BY]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[CREATED_BY]"
+                      lineageId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[CREATED_BY]"
+                      name="CREATED_BY"
+                      precision="19" />
+                    <outputColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[LAST_MODIFIED_BY]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[LAST_MODIFIED_BY]"
+                      length="255"
+                      lineageId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[LAST_MODIFIED_BY]"
+                      name="LAST_MODIFIED_BY" />
+                    <outputColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[FORMATEUR_ID]"
+                      dataType="numeric"
+                      lineageId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[FORMATEUR_ID]"
+                      name="FORMATEUR_ID"
+                      precision="38" />
+                    <outputColumn
+                      refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[UNITE_FORMATION_ID]"
+                      dataType="numeric"
+                      lineageId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[UNITE_FORMATION_ID]"
+                      name="UNITE_FORMATION_ID"
+                      precision="38" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging.Paths[Sortie de la source Oracle]"
+              endId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Destination table SUIVI_HEURE_FORMATEUR vers Staging.Inputs[Entrée de destination OLE DB]"
+              name="Sortie de la source Oracle"
+              startId="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle.Outputs[Sortie de la source Oracle]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Vider la table SUIVI_HEURE_FORMATEUR"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tâche d'exécution de requêtes SQL"
+      DTS:DTSID="{4f159e16-df3a-402d-b323-003a3e7400b3}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Vider la table SUIVI_HEURE_FORMATEUR"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6BB00ADA-10CA-4E25-823E-E1ECF15A8616}"
+          SQLTask:SqlStatementSource="truncate table SUIVI_HEURE_FORMATEUR;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte]"
+      DTS:CreationName=""
+      DTS:DTSID="{47db0e56-fbfb-42c5-8d99-1cc81954e2fd}"
+      DTS:From="Package\Vider la table SUIVI_HEURE_FORMATEUR"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte"
+      DTS:To="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
+<!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
+<!--Le package pourra toujours se charger normalement, mais les informations de disposition précédente seront perdues et le concepteur réorganisera automatiquement les éléments sur l'aire de conception.-->
+<Objects
+  Version="8">
+  <!--Chaque nœud ci-dessous contiendra des propriétés qui n'affectent pas le comportement d'exécution.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="421,42"
+          Id="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging"
+          TopLeft="191.42857177221,161.529411649415" />
+        <NodeLayout
+          Size="275,42"
+          Id="Package\Vider la table SUIVI_HEURE_FORMATEUR"
+          TopLeft="60,60" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte]"
+          TopLeft="197.6,101.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="204.22857177221,59.9294116494152"
+              Start="0,0"
+              End="204.22857177221,52.4294116494152">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.9647058247076" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.9647058247076"
+                    Point2="0,29.9647058247076"
+                    Point3="4,29.9647058247076" />
+                  <mssgle:LineSegment
+                    End="200.22857177221,29.9647058247076" />
+                  <mssgle:CubicBezierSegment
+                    Point1="200.22857177221,29.9647058247076"
+                    Point2="204.22857177221,29.9647058247076"
+                    Point3="204.22857177221,33.9647058247076" />
+                  <mssgle:LineSegment
+                    End="204.22857177221,52.4294116494152" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="306,42"
+          Id="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle"
+          TopLeft="151.214286024473,38.3823529123538" />
+        <NodeLayout
+          Size="354,42"
+          Id="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Destination table SUIVI_HEURE_FORMATEUR vers Staging"
+          TopLeft="183.357143171892,147.911764607349" />
+        <EdgeLayout
+          Id="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging.Paths[Sortie de la source Oracle]"
+          TopLeft="304.014286024473,79.9823529123538">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="56.5428571474187,67.9294116949953"
+              Start="0,0"
+              End="56.5428571474187,60.4294116949953">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.9647058474976" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.9647058474976"
+                    Point2="0,33.9647058474976"
+                    Point3="4,33.9647058474976" />
+                  <mssgle:LineSegment
+                    End="52.5428571474187,33.9647058474976" />
+                  <mssgle:CubicBezierSegment
+                    Point1="52.5428571474187,33.9647058474976"
+                    Point2="56.5428571474187,33.9647058474976"
+                    Point3="56.5428571474187,37.9647058474976" />
+                  <mssgle:LineSegment
+                    End="56.5428571474187,60.4294116949953" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Destination table SUIVI_HEURE_FORMATEUR vers Staging">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Migration des donnée de Table SUIVI_HEURE_FORMATEUR vers Staging\Source table SUIVI_HEURE_FORMATEUR Oracle">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

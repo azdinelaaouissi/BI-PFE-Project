@@ -1,0 +1,159 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="5afb773d-0dc4-4292-92d2-1ec8ee2988fa" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DIM ETABLISSEMENT HOMOLOGATION</ID>
+  <Name>DIM ETABLISSEMENT HOMOLOGATION</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="c75b1a99-76ad-4bb9-92cf-f9eeda1de329">
+    <DataSourceViewID>Snifop Dm</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="4c1f2c96-710e-4317-b763-53b4ad96c90b">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="bbeeff2d-621d-4339-a34e-3669bd22ddae">
+      <ID>ETAB HOMOLOGATION SK</ID>
+      <Name>ETAB HOMOLOGATION SK</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="fef7317e-bbf3-4672-8a6b-0f61e21c8fca">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="281d2ca2-b4b7-4ae3-a539-3812ee878da3">
+            <TableID>dm_DIM_ETABLISSEMENT_HOMOLOGATION</TableID>
+            <ColumnID>ETAB_HOMOLOGATION_SK</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="9c594548-11f7-427d-9e7d-f68ecb89303b">
+          <AttributeID>ETAB HOMOLOGATION SRC</AttributeID>
+          <Name>ETAB HOMOLOGATION SRC</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="717aed3e-1446-4d29-bb01-bf9c2f26be09">
+          <AttributeID>TYPE</AttributeID>
+          <Name>TYPE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e19b1a93-9ace-442a-b332-fd02277901d0">
+          <AttributeID>DATE CREATION</AttributeID>
+          <Name>DATE CREATION</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8d0ca920-81d0-43c3-8fca-47775005ef36">
+          <AttributeID>DUREE VALIDITE</AttributeID>
+          <Name>DUREE VALIDITE</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="92814da9-8580-4541-8554-5c0d0c1e2537">
+      <ID>ETAB HOMOLOGATION SRC</ID>
+      <Name>ETAB HOMOLOGATION SRC</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e5af055c-db60-4b72-86ed-53af50e6b7eb">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="039dbebe-2e94-40c5-8d06-0eca9224f9f7">
+            <TableID>dm_DIM_ETABLISSEMENT_HOMOLOGATION</TableID>
+            <ColumnID>ETAB_HOMOLOGATION_SRC</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5ba8487b-3dd7-4785-9f62-fa9f070bf443">
+      <ID>TYPE</ID>
+      <Name>TYPE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="75404a30-08c2-46e1-a6a8-e42ce9176129">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e753f3e4-79f8-40bf-b783-619a45280f1e">
+            <TableID>dm_DIM_ETABLISSEMENT_HOMOLOGATION</TableID>
+            <ColumnID>TYPE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a88e7e2e-935b-48ba-bbfe-222b6fe66012">
+      <ID>DATE CREATION</ID>
+      <Name>DATE CREATION</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cb237180-5856-490f-a1c8-ac9d7257ac85">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3b6bc88b-c3a1-4b71-84c0-4807b424fecc">
+            <TableID>dm_DIM_ETABLISSEMENT_HOMOLOGATION</TableID>
+            <ColumnID>DATE_CREATION</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5ad25bca-4363-4000-acfa-7c0c849da7b0">
+      <ID>DUREE VALIDITE</ID>
+      <Name>DUREE VALIDITE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="349e32b3-3f97-41d6-bbe5-307c77204fa9">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ab68900c-02b3-44f5-a960-64a6461fc84a">
+            <TableID>dm_DIM_ETABLISSEMENT_HOMOLOGATION</TableID>
+            <ColumnID>DUREE_VALIDITE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

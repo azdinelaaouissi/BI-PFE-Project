@@ -1,0 +1,1819 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/19/2025 5:04:39 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-OR8HLHK"
+  DTS:CreatorName="DESKTOP-OR8HLHK\HP EliteBook 840 G6"
+  DTS:DTSID="{2F95E426-10C5-4839-8B3F-BF3B7580C6D1}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="1036"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{3CA00683-5276-4402-A3BE-111EFEC45D56}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{4C9D1A03-5767-4EAE-806E-061CE6FAB878}"
+      DTS:ObjectName="Gestionnaire de connexions de fichiers plats">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x002C_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\PC\Desktop\PFE\csv\inscription_groupee.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID"
+              DTS:DTSID="{CC0AEC3E-25C4-4610-BBC2-B207CA49D748}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="INSCRIPTION_ID"
+              DTS:DTSID="{3621176E-103F-4DA4-AA60-FD0A748E510F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ANNEE_SCOLAIRE"
+              DTS:DTSID="{587DC43F-80B4-4809-91A9-525AED833106}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="STATUT"
+              DTS:DTSID="{AE767ECD-F088-4C04-A1CB-37A4AA64F0C4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ANNEE_ETUDE"
+              DTS:DTSID="{C3FAE310-720A-4781-8DF8-BE05C286CEC4}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tâche de flux de données"
+      DTS:DTSID="{f4920c2f-70ac-4c2c-8d2c-08ab2c36c1e7}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Destination vers Staging"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
+              description="Destination OLE DB"
+              name="Destination vers Staging"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset">[INSCRIPTION_GROUPE]</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie les options à utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie quand les validations sont émises pendant l'insertion des données.  Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Destination vers Staging.Connections[OleDbConnection]"
+                  connectionManagerID="{6BB00ADA-10CA-4E25-823E-E1ECF15A8616}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.snifop_stg]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Destination vers Staging.Inputs[Entrée de destination OLE DB]"
+                  errorOrTruncationOperation="Insérer"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrée de destination OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Destination vers Staging.Inputs[Entrée de destination OLE DB].Columns[ID]"
+                      cachedDataType="numeric"
+                      cachedName="ID"
+                      cachedPrecision="38"
+                      externalMetadataColumnId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Destination vers Staging.Inputs[Entrée de destination OLE DB].ExternalColumns[ID]"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Outputs[Sortie de tri].Columns[ID]" />
+                    <inputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Destination vers Staging.Inputs[Entrée de destination OLE DB].Columns[INSCRIPTION_ID]"
+                      cachedDataType="numeric"
+                      cachedName="INSCRIPTION_ID"
+                      cachedPrecision="38"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Destination vers Staging.Inputs[Entrée de destination OLE DB].ExternalColumns[INSCRIPTION_ID]"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Outputs[Sortie de tri].Columns[INSCRIPTION_ID]" />
+                    <inputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Destination vers Staging.Inputs[Entrée de destination OLE DB].Columns[ANNEE_SCOLAIRE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="ANNEE_SCOLAIRE"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Destination vers Staging.Inputs[Entrée de destination OLE DB].ExternalColumns[ANNEE_SCOLAIRE]"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Outputs[Sortie de tri].Columns[ANNEE_SCOLAIRE]" />
+                    <inputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Destination vers Staging.Inputs[Entrée de destination OLE DB].Columns[STATUT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="STATUT"
+                      externalMetadataColumnId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Destination vers Staging.Inputs[Entrée de destination OLE DB].ExternalColumns[STATUT]"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Outputs[Sortie de tri].Columns[STATUT]" />
+                    <inputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Destination vers Staging.Inputs[Entrée de destination OLE DB].Columns[ANNEE_ETUDE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="ANNEE_ETUDE"
+                      externalMetadataColumnId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Destination vers Staging.Inputs[Entrée de destination OLE DB].ExternalColumns[ANNEE_ETUDE]"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Outputs[Sortie de tri].Columns[ANNEE_ETUDE]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Destination vers Staging.Inputs[Entrée de destination OLE DB].ExternalColumns[ID]"
+                      dataType="numeric"
+                      name="ID"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Destination vers Staging.Inputs[Entrée de destination OLE DB].ExternalColumns[INSCRIPTION_ID]"
+                      dataType="numeric"
+                      name="INSCRIPTION_ID"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Destination vers Staging.Inputs[Entrée de destination OLE DB].ExternalColumns[ANNEE_SCOLAIRE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="ANNEE_SCOLAIRE" />
+                    <externalMetadataColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Destination vers Staging.Inputs[Entrée de destination OLE DB].ExternalColumns[STATUT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="STATUT" />
+                    <externalMetadataColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Destination vers Staging.Inputs[Entrée de destination OLE DB].ExternalColumns[ANNEE_ETUDE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="ANNEE_ETUDE" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Destination vers Staging.Outputs[Sortie d'erreur de destination OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de destination OLE DB"
+                  synchronousInputId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Destination vers Staging.Inputs[Entrée de destination OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Destination vers Staging.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Destination vers Staging.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Destination vers Staging.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Destination vers Staging.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Ramplacement des valeurs null"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="Ramplacement des valeurs null"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Ramplacement des valeurs null.Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Ramplacement des valeurs null.Inputs[Entrée de colonne dérivée].Columns[STATUT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="STATUT"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[STATUT]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[ISNULL](#{Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[STATUT]}) ? "STAGIAIRE" : #{Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[STATUT]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(STATUT) ? "STAGIAIRE" : STATUT</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Ramplacement des valeurs null.Inputs[Entrée de colonne dérivée].Columns[ANNEE_ETUDE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="ANNEE_ETUDE"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[ANNEE_ETUDE]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[ISNULL](#{Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[ANNEE_ETUDE]}) ? "indefinie" : #{Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[ANNEE_ETUDE]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(ANNEE_ETUDE) ? "indefinie" : ANNEE_ETUDE</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Ramplacement des valeurs null.Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Ramplacement des valeurs null.Inputs[Entrée de colonne dérivée]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Ramplacement des valeurs null.Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Ramplacement des valeurs null.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Ramplacement des valeurs null.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Ramplacement des valeurs null.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Ramplacement des valeurs null.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Ramplacement des valeurs null.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle"
+              componentClassID="Microsoft.SSISOracleSrc"
+              contactInfo="Source Oracle;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Source Oracle"
+              name="Source Tbale INSCRIPTION_GROUPE Oracle"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nom de la table à extraire."
+                  expressionType="Notify"
+                  name="TableName">"BITBOT"."C##SNIFOP_REFERENTIAL_INSCRIPTION_GROUPE"</property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifiez le nombre de lignes extraites par lot."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Détermine l'allocation de taille de segment pour les colonnes LOB"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Int32"
+                  description="Page de codes à utiliser quand les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de lignes préextraites."
+                  expressionType="Notify"
+                  name="PrefetchCount">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Connections[ORACLEConnection]"
+                  connectionManagerID="{7D9F2A8F-4A51-46E9-AE9A-E41CB6D84E93}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[bitbot]"
+                  description="Connexion ORACLE en cours d'exécution utilisée pour accéder à la base de données."
+                  name="ORACLEConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle]"
+                  errorRowDisposition="FailComponent"
+                  name="Sortie de la source Oracle"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[ID]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[ID]"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[ID]"
+                      name="ID"
+                      precision="38" />
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[INSCRIPTION_ID]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[INSCRIPTION_ID]"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[INSCRIPTION_ID]"
+                      name="INSCRIPTION_ID"
+                      precision="38" />
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[ANNEE_SCOLAIRE]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[ANNEE_SCOLAIRE]"
+                      length="255"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[ANNEE_SCOLAIRE]"
+                      name="ANNEE_SCOLAIRE" />
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[STATUT]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[STATUT]"
+                      length="255"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[STATUT]"
+                      name="STATUT" />
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[ANNEE_ETUDE]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[ANNEE_ETUDE]"
+                      length="255"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[ANNEE_ETUDE]"
+                      name="ANNEE_ETUDE" />
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[SERIE]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[SERIE]"
+                      length="255"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[SERIE]"
+                      name="SERIE" />
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[NUMERO]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[NUMERO]"
+                      length="255"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[NUMERO]"
+                      name="NUMERO" />
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[VISA]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[VISA]"
+                      length="255"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[VISA]"
+                      name="VISA" />
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[DATE_VISA]"
+                      dataType="dbTimeStamp"
+                      externalMetadataColumnId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[DATE_VISA]"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[DATE_VISA]"
+                      name="DATE_VISA" />
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[ASSURANCE_ID]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[ASSURANCE_ID]"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[ASSURANCE_ID]"
+                      name="ASSURANCE_ID"
+                      precision="38" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[CREATED_DATE]"
+                      dataType="dbTimeStamp"
+                      name="CREATED_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[LAST_MODIFIED_DATE]"
+                      dataType="dbTimeStamp"
+                      name="LAST_MODIFIED_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[ID]"
+                      dataType="numeric"
+                      name="ID"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[CREATED_BY]"
+                      dataType="numeric"
+                      name="CREATED_BY"
+                      precision="19" />
+                    <externalMetadataColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[LAST_MODIFIED_BY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="LAST_MODIFIED_BY" />
+                    <externalMetadataColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[INSCRIPTION_ID]"
+                      dataType="numeric"
+                      name="INSCRIPTION_ID"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[GROUPE_ID]"
+                      dataType="numeric"
+                      name="GROUPE_ID"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[STATUT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="STATUT" />
+                    <externalMetadataColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[ANNEE_SCOLAIRE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="ANNEE_SCOLAIRE" />
+                    <externalMetadataColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[ANNEE_ETUDE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="ANNEE_ETUDE" />
+                    <externalMetadataColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[OBSERVATION]"
+                      dataType="wstr"
+                      length="255"
+                      name="OBSERVATION" />
+                    <externalMetadataColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[SERIE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="SERIE" />
+                    <externalMetadataColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[NUMERO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="NUMERO" />
+                    <externalMetadataColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[VISA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="VISA" />
+                    <externalMetadataColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[DATE_VISA]"
+                      dataType="dbTimeStamp"
+                      name="DATE_VISA" />
+                    <externalMetadataColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[ASSURANCE_ID]"
+                      dataType="numeric"
+                      name="ASSURANCE_ID"
+                      precision="38" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie d'erreur de la source Oracle]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de la source Oracle">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[ID]"
+                      dataType="numeric"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[ID]"
+                      name="ID"
+                      precision="38" />
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[INSCRIPTION_ID]"
+                      dataType="numeric"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[INSCRIPTION_ID]"
+                      name="INSCRIPTION_ID"
+                      precision="38" />
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[ANNEE_SCOLAIRE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[ANNEE_SCOLAIRE]"
+                      name="ANNEE_SCOLAIRE" />
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[SERIE]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[SERIE]"
+                      length="255"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[SERIE]"
+                      name="SERIE" />
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[NUMERO]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[NUMERO]"
+                      length="255"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[NUMERO]"
+                      name="NUMERO" />
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[VISA]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[VISA]"
+                      length="255"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[VISA]"
+                      name="VISA" />
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[DATE_VISA]"
+                      dataType="dbTimeStamp"
+                      externalMetadataColumnId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[DATE_VISA]"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[DATE_VISA]"
+                      name="DATE_VISA" />
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[ASSURANCE_ID]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].ExternalColumns[ASSURANCE_ID]"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[ASSURANCE_ID]"
+                      name="ASSURANCE_ID"
+                      precision="38" />
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[STATUT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[STATUT]"
+                      name="STATUT" />
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[ANNEE_ETUDE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie d'erreur de la source Oracle].Columns[ANNEE_ETUDE]"
+                      name="ANNEE_ETUDE" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Trier;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Trie les données d'entrée en ordre croissant ou décroissant lorsque le tri ne peut pas être effectué à la source. Par exemple, triez les données de vente par 'id de client' avant leur enregistrement dans un fichier plat et leur diffusion dans un autre service. Remarque : nous ne recommandons pas cette transformation dans le cas de flux de données volumineux."
+              name="Trier"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si la transformation de tri supprime les lignes comportant des valeurs de tri en double."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le nombre maximal de threads à utiliser pour le tri."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Inputs[Entrée de tri]"
+                  name="Entrée de tri">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Inputs[Entrée de tri].Columns[ID]"
+                      cachedDataType="numeric"
+                      cachedName="ID"
+                      cachedPrecision="38"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Inputs[Entrée de tri].Columns[INSCRIPTION_ID]"
+                      cachedDataType="numeric"
+                      cachedName="INSCRIPTION_ID"
+                      cachedPrecision="38"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[INSCRIPTION_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Inputs[Entrée de tri].Columns[ANNEE_SCOLAIRE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="ANNEE_SCOLAIRE"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[ANNEE_SCOLAIRE]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Inputs[Entrée de tri].Columns[STATUT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="STATUT"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[STATUT]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Inputs[Entrée de tri].Columns[ANNEE_ETUDE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="ANNEE_ETUDE"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[ANNEE_ETUDE]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Inputs[Entrée de tri].Columns[SERIE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="SERIE"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[SERIE]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Inputs[Entrée de tri].Columns[NUMERO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="NUMERO"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[NUMERO]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Inputs[Entrée de tri].Columns[VISA]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="VISA"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[VISA]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Inputs[Entrée de tri].Columns[DATE_VISA]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DATE_VISA"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[DATE_VISA]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Inputs[Entrée de tri].Columns[ASSURANCE_ID]"
+                      cachedDataType="numeric"
+                      cachedName="ASSURANCE_ID"
+                      cachedPrecision="38"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[ASSURANCE_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Outputs[Sortie de tri]"
+                  isSorted="true"
+                  name="Sortie de tri">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Outputs[Sortie de tri].Columns[ID]"
+                      dataType="numeric"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Outputs[Sortie de tri].Columns[ID]"
+                      name="ID"
+                      precision="38">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Outputs[Sortie de tri].Columns[INSCRIPTION_ID]"
+                      dataType="numeric"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Outputs[Sortie de tri].Columns[INSCRIPTION_ID]"
+                      name="INSCRIPTION_ID"
+                      precision="38"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[INSCRIPTION_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Outputs[Sortie de tri].Columns[ANNEE_SCOLAIRE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Outputs[Sortie de tri].Columns[ANNEE_SCOLAIRE]"
+                      name="ANNEE_SCOLAIRE"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[ANNEE_SCOLAIRE]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Outputs[Sortie de tri].Columns[STATUT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Outputs[Sortie de tri].Columns[STATUT]"
+                      name="STATUT">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[STATUT]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Outputs[Sortie de tri].Columns[ANNEE_ETUDE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Outputs[Sortie de tri].Columns[ANNEE_ETUDE]"
+                      name="ANNEE_ETUDE">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[ANNEE_ETUDE]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Outputs[Sortie de tri].Columns[SERIE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Outputs[Sortie de tri].Columns[SERIE]"
+                      name="SERIE">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[SERIE]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Outputs[Sortie de tri].Columns[NUMERO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Outputs[Sortie de tri].Columns[NUMERO]"
+                      name="NUMERO">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[NUMERO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Outputs[Sortie de tri].Columns[VISA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Outputs[Sortie de tri].Columns[VISA]"
+                      name="VISA">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[VISA]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Outputs[Sortie de tri].Columns[DATE_VISA]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Outputs[Sortie de tri].Columns[DATE_VISA]"
+                      name="DATE_VISA">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[DATE_VISA]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Outputs[Sortie de tri].Columns[ASSURANCE_ID]"
+                      dataType="numeric"
+                      lineageId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Outputs[Sortie de tri].Columns[ASSURANCE_ID]"
+                      name="ASSURANCE_ID"
+                      precision="38">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle].Columns[ASSURANCE_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER.Paths[Sortie de colonne dérivée]"
+              endId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Inputs[Entrée de tri]"
+              name="Sortie de colonne dérivée"
+              startId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Ramplacement des valeurs null.Outputs[Sortie de colonne dérivée]" />
+            <path
+              refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER.Paths[Sortie de la source Oracle]"
+              endId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Ramplacement des valeurs null.Inputs[Entrée de colonne dérivée]"
+              name="Sortie de la source Oracle"
+              startId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle.Outputs[Sortie de la source Oracle]" />
+            <path
+              refId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER.Paths[Sortie de tri]"
+              endId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Destination vers Staging.Inputs[Entrée de destination OLE DB]"
+              name="Sortie de tri"
+              startId="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier.Outputs[Sortie de tri]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tâche de flux de données"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tâche de flux de données"
+      DTS:DTSID="{9085850D-CDEB-470C-A676-A7B72861FD7C}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tâche de flux de données"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Tâche de flux de données\Destination OLE DB"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
+              description="Destination OLE DB"
+              name="Destination OLE DB"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset">[dbo].[INSCRIPTION_GROUPE]</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie les options à utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie quand les validations sont émises pendant l'insertion des données.  Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tâche de flux de données\Destination OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="{6BB00ADA-10CA-4E25-823E-E1ECF15A8616}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.snifop_stg]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
+                  errorOrTruncationOperation="Insérer"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrée de destination OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ID"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[ID]"
+                      lineageId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[ID]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[INSCRIPTION_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="INSCRIPTION_ID"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[INSCRIPTION_ID]"
+                      lineageId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[INSCRIPTION_ID]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[ANNEE_SCOLAIRE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ANNEE_SCOLAIRE"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[ANNEE_SCOLAIRE]"
+                      lineageId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[ANNEE_SCOLAIRE]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[STATUT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="STATUT"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[STATUT]"
+                      lineageId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[STATUT]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[ANNEE_ETUDE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ANNEE_ETUDE"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[ANNEE_ETUDE]"
+                      lineageId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[ANNEE_ETUDE]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[ID]"
+                      dataType="numeric"
+                      name="ID"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[INSCRIPTION_ID]"
+                      dataType="numeric"
+                      name="INSCRIPTION_ID"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[ANNEE_SCOLAIRE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="ANNEE_SCOLAIRE" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[STATUT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="STATUT" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[ANNEE_ETUDE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="ANNEE_ETUDE" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tâche de flux de données\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de destination OLE DB"
+                  synchronousInputId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tâche de flux de données\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tâche de flux de données\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tâche de flux de données\Source du fichier plat"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Source du fichier plat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Source du fichier plat"
+              localeId="1036"
+              name="Source du fichier plat"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Spécifie si les colonnes dont la longueur est zéro sont traitées comme des valeurs NULL."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom d'une colonne de sortie contenant le nom du fichier. Si aucun nom n'est spécifié, aucune colonne de sortie contenant le nom du fichier ne sera générée."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tâche de flux de données\Source du fichier plat.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats]"
+                  connectionManagerRefId="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat]"
+                  name="Sortie de source de fichier plat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[ID]"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[ID]"
+                      name="ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[INSCRIPTION_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[INSCRIPTION_ID]"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[INSCRIPTION_ID]"
+                      name="INSCRIPTION_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[ANNEE_SCOLAIRE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[ANNEE_SCOLAIRE]"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[ANNEE_SCOLAIRE]"
+                      name="ANNEE_SCOLAIRE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[STATUT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[STATUT]"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[STATUT]"
+                      name="STATUT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[ANNEE_ETUDE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[ANNEE_ETUDE]"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[ANNEE_ETUDE]"
+                      name="ANNEE_ETUDE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[INSCRIPTION_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="INSCRIPTION_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[ANNEE_SCOLAIRE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ANNEE_SCOLAIRE" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[STATUT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="STATUT" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[ANNEE_ETUDE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ANNEE_ETUDE" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de source de fichier plat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Colonne de sortie d'erreur de source de fichier plat"
+                      lineageId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      name="Colonne de sortie d'erreur de source de fichier plat" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Tâche de flux de données.Paths[Sortie de source de fichier plat]"
+              endId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
+              name="Sortie de source de fichier plat"
+              startId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Vider la Table INSCRIPTION_GROUPE dans Staging"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tâche d'exécution de requêtes SQL"
+      DTS:DTSID="{b45bbfe3-2ff1-47b3-b294-a374980b9975}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Vider la Table INSCRIPTION_GROUPE dans Staging"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6BB00ADA-10CA-4E25-823E-E1ECF15A8616}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE INSCRIPTION_GROUPE;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte]"
+      DTS:CreationName=""
+      DTS:DTSID="{f664a310-3e36-40f3-8c8f-b95017f8a55d}"
+      DTS:From="Package\Vider la Table INSCRIPTION_GROUPE dans Staging"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte"
+      DTS:To="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{6B4B43FB-DF55-4B55-8569-AD5BA4CDE764}"
+      DTS:From="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte 1"
+      DTS:To="Package\Tâche de flux de données" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
+<!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
+<!--Le package pourra toujours se charger normalement, mais les informations de disposition précédente seront perdues et le concepteur réorganisera automatiquement les éléments sur l'aire de conception.-->
+<Objects
+  Version="8">
+  <!--Chaque nœud ci-dessous contiendra des propriétés qui n'affectent pas le comportement d'exécution.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="399,42"
+          Id="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER"
+          TopLeft="326,210.47058813408" />
+        <NodeLayout
+          Size="200,42"
+          Id="Package\Tâche de flux de données"
+          TopLeft="708,302" />
+        <NodeLayout
+          Size="322,42"
+          Id="Package\Vider la Table INSCRIPTION_GROUPE dans Staging"
+          TopLeft="108.571428674825,60" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte]"
+          TopLeft="269.571428674825,102">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="255.928571325175,108.47058813408"
+              Start="0,0"
+              End="255.928571325175,100.97058813408">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.23529406704" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,50.23529406704"
+                    Point2="0,54.23529406704"
+                    Point3="4,54.23529406704" />
+                  <mssgle:LineSegment
+                    End="251.928571325175,54.23529406704" />
+                  <mssgle:CubicBezierSegment
+                    Point1="251.928571325175,54.23529406704"
+                    Point2="255.928571325175,54.23529406704"
+                    Point3="255.928571325175,58.23529406704" />
+                  <mssgle:LineSegment
+                    End="255.928571325175,100.97058813408" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte 1]"
+          TopLeft="525.5,252.47058813408">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="282.5,49.52941186592"
+              Start="0,0"
+              End="282.5,42.02941186592">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.76470593296" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.76470593296"
+                    Point2="0,24.76470593296"
+                    Point3="4,24.76470593296" />
+                  <mssgle:LineSegment
+                    End="278.5,24.76470593296" />
+                  <mssgle:CubicBezierSegment
+                    Point1="278.5,24.76470593296"
+                    Point2="282.5,24.76470593296"
+                    Point3="282.5,28.76470593296" />
+                  <mssgle:LineSegment
+                    End="282.5,42.02941186592" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="288,42"
+          Id="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle"
+          TopLeft="78.5714287386865,38.2352940841323" />
+        <NodeLayout
+          Size="193,42"
+          Id="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Destination vers Staging"
+          TopLeft="642.142858296937,355.058823378596" />
+        <NodeLayout
+          Size="225,42"
+          Id="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Ramplacement des valeurs null"
+          TopLeft="247.714286365071,136.470588145475" />
+        <NodeLayout
+          Size="101,42"
+          Id="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Trier"
+          TopLeft="429,256" />
+        <EdgeLayout
+          Id="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER.Paths[Sortie de la source Oracle]"
+          TopLeft="222.571428738687,80.2352940841323">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="137.642857626384,56.2352940613427"
+              Start="0,0"
+              End="137.642857626384,48.7352940613427">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.1176470306713" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.1176470306713"
+                    Point2="0,28.1176470306713"
+                    Point3="4,28.1176470306713" />
+                  <mssgle:LineSegment
+                    End="133.642857626384,28.1176470306713" />
+                  <mssgle:CubicBezierSegment
+                    Point1="133.642857626384,28.1176470306713"
+                    Point2="137.642857626384,28.1176470306713"
+                    Point3="137.642857626384,32.1176470306713" />
+                  <mssgle:LineSegment
+                    End="137.642857626384,48.7352940613427" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER.Paths[Sortie de colonne dérivée]"
+          TopLeft="360.214286365071,178.470588145475">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="119.285713634929,77.529411854525"
+              Start="0,0"
+              End="119.285713634929,70.029411854525">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.7647059272625" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.7647059272625"
+                    Point2="0,38.7647059272625"
+                    Point3="4,38.7647059272625" />
+                  <mssgle:LineSegment
+                    End="115.285713634929,38.7647059272625" />
+                  <mssgle:CubicBezierSegment
+                    Point1="115.285713634929,38.7647059272625"
+                    Point2="119.285713634929,38.7647059272625"
+                    Point3="119.285713634929,42.7647059272625" />
+                  <mssgle:LineSegment
+                    End="119.285713634929,70.029411854525" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER.Paths[Sortie de tri]"
+          TopLeft="479.5,298">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="259.142858296937,57.058823378596"
+              Start="0,0"
+              End="259.142858296937,49.558823378596">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.529411689298" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.529411689298"
+                    Point2="0,28.529411689298"
+                    Point3="4,28.529411689298" />
+                  <mssgle:LineSegment
+                    End="255.142858296937,28.529411689298" />
+                  <mssgle:CubicBezierSegment
+                    Point1="255.142858296937,28.529411689298"
+                    Point2="259.142858296937,28.529411689298"
+                    Point3="259.142858296937,32.529411689298" />
+                  <mssgle:LineSegment
+                    End="259.142858296937,49.558823378596" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Source Tbale INSCRIPTION_GROUPE Oracle">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Migratin de Table INSCRIPTION_GROUPE vers Staging SQL SERVER\Destination vers Staging">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Tâche de flux de données">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Tâche de flux de données\Destination OLE DB"
+          TopLeft="420,217" />
+        <NodeLayout
+          Size="179,42"
+          Id="Package\Tâche de flux de données\Source du fichier plat"
+          TopLeft="340,56" />
+        <EdgeLayout
+          Id="Package\Tâche de flux de données.Paths[Sortie de source de fichier plat]"
+          TopLeft="429.5,98">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="76,119"
+              Start="0,0"
+              End="76,111.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,55.5"
+                    Point2="0,59.5"
+                    Point3="4,59.5" />
+                  <mssgle:LineSegment
+                    End="72,59.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="72,59.5"
+                    Point2="76,59.5"
+                    Point3="76,63.5" />
+                  <mssgle:LineSegment
+                    End="76,111.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tâche de flux de données\Destination OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

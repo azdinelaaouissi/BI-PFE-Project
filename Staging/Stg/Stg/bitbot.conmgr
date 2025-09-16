@@ -1,0 +1,21 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="bitbot"
+  DTS:DTSID="{7D9F2A8F-4A51-46E9-AE9A-E41CB6D84E93}"
+  DTS:CreationName="ORACLE">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager>
+      <OraConnectionString>SERVER=localhost:1521/orcl;USERNAME=bitbot;WINAUTH=0;</OraConnectionString>
+      <OraPassword
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzTVVmrjNWUy+nws9xOnYQwAAAAACAAAAAAAQZgAAAAEAACAAAABLXfdly8c+/6bGFLZuPibgBC+dz9GhslkKsKEoadiYogAAAAAOgAAAAAIAACAAAAA0U2MfFWH4ft08pO45uLQtPZIfuT4wvVxMgCVQnQVy4jAAAAA0o+Vy4HpFHxIHZTR+yN5WgOiAjI46zQq8WGnWX3Hm39qUT8DkqGeocXskOjfXKNNAAAAA9X8RLz43tEaCOXbiNSCRNyHJyTydGvxc3La7J/cLvjwI2VSP12/Cm/5+qGboS3XxUGGdCVovGoedFmcD2Bw82A==</OraPassword>
+      <OraRetain>False</OraRetain>
+      <OraInitialCatalog></OraInitialCatalog>
+      <OraServerName>localhost:1521/orcl</OraServerName>
+      <OraUserName>bitbot</OraUserName>
+      <OraOracleHome></OraOracleHome>
+      <OraOracleHome64></OraOracleHome64>
+      <OraWinAuthentication>False</OraWinAuthentication>
+      <OraEnableDetailedTracing>False</OraEnableDetailedTracing>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
